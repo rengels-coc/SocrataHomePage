@@ -1,0 +1,387 @@
+@charset "utf-8";
+
+@font-face { font-family: socrata-icons; src: url("https://data.seattle.gov/frontend/P25-HF-1/webfonts/common/socrata-icons.1706020453.woff2") format("woff2"), url("https://data.seattle.gov/frontend/P25-HF-1/webfonts/common/socrata-icons.1706020453.woff") format("woff"), url("https://data.seattle.gov/frontend/P25-HF-1/webfonts/common/socrata-icons.1706020453.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+.icon-add-collaborator::before, .socrata-icon-add-collaborator::before, .icon-add::before, .socrata-icon-add::before, .icon-arrow-down::before, .socrata-icon-arrow-down::before, .icon-arrow-down2::before, .socrata-icon-arrow-down2::before, .icon-arrow-left::before, .socrata-icon-arrow-left::before, .icon-arrow-next::before, .socrata-icon-arrow-next::before, .icon-arrow-prev::before, .socrata-icon-arrow-prev::before, .icon-arrow-right::before, .socrata-icon-arrow-right::before, .icon-arrow-up::before, .socrata-icon-arrow-up::before, .icon-arrow-up2::before, .socrata-icon-arrow-up2::before, .icon-attachment::before, .socrata-icon-attachment::before, .icon-axis-scale::before, .socrata-icon-axis-scale::before, .icon-bar-chart-horz::before, .socrata-icon-bar-chart-horz::before, .icon-bar-chart::before, .socrata-icon-bar-chart::before, .icon-bell::before, .socrata-icon-bell::before, .icon-bold2::before, .socrata-icon-bold2::before, .icon-boolean::before, .socrata-icon-boolean::before, .icon-calendar-alt::before, .socrata-icon-calendar-alt::before, .icon-cards::before, .socrata-icon-cards::before, .icon-chart::before, .socrata-icon-chart::before, .icon-check-2::before, .socrata-icon-check-2::before, .icon-check::before, .socrata-icon-check::before, .icon-checkmark-alt::before, .socrata-icon-checkmark-alt::before, .icon-checkmark3::before, .socrata-icon-checkmark3::before, .icon-chevron-down::before, .socrata-icon-chevron-down::before, .icon-chevron-up::before, .socrata-icon-chevron-up::before, .icon-circle::before, .socrata-icon-circle::before, .icon-clear-formatting::before, .socrata-icon-clear-formatting::before, .icon-close-2::before, .socrata-icon-close-2::before, .icon-close-circle::before, .socrata-icon-close-circle::before, .icon-close::before, .socrata-icon-close::before, .icon-collapse::before, .socrata-icon-collapse::before, .icon-color::before, .socrata-icon-color::before, .icon-column-info::before, .socrata-icon-column-info::before, .icon-column-mapping::before, .socrata-icon-column-mapping::before, .icon-column::before, .socrata-icon-column::before, .icon-combo-chart::before, .socrata-icon-combo-chart::before, .icon-community::before, .socrata-icon-community::before, .icon-copy-document::before, .socrata-icon-copy-document::before, .icon-crop::before, .socrata-icon-crop::before, .icon-cross2::before, .socrata-icon-cross2::before, .icon-data-document::before, .socrata-icon-data-document::before, .icon-data::before, .socrata-icon-data::before, .icon-dataset::before, .socrata-icon-dataset::before, .icon-date::before, .socrata-icon-date::before, .icon-db-collection::before, .socrata-icon-db-collection::before, .icon-delete::before, .socrata-icon-delete::before, .icon-distribution::before, .socrata-icon-distribution::before, .icon-dock-bottom::before, .socrata-icon-dock-bottom::before, .icon-dollar::before, .socrata-icon-dollar::before, .icon-download::before, .socrata-icon-download::before, .icon-draft-badge::before, .socrata-icon-draft-badge::before, .icon-draft-inverted::before, .socrata-icon-draft-inverted::before, .icon-draft::before, .socrata-icon-draft::before, .icon-droplet::before, .socrata-icon-droplet::before, .icon-edit::before, .socrata-icon-edit::before, .icon-email::before, .socrata-icon-email::before, .icon-embed::before, .socrata-icon-embed::before, .icon-expand::before, .socrata-icon-expand::before, .icon-external-square::before, .socrata-icon-external-square::before, .icon-external::before, .socrata-icon-external::before, .icon-eye-blocked::before, .socrata-icon-eye-blocked::before, .icon-eye::before, .socrata-icon-eye::before, .icon-facebook::before, .socrata-icon-facebook::before, .icon-failed::before, .socrata-icon-failed::before, .icon-featured::before, .socrata-icon-featured::before, .icon-federation::before, .socrata-icon-federation::before, .icon-file-upload::before, .socrata-icon-file-upload::before, .icon-file::before, .socrata-icon-file::before, .icon-filter::before, .socrata-icon-filter::before, .icon-flickr::before, .socrata-icon-flickr::before, .icon-flyout-options::before, .socrata-icon-flyout-options::before, .icon-function::before, .socrata-icon-function::before, .icon-gateway::before, .socrata-icon-gateway::before, .icon-geo::before, .socrata-icon-geo::before, .icon-github::before, .socrata-icon-github::before, .icon-goal::before, .socrata-icon-goal::before, .icon-google::before, .socrata-icon-google::before, .icon-grab-handle::before, .socrata-icon-grab-handle::before, .icon-group::before, .socrata-icon-group::before, .icon-gte::before, .socrata-icon-gte::before, .icon-hamburger::before, .socrata-icon-hamburger::before, .icon-hierarchy::before, .socrata-icon-hierarchy::before, .icon-id::before, .socrata-icon-id::before, .icon-image::before, .socrata-icon-image::before, .icon-indeterminate-state-checkbox::before, .socrata-icon-indeterminate-state-checkbox::before, .icon-indeterminate-state-icon::before, .socrata-icon-indeterminate-state-icon::before, .icon-info-inverse::before, .socrata-icon-info-inverse::before, .icon-info::before, .socrata-icon-info::before, .icon-instagram::before, .socrata-icon-instagram::before, .icon-italic2::before, .socrata-icon-italic2::before, .icon-join::before, .socrata-icon-join::before, .icon-kebab::before, .socrata-icon-kebab::before, .icon-layers::before, .socrata-icon-layers::before, .icon-layout-inline::before, .socrata-icon-layout-inline::before, .icon-layout-pop-out::before, .socrata-icon-layout-pop-out::before, .icon-layout-settings::before, .socrata-icon-layout-settings::before, .icon-line-chart::before, .socrata-icon-line-chart::before, .icon-link::before, .socrata-icon-link::before, .icon-linkedin::before, .socrata-icon-linkedin::before, .icon-list-numbered::before, .socrata-icon-list-numbered::before, .icon-list2::before, .socrata-icon-list2::before, .icon-logo::before, .socrata-icon-logo::before, .icon-lte::before, .socrata-icon-lte::before, .icon-map::before, .socrata-icon-map::before, .icon-measure::before, .socrata-icon-measure::before, .icon-measures-editor-working-copy::before, .socrata-icon-measures-editor-working-copy::before, .icon-measures-editor::before, .socrata-icon-measures-editor::before, .icon-move-vertical::before, .socrata-icon-move-vertical::before, .icon-move::before, .socrata-icon-move::before, .icon-my-org::before, .socrata-icon-my-org::before, .icon-no-filter::before, .socrata-icon-no-filter::before, .icon-number::before, .socrata-icon-number::before, .icon-official::before, .socrata-icon-official::before, .icon-official2::before, .socrata-icon-official2::before, .icon-outlink::before, .socrata-icon-outlink::before, .icon-paragraph-center3::before, .socrata-icon-paragraph-center3::before, .icon-paragraph-left::before, .socrata-icon-paragraph-left::before, .icon-paragraph-left3::before, .socrata-icon-paragraph-left3::before, .icon-paragraph-right3::before, .socrata-icon-paragraph-right3::before, .icon-pause::before, .socrata-icon-pause::before, .icon-pending-inverted::before, .socrata-icon-pending-inverted::before, .icon-pending::before, .socrata-icon-pending::before, .icon-pending2::before, .socrata-icon-pending2::before, .icon-pie-chart::before, .socrata-icon-pie-chart::before, .icon-pinterest::before, .socrata-icon-pinterest::before, .icon-play::before, .socrata-icon-play::before, .icon-play2::before, .socrata-icon-play2::before, .icon-plus2::before, .socrata-icon-plus2::before, .icon-plus3::before, .socrata-icon-plus3::before, .icon-presentation::before, .socrata-icon-presentation::before, .icon-preview::before, .socrata-icon-preview::before, .icon-print::before, .socrata-icon-print::before, .icon-private::before, .socrata-icon-private::before, .icon-processing::before, .socrata-icon-processing::before, .icon-progress::before, .socrata-icon-progress::before, .icon-public-open::before, .socrata-icon-public-open::before, .icon-pulse::before, .socrata-icon-pulse::before, .icon-puzzle::before, .socrata-icon-puzzle::before, .icon-question-inverse::before, .socrata-icon-question-inverse::before, .icon-question::before, .socrata-icon-question::before, .icon-quotes-left::before, .socrata-icon-quotes-left::before, .icon-redo::before, .socrata-icon-redo::before, .icon-refresh::before, .socrata-icon-refresh::before, .icon-region::before, .socrata-icon-region::before, .icon-remove::before, .socrata-icon-remove::before, .icon-scatter-plot::before, .socrata-icon-scatter-plot::before, .icon-search::before, .socrata-icon-search::before, .icon-security::before, .socrata-icon-security::before, .icon-settings-switch::before, .socrata-icon-settings-switch::before, .icon-settings::before, .socrata-icon-settings::before, .icon-share::before, .socrata-icon-share::before, .icon-sign-out::before, .socrata-icon-sign-out::before, .icon-sort-asc::before, .socrata-icon-sort-asc::before, .icon-sort-az::before, .socrata-icon-sort-az::before, .icon-sort-desc::before, .socrata-icon-sort-desc::before, .icon-sort-za::before, .socrata-icon-sort-za::before, .icon-sort::before, .socrata-icon-sort::before, .icon-stories-icon::before, .socrata-icon-stories-icon::before, .icon-stories-menu::before, .socrata-icon-stories-menu::before, .icon-story::before, .socrata-icon-story::before, .icon-sub-org::before, .socrata-icon-sub-org::before, .icon-table-hierarchy::before, .socrata-icon-table-hierarchy::before, .icon-table::before, .socrata-icon-table::before, .icon-tag::before, .socrata-icon-tag::before, .icon-team::before, .socrata-icon-team::before, .icon-templates::before, .socrata-icon-templates::before, .icon-text::before, .socrata-icon-text::before, .icon-tumblr::before, .socrata-icon-tumblr::before, .icon-twitter::before, .socrata-icon-twitter::before, .icon-undo::before, .socrata-icon-undo::before, .icon-undock::before, .socrata-icon-undock::before, .icon-user::before, .socrata-icon-user::before, .icon-vimeo::before, .socrata-icon-vimeo::before, .icon-waiting::before, .socrata-icon-waiting::before, .icon-warning-alt::before, .socrata-icon-warning-alt::before, .icon-warning-alt2::before, .socrata-icon-warning-alt2::before, .icon-warning::before, .socrata-icon-warning::before, .icon-watch::before, .socrata-icon-watch::before, .icon-watched::before, .socrata-icon-watched::before, .icon-windows::before, .socrata-icon-windows::before, .icon-working-copy::before, .socrata-icon-working-copy::before, .icon-yahoo::before, .socrata-icon-yahoo::before, .icon-yammer::before, .socrata-icon-yammer::before, .icon-youtube::before, .socrata-icon-youtube::before { display: inline-block; font-family: socrata-icons; font-style: normal; font-weight: normal; font-variant: normal; text-decoration: inherit; text-rendering: optimizelegibility; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; }
+
+.icon-lg, .socrata-icon-lg { font-size: 1.33333em; line-height: 0.75em; vertical-align: -15%; }
+
+.icon-2x, .socrata-icon-2x { font-size: 2em; }
+
+.icon-3x, .socrata-icon-3x { font-size: 3em; }
+
+.icon-4x, .socrata-icon-4x { font-size: 4em; }
+
+.icon-5x, .socrata-icon-5x { font-size: 5em; }
+
+.icon-fw, .socrata-icon-fw { width: 1.28571em; text-align: center; }
+
+.icon-add-collaborator::before, .socrata-icon-add-collaborator::before { content: ""; }
+
+.icon-add::before, .socrata-icon-add::before { content: ""; }
+
+.icon-arrow-down::before, .socrata-icon-arrow-down::before { content: ""; }
+
+.icon-arrow-down2::before, .socrata-icon-arrow-down2::before { content: ""; }
+
+.icon-arrow-left::before, .socrata-icon-arrow-left::before { content: ""; }
+
+.icon-arrow-next::before, .socrata-icon-arrow-next::before { content: ""; }
+
+.icon-arrow-prev::before, .socrata-icon-arrow-prev::before { content: ""; }
+
+.icon-arrow-right::before, .socrata-icon-arrow-right::before { content: ""; }
+
+.icon-arrow-up::before, .socrata-icon-arrow-up::before { content: ""; }
+
+.icon-arrow-up2::before, .socrata-icon-arrow-up2::before { content: ""; }
+
+.icon-attachment::before, .socrata-icon-attachment::before { content: ""; }
+
+.icon-axis-scale::before, .socrata-icon-axis-scale::before { content: ""; }
+
+.icon-bar-chart-horz::before, .socrata-icon-bar-chart-horz::before { content: ""; }
+
+.icon-bar-chart::before, .socrata-icon-bar-chart::before { content: ""; }
+
+.icon-bell::before, .socrata-icon-bell::before { content: ""; }
+
+.icon-bold2::before, .socrata-icon-bold2::before { content: ""; }
+
+.icon-boolean::before, .socrata-icon-boolean::before { content: ""; }
+
+.icon-calendar-alt::before, .socrata-icon-calendar-alt::before { content: ""; }
+
+.icon-cards::before, .socrata-icon-cards::before { content: ""; }
+
+.icon-chart::before, .socrata-icon-chart::before { content: ""; }
+
+.icon-check-2::before, .socrata-icon-check-2::before { content: ""; }
+
+.icon-check::before, .socrata-icon-check::before { content: ""; }
+
+.icon-checkmark-alt::before, .socrata-icon-checkmark-alt::before { content: ""; }
+
+.icon-checkmark3::before, .socrata-icon-checkmark3::before { content: ""; }
+
+.icon-chevron-down::before, .socrata-icon-chevron-down::before { content: ""; }
+
+.icon-chevron-up::before, .socrata-icon-chevron-up::before { content: ""; }
+
+.icon-circle::before, .socrata-icon-circle::before { content: ""; }
+
+.icon-clear-formatting::before, .socrata-icon-clear-formatting::before { content: ""; }
+
+.icon-close-2::before, .socrata-icon-close-2::before { content: ""; }
+
+.icon-close-circle::before, .socrata-icon-close-circle::before { content: ""; }
+
+.icon-close::before, .socrata-icon-close::before { content: ""; }
+
+.icon-collapse::before, .socrata-icon-collapse::before { content: ""; }
+
+.icon-color::before, .socrata-icon-color::before { content: ""; }
+
+.icon-column-info::before, .socrata-icon-column-info::before { content: ""; }
+
+.icon-column-mapping::before, .socrata-icon-column-mapping::before { content: ""; }
+
+.icon-column::before, .socrata-icon-column::before { content: ""; }
+
+.icon-combo-chart::before, .socrata-icon-combo-chart::before { content: ""; }
+
+.icon-community::before, .socrata-icon-community::before { content: ""; }
+
+.icon-copy-document::before, .socrata-icon-copy-document::before { content: ""; }
+
+.icon-crop::before, .socrata-icon-crop::before { content: ""; }
+
+.icon-cross2::before, .socrata-icon-cross2::before { content: ""; }
+
+.icon-data-document::before, .socrata-icon-data-document::before { content: ""; }
+
+.icon-data::before, .socrata-icon-data::before { content: ""; }
+
+.icon-dataset::before, .socrata-icon-dataset::before { content: ""; }
+
+.icon-date::before, .socrata-icon-date::before { content: ""; }
+
+.icon-db-collection::before, .socrata-icon-db-collection::before { content: ""; }
+
+.icon-delete::before, .socrata-icon-delete::before { content: ""; }
+
+.icon-distribution::before, .socrata-icon-distribution::before { content: ""; }
+
+.icon-dock-bottom::before, .socrata-icon-dock-bottom::before { content: ""; }
+
+.icon-dollar::before, .socrata-icon-dollar::before { content: ""; }
+
+.icon-download::before, .socrata-icon-download::before { content: ""; }
+
+.icon-draft-badge::before, .socrata-icon-draft-badge::before { content: ""; }
+
+.icon-draft-inverted::before, .socrata-icon-draft-inverted::before { content: ""; }
+
+.icon-draft::before, .socrata-icon-draft::before { content: ""; }
+
+.icon-droplet::before, .socrata-icon-droplet::before { content: ""; }
+
+.icon-edit::before, .socrata-icon-edit::before { content: ""; }
+
+.icon-email::before, .socrata-icon-email::before { content: ""; }
+
+.icon-embed::before, .socrata-icon-embed::before { content: ""; }
+
+.icon-expand::before, .socrata-icon-expand::before { content: ""; }
+
+.icon-external-square::before, .socrata-icon-external-square::before { content: ""; }
+
+.icon-external::before, .socrata-icon-external::before { content: ""; }
+
+.icon-eye-blocked::before, .socrata-icon-eye-blocked::before { content: ""; }
+
+.icon-eye::before, .socrata-icon-eye::before { content: ""; }
+
+.icon-facebook::before, .socrata-icon-facebook::before { content: ""; }
+
+.icon-failed::before, .socrata-icon-failed::before { content: ""; }
+
+.icon-featured::before, .socrata-icon-featured::before { content: ""; }
+
+.icon-federation::before, .socrata-icon-federation::before { content: ""; }
+
+.icon-file-upload::before, .socrata-icon-file-upload::before { content: ""; }
+
+.icon-file::before, .socrata-icon-file::before { content: ""; }
+
+.icon-filter::before, .socrata-icon-filter::before { content: ""; }
+
+.icon-flickr::before, .socrata-icon-flickr::before { content: ""; }
+
+.icon-flyout-options::before, .socrata-icon-flyout-options::before { content: ""; }
+
+.icon-function::before, .socrata-icon-function::before { content: ""; }
+
+.icon-gateway::before, .socrata-icon-gateway::before { content: ""; }
+
+.icon-geo::before, .socrata-icon-geo::before { content: ""; }
+
+.icon-github::before, .socrata-icon-github::before { content: ""; }
+
+.icon-goal::before, .socrata-icon-goal::before { content: ""; }
+
+.icon-google::before, .socrata-icon-google::before { content: ""; }
+
+.icon-grab-handle::before, .socrata-icon-grab-handle::before { content: ""; }
+
+.icon-group::before, .socrata-icon-group::before { content: ""; }
+
+.icon-gte::before, .socrata-icon-gte::before { content: ""; }
+
+.icon-hamburger::before, .socrata-icon-hamburger::before { content: ""; }
+
+.icon-hierarchy::before, .socrata-icon-hierarchy::before { content: ""; }
+
+.icon-id::before, .socrata-icon-id::before { content: ""; }
+
+.icon-image::before, .socrata-icon-image::before { content: ""; }
+
+.icon-indeterminate-state-checkbox::before, .socrata-icon-indeterminate-state-checkbox::before { content: ""; }
+
+.icon-indeterminate-state-icon::before, .socrata-icon-indeterminate-state-icon::before { content: ""; }
+
+.icon-info-inverse::before, .socrata-icon-info-inverse::before { content: ""; }
+
+.icon-info::before, .socrata-icon-info::before { content: ""; }
+
+.icon-instagram::before, .socrata-icon-instagram::before { content: ""; }
+
+.icon-italic2::before, .socrata-icon-italic2::before { content: ""; }
+
+.icon-join::before, .socrata-icon-join::before { content: ""; }
+
+.icon-kebab::before, .socrata-icon-kebab::before { content: ""; }
+
+.icon-layers::before, .socrata-icon-layers::before { content: ""; }
+
+.icon-layout-inline::before, .socrata-icon-layout-inline::before { content: ""; }
+
+.icon-layout-pop-out::before, .socrata-icon-layout-pop-out::before { content: ""; }
+
+.icon-layout-settings::before, .socrata-icon-layout-settings::before { content: ""; }
+
+.icon-line-chart::before, .socrata-icon-line-chart::before { content: ""; }
+
+.icon-link::before, .socrata-icon-link::before { content: ""; }
+
+.icon-linkedin::before, .socrata-icon-linkedin::before { content: ""; }
+
+.icon-list-numbered::before, .socrata-icon-list-numbered::before { content: ""; }
+
+.icon-list2::before, .socrata-icon-list2::before { content: ""; }
+
+.icon-logo::before, .socrata-icon-logo::before { content: ""; }
+
+.icon-lte::before, .socrata-icon-lte::before { content: ""; }
+
+.icon-map::before, .socrata-icon-map::before { content: ""; }
+
+.icon-measure::before, .socrata-icon-measure::before { content: ""; }
+
+.icon-measures-editor-working-copy::before, .socrata-icon-measures-editor-working-copy::before { content: ""; }
+
+.icon-measures-editor::before, .socrata-icon-measures-editor::before { content: ""; }
+
+.icon-move-vertical::before, .socrata-icon-move-vertical::before { content: ""; }
+
+.icon-move::before, .socrata-icon-move::before { content: ""; }
+
+.icon-my-org::before, .socrata-icon-my-org::before { content: ""; }
+
+.icon-no-filter::before, .socrata-icon-no-filter::before { content: ""; }
+
+.icon-number::before, .socrata-icon-number::before { content: ""; }
+
+.icon-official::before, .socrata-icon-official::before { content: ""; }
+
+.icon-official2::before, .socrata-icon-official2::before { content: ""; }
+
+.icon-outlink::before, .socrata-icon-outlink::before { content: ""; }
+
+.icon-paragraph-center3::before, .socrata-icon-paragraph-center3::before { content: ""; }
+
+.icon-paragraph-left::before, .socrata-icon-paragraph-left::before { content: ""; }
+
+.icon-paragraph-left3::before, .socrata-icon-paragraph-left3::before { content: ""; }
+
+.icon-paragraph-right3::before, .socrata-icon-paragraph-right3::before { content: ""; }
+
+.icon-pause::before, .socrata-icon-pause::before { content: ""; }
+
+.icon-pending-inverted::before, .socrata-icon-pending-inverted::before { content: ""; }
+
+.icon-pending::before, .socrata-icon-pending::before { content: ""; }
+
+.icon-pending2::before, .socrata-icon-pending2::before { content: ""; }
+
+.icon-pie-chart::before, .socrata-icon-pie-chart::before { content: ""; }
+
+.icon-pinterest::before, .socrata-icon-pinterest::before { content: ""; }
+
+.icon-play::before, .socrata-icon-play::before { content: ""; }
+
+.icon-play2::before, .socrata-icon-play2::before { content: ""; }
+
+.icon-plus2::before, .socrata-icon-plus2::before { content: ""; }
+
+.icon-plus3::before, .socrata-icon-plus3::before { content: ""; }
+
+.icon-presentation::before, .socrata-icon-presentation::before { content: ""; }
+
+.icon-preview::before, .socrata-icon-preview::before { content: ""; }
+
+.icon-print::before, .socrata-icon-print::before { content: ""; }
+
+.icon-private::before, .socrata-icon-private::before { content: ""; }
+
+.icon-processing::before, .socrata-icon-processing::before { content: ""; }
+
+.icon-progress::before, .socrata-icon-progress::before { content: ""; }
+
+.icon-public-open::before, .socrata-icon-public-open::before { content: ""; }
+
+.icon-pulse::before, .socrata-icon-pulse::before { content: ""; }
+
+.icon-puzzle::before, .socrata-icon-puzzle::before { content: ""; }
+
+.icon-question-inverse::before, .socrata-icon-question-inverse::before { content: ""; }
+
+.icon-question::before, .socrata-icon-question::before { content: ""; }
+
+.icon-quotes-left::before, .socrata-icon-quotes-left::before { content: ""; }
+
+.icon-redo::before, .socrata-icon-redo::before { content: ""; }
+
+.icon-refresh::before, .socrata-icon-refresh::before { content: ""; }
+
+.icon-region::before, .socrata-icon-region::before { content: ""; }
+
+.icon-remove::before, .socrata-icon-remove::before { content: ""; }
+
+.icon-scatter-plot::before, .socrata-icon-scatter-plot::before { content: ""; }
+
+.icon-search::before, .socrata-icon-search::before { content: ""; }
+
+.icon-security::before, .socrata-icon-security::before { content: ""; }
+
+.icon-settings-switch::before, .socrata-icon-settings-switch::before { content: ""; }
+
+.icon-settings::before, .socrata-icon-settings::before { content: ""; }
+
+.icon-share::before, .socrata-icon-share::before { content: ""; }
+
+.icon-sign-out::before, .socrata-icon-sign-out::before { content: ""; }
+
+.icon-sort-asc::before, .socrata-icon-sort-asc::before { content: ""; }
+
+.icon-sort-az::before, .socrata-icon-sort-az::before { content: ""; }
+
+.icon-sort-desc::before, .socrata-icon-sort-desc::before { content: ""; }
+
+.icon-sort-za::before, .socrata-icon-sort-za::before { content: ""; }
+
+.icon-sort::before, .socrata-icon-sort::before { content: ""; }
+
+.icon-stories-icon::before, .socrata-icon-stories-icon::before { content: ""; }
+
+.icon-stories-menu::before, .socrata-icon-stories-menu::before { content: ""; }
+
+.icon-story::before, .socrata-icon-story::before { content: ""; }
+
+.icon-sub-org::before, .socrata-icon-sub-org::before { content: ""; }
+
+.icon-table-hierarchy::before, .socrata-icon-table-hierarchy::before { content: ""; }
+
+.icon-table::before, .socrata-icon-table::before { content: ""; }
+
+.icon-tag::before, .socrata-icon-tag::before { content: ""; }
+
+.icon-team::before, .socrata-icon-team::before { content: ""; }
+
+.icon-templates::before, .socrata-icon-templates::before { content: ""; }
+
+.icon-text::before, .socrata-icon-text::before { content: ""; }
+
+.icon-tumblr::before, .socrata-icon-tumblr::before { content: ""; }
+
+.icon-twitter::before, .socrata-icon-twitter::before { content: ""; }
+
+.icon-undo::before, .socrata-icon-undo::before { content: ""; }
+
+.icon-undock::before, .socrata-icon-undock::before { content: ""; }
+
+.icon-user::before, .socrata-icon-user::before { content: ""; }
+
+.icon-vimeo::before, .socrata-icon-vimeo::before { content: ""; }
+
+.icon-waiting::before, .socrata-icon-waiting::before { content: ""; }
+
+.icon-warning-alt::before, .socrata-icon-warning-alt::before { content: ""; }
+
+.icon-warning-alt2::before, .socrata-icon-warning-alt2::before { content: ""; }
+
+.icon-warning::before, .socrata-icon-warning::before { content: ""; }
+
+.icon-watch::before, .socrata-icon-watch::before { content: ""; }
+
+.icon-watched::before, .socrata-icon-watched::before { content: ""; }
+
+.icon-windows::before, .socrata-icon-windows::before { content: ""; }
+
+.icon-working-copy::before, .socrata-icon-working-copy::before { content: ""; }
+
+.icon-yahoo::before, .socrata-icon-yahoo::before { content: ""; }
+
+.icon-yammer::before, .socrata-icon-yammer::before { content: ""; }
+
+.icon-youtube::before, .socrata-icon-youtube::before { content: ""; }

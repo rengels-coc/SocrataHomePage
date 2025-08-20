@@ -1,0 +1,5 @@
+@charset "utf-8";
+
+@font-face { font-family: TylerIcons; src: url("https://cdn.forge.tylertech.com/v1/fonts/TylerIcons.woff2?b0pfzc") format("woff2"), url("https://cdn.forge.tylertech.com/v1/fonts/TylerIcons.ttf?b0pfzc") format("truetype"), url("https://cdn.forge.tylertech.com/v1/fonts/TylerIcons.woff?b0pfzc") format("woff"); font-weight: normal; font-style: normal; font-display: block; }
+
+.tyler-icons { speak: none; font-style: normal; font-weight: normal; text-transform: none; line-height: 1; font-feature-settings: "liga"; -webkit-font-smoothing: antialiased; font-size: 24px; display: inline-block; letter-spacing: normal; overflow-wrap: normal; white-space: nowrap; direction: ltr; text-rendering: optimizelegibility; font-family: TylerIcons !important; }

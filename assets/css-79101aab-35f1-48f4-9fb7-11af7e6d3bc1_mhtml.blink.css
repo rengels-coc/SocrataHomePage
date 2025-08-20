@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+#socrata-forge-toast { --forge-z-index-notification: 10202; }
+
+#socrata-forge-toast .toast-error-icon { --forge-icon-color: var(--forge-theme-error); }
+
+#socrata-forge-toast .toast-success-icon { --forge-icon-color: var(--forge-theme-success); }
+
+#socrata-forge-toast .message-container { display: flex; align-items: center; gap: 1rem; font-size: 1rem; }
+
+.socrata-toast-notification .alert { position: fixed; right: calc(40%); margin: auto; z-index: 10202; width: 20%; display: flex; min-width: 125px; justify-content: space-between; overflow-wrap: break-word; }
+
+.socrata-toast-notification .alert button { cursor: pointer; padding: 0px; }
+
+.socrata-toast-notification .alert .toast-content { width: 100%; text-align: center; }
+
+.socrata-toast-notification .alert .btn-dismiss { float: right; margin-left: 20px; margin-top: -2px; }
+
+.socrata-toast-notification .alert .btn-dismiss .socrata-icon svg { height: 15px; width: 15px; }
+
+.socrata-toast-notification .alert.success .btn-dismiss .socrata-icon svg g { fill: rgb(23, 123, 65); }
+
+.socrata-toast-notification .alert.success .btn-dismiss:hover .socrata-icon svg g, .socrata-toast-notification .alert.success .btn-dismiss:focus .socrata-icon svg g { fill: rgb(32, 176, 92); }
+
+.socrata-toast-notification .alert.error .btn-dismiss .socrata-icon svg g { fill: rgb(145, 70, 70); }
+
+.socrata-toast-notification .alert.error .btn-dismiss:hover .socrata-icon svg g, .socrata-toast-notification .alert.error .btn-dismiss:focus .socrata-icon svg g { fill: rgb(208, 100, 99); }
+
+.socrata-toast-notification .alert.error .btn-retry { color: rgb(145, 70, 70); font-weight: bold; padding-left: 5px; }
+
+.socrata-toast-notification .alert.error .btn-retry:hover, .socrata-toast-notification .alert.error .btn-retry:focus { text-decoration: underline; }

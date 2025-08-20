@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+@keyframes spin { 
+  100% { transform: rotate(360deg); }
+}
+
+.spinner-default, .common--components--spinner { animation: 0.9s linear 0s infinite normal none running spin; border-width: 3px; border-style: solid; border-color: rgb(40, 141, 193) rgb(234, 244, 249) rgb(40, 141, 193) rgb(40, 141, 193); border-image: initial; border-radius: 50%; display: inline-block; }
+
+.spinner-default.spinner-dark, .spinner-dark.common--components--spinner { border-color: rgb(234, 244, 249) rgb(40, 141, 193) rgb(234, 244, 249) rgb(234, 244, 249); }
+
+.spinner-default.spinner-large, .common--components--spinner { border-width: 8px; width: 64px; height: 64px; }
+
+.spinner-btn-primary { border-color: rgb(255, 255, 255) rgb(32, 113, 154) rgb(255, 255, 255) rgb(255, 255, 255); }
+
+.common--components--spinner { left: calc(50% - 32px); position: absolute; top: calc(50% - 32px); }

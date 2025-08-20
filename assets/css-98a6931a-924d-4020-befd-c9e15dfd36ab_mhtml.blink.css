@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+.ace_editor.ace_autocomplete .ace_marker-layer .ace_active-line { background-color: rgb(202, 214, 250); z-index: 1; }
+
+.ace_dark.ace_editor.ace_autocomplete .ace_marker-layer .ace_active-line { background-color: rgb(58, 103, 78); }
+
+.ace_editor.ace_autocomplete .ace_line-hover { border: 1px solid rgb(171, 191, 254); margin-top: -1px; background: rgba(233, 233, 253, 0.4); position: absolute; z-index: 2; }
+
+.ace_dark.ace_editor.ace_autocomplete .ace_line-hover { border: 1px solid rgba(109, 150, 13, 0.8); background: rgba(58, 103, 78, 0.62); }
+
+.ace_completion-meta { opacity: 0.5; margin: 0.9em; }
+
+.ace_completion-message { color: blue; }
+
+.ace_editor.ace_autocomplete .ace_completion-highlight { color: rgb(45, 105, 199); }
+
+.ace_dark.ace_editor.ace_autocomplete .ace_completion-highlight { color: rgb(147, 202, 18); }
+
+.ace_editor.ace_autocomplete { width: 300px; z-index: 200000; border: 1px solid lightgray; position: fixed; box-shadow: rgba(0, 0, 0, 0.2) 2px 3px 5px; line-height: 1.4; background: rgb(254, 254, 254); color: rgb(17, 17, 17); }
+
+.ace_dark.ace_editor.ace_autocomplete { border: 1px solid rgb(72, 71, 71); box-shadow: rgba(0, 0, 0, 0.51) 2px 3px 5px; line-height: 1.4; background: rgb(37, 40, 44); color: rgb(193, 193, 193); }

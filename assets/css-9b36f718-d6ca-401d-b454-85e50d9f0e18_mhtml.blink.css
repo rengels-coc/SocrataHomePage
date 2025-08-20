@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+.cs-info-box .cs-tile-title { font-size: 20px; font-weight: 600; }
+
+.cs-info-box .cs-tile-description { font-size: 0.878357em; line-height: 1.5; }
+
+@media screen and (max-width: 1200px) {
+  .cs-info-box-tiles-component { padding: 0px 40px; }
+  .cs-info-box-tiles-component .cs-info-box { margin-bottom: 20px; }
+}

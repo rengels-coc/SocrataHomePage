@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+:root { --default-font-stack: "Roboto", "Helvetica", Arial, sans-serif; }
+
+.alert, .flash { background-color: rgb(246, 246, 246); border: 1px solid rgb(200, 200, 200); border-radius: 1px; color: rgb(94, 94, 94); font-weight: normal !important; }
+
+.alert > a:not(.btn), .alert a:visited:not(.btn), .flash > a:not(.btn), .flash a:visited:not(.btn) { font-weight: bold; color: rgb(28, 99, 135); }
+
+.alert.small, .flash.small { text-align: center; font-size: 12px; }
+
+.alert.info, .alert.notice, .flash.info, .flash.notice { background-color: rgb(234, 244, 249); border-color: rgb(40, 141, 193); color: rgb(28, 99, 135); }
+
+.alert.success, .flash.success { background-color: rgb(234, 247, 239); border-color: rgb(43, 175, 95); color: rgb(23, 123, 65); }
+
+.alert.warning, .flash.warning { background-color: rgb(253, 249, 237); border-color: rgb(230, 175, 0); color: rgb(138, 105, 0); }
+
+.alert.error, .flash.error { background-color: rgb(250, 240, 240); border-color: rgb(206, 101, 101); color: rgb(145, 70, 70); }
+
+.alert.alert-full-width-top, .flash.alert-full-width-top { border-top: 0px; border-left: 0px; border-right: 0px; }
+
+.alert.alert-full-width-bottom, .flash.alert-full-width-bottom { border-bottom: 0px; border-left: 0px; border-right: 0px; }
+
+#ie-deprecation-banner-msg { font-size: 15px; line-height: 20px; }
+
+#internet-explorer-deprecation-banner .socrata-icon svg { width: inherit; height: inherit; vertical-align: top; }

@@ -1,0 +1,3 @@
+@charset "utf-8";
+
+.language-option { color: var(--forge-theme-text-high, rgba(0, 0, 0, 0.87)); }

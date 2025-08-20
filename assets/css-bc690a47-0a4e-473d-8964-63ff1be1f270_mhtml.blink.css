@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+.export-dialog-container { justify-content: space-between; padding: 0px 24px; }
+
+.export-dialog-container a { color: var(--forge-theme-primary, #3f51b5); }
+
+.footer forge-button { margin: 0px 5px; }
+
+.forge-header-title { margin-bottom: 0px; }
+
+.forge-select { width: 260px; }
+
+.export-dataset-dialog { width: 520px; overflow: auto; }
+
+@media (max-width: 520px) {
+  .export-dataset-dialog { width: auto; }
+}
+
+.filtered-radio-group { padding-bottom: 16px; }
+
+.filtered-radio-group .filtered-data { padding-right: 16px; }
+
+.button-toggle { padding-bottom: 15px; }
+
+.export-formats { padding-bottom: 15px; }
+
+.export-formats .api-documentation-links, .export-formats .odata-documentation-links { display: flex; justify-content: flex-start; margin-top: 16px; margin-bottom: 10px; flex-wrap: wrap; }
+
+.export-formats .api-documentation-links .foundry-link, .export-formats .odata-documentation-links .foundry-link { margin-right: 4px; }
+
+.export-formats .resource-name-checkbox { padding-top: 8px; }
+
+.body-text { padding: 24px 0px; margin: 0px; }
+
+forge-inline-message.api-limit-message::part(root) { margin: 0px; }
+
+.api-limit-message { padding-bottom: 16px; }
+
+.api-limit-message a { text-decoration: underline; }
+
+.partial-export-message { margin-left: -16px; margin-right: -16px; margin-top: -10px; }
+
+.partial-export-message .message-title { margin-bottom: 0px; padding-top: 3px; padding-bottom: 10px; }

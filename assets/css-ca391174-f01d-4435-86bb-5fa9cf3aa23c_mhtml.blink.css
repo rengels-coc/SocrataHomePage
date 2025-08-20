@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+.my-alerts-content { position: relative; min-height: 110px; }
+
+.my-alerts-content .alert-detail { clear: both; }
+
+.my-alerts-content .alert-dataset { color: rgb(40, 141, 193); display: inline-block; font-size: 12px; }
+
+.my-alerts-content .alert-name { color: rgb(44, 44, 44); display: inline-block; float: left; font-size: 16px; font-weight: bold; text-transform: capitalize; width: 95%; }
+
+.my-alerts-content .alert-query { font-size: 11px; color: rgb(40, 141, 193); }
+
+.my-alerts-content .alert-dataset, .my-alerts-content .alert-query { text-decoration: none; }
+
+.my-alerts-content .alert-dataset:hover, .my-alerts-content .alert-query:hover { text-decoration: underline; }
+
+.my-alerts-content .icon-checkmark3 { font-size: 16px; line-height: 0.6 !important; }
+
+.my-alerts-content .fake-checkbox { padding: 0px; height: 20px; width: 20px; }
+
+.my-alerts-content .checkbox input[type="checkbox"] { position: absolute; }
+
+.my-alerts-content td { vertical-align: top; }
+
+.my-alerts-content .alert-info span { background-color: rgb(234, 244, 249); border-radius: 5px; color: rgb(44, 44, 44); display: block; font-size: 14px; padding: 8px; width: 100%; margin-top: 20px; }
+
+.my-alerts-content .alert-info.error span { color: rgb(206, 101, 101); }
+
+.my-alerts-content .alert-info hr { border: 1px solid rgb(241, 241, 241); }
+
+.my-alerts-content .myalert-table { padding: 20px 0px; border-collapse: collapse; border-spacing: 0px; min-width: 100%; width: 100%; }
+
+.my-alerts-content .myalert-table th:nth-child(1) { padding-left: 3px; }
+
+.my-alerts-content .myalert-table th, .my-alerts-content .myalert-table td { border-bottom: 1px solid rgb(228, 228, 228); border-left: 0px; border-right: 0px; padding: 10px 10px 10px 0px; }
+
+.my-alerts-content .myalert-table tr:first-child > td { border-top: none; }
+
+.my-alerts-content .myalert-table td:nth-child(1) { padding-top: 10px; vertical-align: top; padding-left: 3px; width: 6%; }
+
+.my-alerts-content .my-alerts-paused td:nth-child(1) { padding-top: 37px; }
+
+.my-alerts-content .my-alerts-paused .paused { padding: 5px; background-color: rgb(252, 249, 239); border: 1px solid rgb(228, 173, 57); }
+
+.my-alerts-content .my-alerts-paused .paused .paused-title { color: rgb(164, 137, 83); font-size: 12px; }
+
+.my-alerts-content .alert-container .alert-share { color: var(--forge-theme-primary); cursor: pointer; float: right; }
+
+.my-alerts-content .alert-container .alert-share .socrata-icon { height: 16px; width: 16px; }
+
+.my-alerts-content .pull-right { float: right; }
+
+.my-alerts-content .pause-button:hover:not(:disabled) { color: rgb(255, 255, 255); }
+
+.my-alerts-content .pause-button:focus { color: rgb(255, 255, 255); }
+
+.my-alerts-content .delete-button, .my-alerts-content .pause-button { display: inline-block; font-size: 12px; margin-left: 5px; padding: 5px 10px; text-align: center; width: 70px; }
+
+.my-alerts-content .myalert-footer { font-size: 14px; color: rgb(44, 44, 44); }

@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+.cs-quick-link-tile { position: relative; background: rgba(150, 150, 150, 0.4); color: rgb(255, 255, 255); list-style: none; }
+
+.cs-quick-link-tile a { text-decoration: none; }
+
+.cs-quick-link-tile a:hover, .cs-quick-link-tile a:focus { color: rgb(255, 255, 255); }
+
+.cs-quick-link-tile .cs-tile-content-wrapper { color: rgb(255, 255, 255); font-weight: 100; position: relative; text-align: center; z-index: 10; padding-top: 3.5em; }
+
+.cs-quick-link-tile .cs-tile-content-wrapper .cs-tile-icon { font-size: 50px; margin-bottom: 10px; display: block; }
+
+.cs-quick-link-tile .cs-tile-content-wrapper img { height: 50px; margin-bottom: 10px; }
+
+.cs-quick-link-tile .cs-tile-content-wrapper .cs-tile-title { font-size: 20px; }
+
+.cs-quick-link-tile:hover, .cs-quick-link-tile:focus { text-decoration: none; }
+
+.cs-quick-link-tile:hover .cs-quick-link-hover-shadow, .cs-quick-link-tile:focus .cs-quick-link-hover-shadow { background-color: rgba(0, 0, 0, 0.3); }
+
+.cs-quick-link-tile .cs-quick-link-hover-shadow { position: absolute; height: 100%; width: 100%; top: 0px; }

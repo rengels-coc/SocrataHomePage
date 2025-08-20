@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+.omnibar-mobile-search-drawer { display: flex; position: absolute; background-color: var(--forge-app-bar-theme-background, #283593); left: 0px; top: 0px; width: 100vw; height: 56px; align-items: center; z-index: 9; }
+
+.omnibar-mobile-search-drawer forge-app-bar-search { padding: 8px; width: 100%; }
+
+#mobile-search-button { position: initial; }

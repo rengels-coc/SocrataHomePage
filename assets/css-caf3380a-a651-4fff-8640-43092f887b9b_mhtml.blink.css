@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+:root { --default-font-stack: "Roboto", "Helvetica", Arial, sans-serif; }
+
+.h1, .h2, .h3, .h4, .h5, .h6 { margin: 0px; padding: 0px; font-style: inherit; font-variant: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-optical-sizing: inherit; font-size-adjust: inherit; font-kerning: inherit; font-feature-settings: inherit; font-variation-settings: inherit; font-size: 100%; letter-spacing: -0.3px; font-weight: 600; }
+
+.h1 { font-size: 23px; }
+
+.h2 { font-size: 20px; }
+
+.h3 { font-size: 20px; }
+
+.h4 { font-size: 19px; }
+
+.h5 { font-size: 17px; }
+
+.h6 { font-size: 15px; }
+
+.intro { font-size: 17px; font-weight: 200; }
+
+.small { font-size: 13px; }
+
+.x-small { font-size: 11px; }
+
+.quiet { color: rgb(118, 118, 118); }
+
+.common--components--Autocomplete--autocomplete--results--results-container, .common--components--Autocomplete--autocomplete--results--results-container-collapsible { font-family: var(--default-font-stack); line-height: 1.25; background-color: rgb(255, 255, 255); border: 2px solid rgb(148, 198, 224); box-shadow: rgba(0, 0, 0, 0.2) 3px 3px 5px; position: absolute; z-index: 1000; width: 100%; display: flex; flex-direction: column; }
+
+@media screen and (max-width: 1000px) {
+  .common--components--Autocomplete--autocomplete--results--results-container, .common--components--Autocomplete--autocomplete--results--results-container-collapsible { margin-left: 10px; width: calc(100% - 20px); }
+}
+
+.common--components--Autocomplete--autocomplete--results--results-container-collapsible { box-sizing: content-box; width: 294px; left: -275px; top: 52px; }
+
+.common--components--Autocomplete--autocomplete--results--result, .common--components--Autocomplete--autocomplete--results--result-focused { font-family: var(--default-font-stack); line-height: 1.25; background-color: rgb(255, 255, 255); color: rgb(94, 94, 94); float: left; text-align: left; font-size: 15px; font-weight: 600; overflow: hidden; padding-top: 10px; padding-bottom: 10px; padding-left: 13px; cursor: pointer; }
+
+.common--components--Autocomplete--autocomplete--results--result:hover, .common--components--Autocomplete--autocomplete--results--result-focused:hover { background-color: rgb(234, 244, 249); color: rgb(28, 99, 135); }
+
+.common--components--Autocomplete--autocomplete--results--result .highlight, .common--components--Autocomplete--autocomplete--results--result-focused .highlight { font-weight: 400; }
+
+.common--components--Autocomplete--autocomplete--results--result-focused { background-color: rgb(234, 244, 249); color: rgb(28, 99, 135); }

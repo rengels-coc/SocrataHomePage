@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+.paneRoot { --forge-theme-border-color: white; }
+
+.paneRoot .forge-typography--body2, .paneRoot .forge-typography--subheading4 { color: var(--forge-theme-text-high); }
+
+.paneTitle { flex-grow: 4; color: var(--forge-theme-text-high); }
+
+.paneSubHeader { position: relative; display: flex; align-items: center; justify-content: space-between; cursor: pointer; }
+
+.paneButton { display: flex; border: none; background-color: transparent; transform-origin: center center; padding: 0px; }
+
+.socrata-accordion-pane { display: flex; flex-direction: column; }
+
+.socrata-accordion-pane-content { padding-top: 0px; padding-bottom: 0px; }
+
+.socrata-accordion-pane-content > div { padding-top: 10px; }

@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+.footer-bar { background-color: rgb(76, 84, 93); height: 46px; padding: 8px 10px; position: relative; text-align: center; z-index: 1; }
+
+.footer-bar .primary-button { background-color: rgb(21, 88, 125); border: 0px none; border-radius: 2px; color: rgb(255, 255, 255); }
+
+.footer-bar .primary-button:hover, .footer-bar .primary-button:focus { background-color: rgb(18, 78, 111); }
+
+.footer-bar .primary-button[disabled] { cursor: not-allowed; opacity: 0.5; }
+
+.footer-bar .cancel-button { margin-right: 5px; }
+
+.buttons-wrapper { position: relative; text-align: left; }
+
+.prompt-buttons-wrapper { float: right; }
+
+.prompt-buttons-wrapper button { float: left; min-width: 60px; }
+
+.inline-prompt { background-color: rgb(255, 255, 255); border-radius: 5px; bottom: 56px; box-shadow: rgb(204, 204, 204) 0px 0px 1px 1px; color: rgb(105, 104, 105); left: 0px; padding: 10px; position: absolute; right: 0px; white-space: normal; }
+
+.inline-prompt::before, .inline-prompt::after { border-color: transparent; border-style: solid; content: ""; height: 0px; position: absolute; width: 0px; }
+
+.inline-prompt::before { border-top-color: rgba(204, 204, 204, 0.15); border-width: 17px 12px 0px; bottom: -17px; left: 24px; z-index: 0; }
+
+.inline-prompt::after { border-top-color: rgb(255, 255, 255); border-width: 15px 10px 0px; bottom: -15px; left: 26px; z-index: 1; }
+
+.inline-prompt p { font-size: 12px; margin: 0px 0px 5px; }
+
+.inline-prompt .heading-text { font-size: 13px; font-weight: 600; }
+
+.setting-button { color: rgb(255, 255, 255); cursor: pointer; float: right; height: 30px; max-width: calc(50% - 5px); text-decoration: none; padding: 5px !important; }
+
+.setting-button em { display: inline-block; font-size: 13px; font-style: normal; font-weight: 400; margin-left: 5px; overflow: hidden; text-overflow: ellipsis; vertical-align: top; white-space: nowrap; }
+
+.setting-button .socrata-icon { color: rgb(153, 153, 153); fill: rgb(153, 153, 153); height: 17px; width: 17px; bottom: 2px; }
+
+.setting-button .socrata-icon svg { height: 17px; width: 17px; }
+
+.setting-button .socrata-icon svg, .setting-button .socrata-icon svg * { color: rgb(153, 153, 153); fill: rgb(153, 153, 153); }
+
+.setting-button .socrata-icon::before { display: none; }

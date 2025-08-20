@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+.error_widget_wrapper { background: inherit; color: inherit; border: none; }
+
+.error_widget { border-top: 2px solid; border-bottom: 2px solid; margin: 5px 0px; padding: 10px 40px; white-space: pre-wrap; }
+
+.error_widget.ace_error, .error_widget_arrow.ace_error { border-color: rgb(255, 90, 90); }
+
+.error_widget.ace_warning, .error_widget_arrow.ace_warning { border-color: rgb(241, 216, 23); }
+
+.error_widget.ace_info, .error_widget_arrow.ace_info { border-color: rgb(90, 90, 90); }
+
+.error_widget.ace_ok, .error_widget_arrow.ace_ok { border-color: rgb(90, 170, 90); }
+
+.error_widget_arrow { position: absolute; border-width: 5px; border-style: solid; border-bottom-color: initial; border-image: initial; top: -5px; border-top-color: transparent !important; border-right-color: transparent !important; border-left-color: transparent !important; }

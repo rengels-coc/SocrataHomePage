@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+.picklist { background: rgb(255, 255, 255); border: 1px solid rgb(200, 200, 200); overflow-y: auto; color: rgb(94, 94, 94); padding: 1px; }
+
+.picklist.picklist-size-large { font-size: 15px; }
+
+.picklist.picklist-size-medium { font-size: 13px; }
+
+.picklist.picklist-disabled { color: rgb(145, 145, 145); background-color: rgb(246, 246, 246); pointer-events: none; }
+
+.picklist-group-header { background-color: rgb(241, 241, 241); padding: 10px; text-transform: uppercase; font-size: 12px; }
+
+.picklist-separator { height: 1px; background: rgb(200, 200, 200); border-left: none; border-right: none; }
+
+.picklist-option { position: relative; padding: 10px; user-select: none; cursor: default; text-overflow: ellipsis; white-space: nowrap; }
+
+.picklist-option.danger { color: rgb(206, 101, 101); }
+
+.picklist-option .picklist-title.picklist-with-icon .picklist-item { margin-left: 25px; }
+
+.picklist-option .picklist-title .picklist-item-symbol { float: right; }
+
+.picklist-option .picklist-title .socrata-icon { margin-right: 0.25rem; height: 20px; width: 20px; position: absolute; }
+
+.picklist-option.picklist-option-disabled { pointer-events: none; cursor: not-allowed; background: rgb(241, 241, 241); color: rgb(145, 145, 145); }
+
+.picklist-option:hover { background-color: rgb(230, 249, 245); }
+
+.picklist-option.picklist-option-selected { color: rgb(255, 255, 255); background-color: rgb(0, 190, 155); }
+
+.picklist-option.picklist-subcategory { text-indent: 10%; }
+
+.picklist-option:not(.picklist-option-selected).picklist-option-highlighted, .picklist-option:not(.picklist-option-selected):active:not(.picklist-option-selected) { color: rgb(255, 255, 255); background-color: rgb(77, 210, 185); }
+
+.picklist.picklist-forge { font-size: 16px; }
+
+.picklist.picklist-forge .picklist-option { color: rgba(0, 0, 0, 0.8); padding: 12px 16px; }
+
+.picklist.picklist-forge .picklist-option .picklist-option { --mdc-ripple-fg-opacity: 0.12; }
+
+.picklist.picklist-forge .picklist-option:hover { background-color: rgba(0, 0, 0, 0.04); }
+
+.picklist.picklist-forge .picklist-option.picklist-option-selected { color: rgb(63, 81, 181); background-color: rgba(63, 81, 181, 0.12); }
+
+.picklist.picklist-forge .picklist-option.picklist-option-selected:hover, .picklist.picklist-forge .picklist-option.picklist-option-selected:active { background-color: rgba(63, 81, 181, 0.16); }
+
+.picklist.picklist-forge .picklist-option:not(.picklist-option-selected).picklist-option-highlighted, .picklist.picklist-forge .picklist-option:not(.picklist-option-selected):active:not(.picklist-option-selected) { color: rgba(0, 0, 0, 0.8); background-color: rgba(63, 81, 181, 0.12); }

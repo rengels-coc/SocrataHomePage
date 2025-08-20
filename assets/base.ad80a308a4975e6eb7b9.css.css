@@ -1,0 +1,2021 @@
+@charset "utf-8";
+
+html { font-family: Arial, sans-serif; }
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: baseline; background: transparent; }
+
+body { color: rgb(51, 51, 51); font-size: 62.5%; line-height: 1; }
+
+ol, ul { list-style: none; }
+
+ul.styled { list-style-type: disc; margin-left: 1.2em; }
+
+blockquote, q { quotes: none; }
+
+blockquote::before, blockquote::after, q::before, q::after { content: none; }
+
+ins { text-decoration: none; }
+
+del { text-decoration: line-through; }
+
+table { border-collapse: collapse; border-spacing: 0px; }
+
+p { font-size: 1.1em; line-height: 1.1em; }
+
+form p { font-size: 1em; line-height: 1em; }
+
+h1 { font-size: 2.4em; line-height: 1.4em; margin-bottom: 0.5em; }
+
+h2 { font-size: 1.5em; line-height: 1.5em; }
+
+h3 { font-size: 1.4em; line-height: 1.4em; }
+
+h4 { font-size: 1.2em; font-weight: normal; line-height: 1.3em; }
+
+h5 { display: inline; font-size: 1.2em; font-weight: normal; line-height: 1.3em; }
+
+a { text-decoration: none; }
+
+textarea { font-family: Arial, sans-serif; height: 5em; }
+
+.ruler { visibility: hidden; }
+
+.socrata-icon::before { display: none !important; }
+
+.aria-not-displayed { border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; }
+
+#launcher { visibility: hidden !important; }
+
+html, body { background-color: rgb(247, 247, 247); height: 100%; padding: 0px; }
+
+.siteOuterWrapper { min-height: 100%; }
+
+.siteInnerWrapper { margin: 0px auto; min-height: 100%; padding-bottom: 5em; }
+
+#siteHeader .appLogo { float: left; margin: 0px; padding: 0.3em 0.6em; }
+
+#siteHeader .appLogo a { background-color: transparent; background-position: 0px 0px; background-repeat: no-repeat; display: block; text-align: left; text-indent: -9999px; background-image: url("https://data.seattle.gov/frontend/P25-HF-1/stylesheets/images/common/logo_with_name.png"); background-size: contain; height: 34px; width: 129px; }
+
+#siteHeader .siteUserNav { float: right; margin: 1.3em; }
+
+#siteHeader .siteUserNav li { display: block; float: left; margin-left: 1.5em; }
+
+#siteHeader .siteUserNav li a { text-decoration: none; color: rgb(0, 0, 0); font-size: 1.1em; }
+
+#siteHeader .siteUserNav li a:hover, #siteHeader .siteUserNav li a:focus, #siteHeader .siteUserNav li a:active { text-decoration: underline; }
+
+#siteHeader .siteUserNav li a .ss-icon { display: none; }
+
+#siteHeader .siteUserNav li.signUpLink a { font-weight: bold; }
+
+#siteHeader .siteUserNav.loggedInNav li.signUpLink, #siteHeader .siteUserNav.loggedInNav li.signInLink { display: none; }
+
+#siteHeader .siteMainNav { float: left; margin-bottom: 1em; margin-left: 1.4em; }
+
+#siteHeader .siteMainNav li { display: block; float: left; margin-right: 0.4em; }
+
+#siteHeader .siteMainNav li a { background: linear-gradient(270deg, rgb(25, 83, 139), rgb(4, 38, 86)) rgb(25, 83, 139); border: 1px solid rgb(4, 38, 86); border-radius: 0.2em; color: rgb(255, 255, 255); display: block; font-size: 1.3em; padding: 0.5em 1em; }
+
+#siteHeader form.search { float: right; margin-right: 1em; }
+
+#siteFooter { overflow: hidden; }
+
+body > #siteFooter { height: 4.1em; margin-top: -4.2em; }
+
+#siteFooter .footerLogo { background-color: transparent; background-position: 0px 0px; background-repeat: no-repeat; display: block; text-align: left; text-indent: -9999px; background-image: url("https://data.seattle.gov/frontend/P25-HF-1/stylesheets/images/common/logo_with_name.png"); background-size: contain; float: left; height: 20px; margin: 1em; width: 89px; }
+
+#siteFooter .siteFooterNav { float: right; margin: 1.5em; }
+
+#siteFooter .siteFooterNav li { display: block; float: left; margin-left: 2.5em; }
+
+#siteFooter .siteFooterNav li a { text-decoration: none; color: rgb(68, 68, 68); font-size: 1.1em; }
+
+#siteFooter .siteFooterNav li a:hover, #siteFooter .siteFooterNav li a:focus, #siteFooter .siteFooterNav li a:active { text-decoration: underline; }
+
+#siteFooter .siteFooterNav li a.powered-by { background: url("https://data.seattle.gov/frontend/P25-HF-1/stylesheets/images/common/small_logo.png") left center no-repeat scroll; padding: 0.5em 0em 0.5em 2em; }
+
+.contentBox { background-color: rgb(255, 255, 255); border: 1px solid rgb(206, 206, 206); border-radius: 0.2em; margin: 0px 0px 2em; padding: 1.5em; max-width: 100%; }
+
+.contentBox.fixedWidth { max-width: 100em; margin: 1em auto; }
+
+.contentBox.withLeftNavigation { margin-left: 19em; }
+
+.contentBox h1 { font-size: 1.8em; }
+
+.contentBox h2 { color: rgb(68, 68, 68); font-size: 1.5em; margin-top: 1em; }
+
+.contentBox .jqmWindow { display: none; left: 50%; min-height: 0px; position: fixed; top: 0px; }
+
+.modalContentBox { background-color: rgb(255, 255, 255); border: 4px solid rgb(206, 206, 206); border-radius: 0.4em; margin: 1em auto; max-width: 48em; }
+
+.modalContentBox.wide { max-width: 80em; }
+
+.modalContentBox.wide .firstColumn { border-right: 2px solid rgb(206, 206, 206); padding-right: 2em; }
+
+.modalContentBox .contentHeader h1 { font-size: 1.8em; margin-top: 1em; text-align: center; }
+
+#jqmAlert .finishButtons { padding-top: 1em; text-align: right; }
+
+#noticeContainer { margin: 0px auto; position: initial; text-align: center; z-index: 10100; }
+
+#noticeContainer:empty { display: none; }
+
+#noticeContainer > div { margin: 1em; position: relative; }
+
+#noticeContainer > div span, #noticeContainer > div a { margin: 0px 0.2em; }
+
+#noticeContainer > div .close { margin: 0px; position: absolute; right: 0px; top: 4px; }
+
+#errorBox { margin: 0px auto; width: 50%; }
+
+.leftNavBox { background-color: rgb(255, 255, 255); border: 1px solid rgb(206, 206, 206); border-radius: 0.2em; width: 14em; padding: 1.5em; position: absolute; }
+
+.leftNavBox .navigationList li { border-top: 1px solid rgb(206, 206, 206); line-height: 1.4em; font-size: 1.4em; padding: 0.25em 0px; }
+
+.leftNavBox .navigationList li:first-child { border-top: none; }
+
+.leftNavBox .navigationList .icon { float: left; margin: 0.3em 0.5em 0px 0px; }
+
+body.controller_connector .leftNavBox { width: 17em; }
+
+.asset-icon { margin-bottom: 2px; }
+
+.asset-icon[data-display-type] { background: none; text-indent: 0px; }
+
+.asset-icon[data-display-type]::before { font-family: socrata-icons; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; font-size: 13px; }
+
+.asset-icon[data-display-type="calendar"]::before { content: ""; color: blue; }
+
+.asset-icon[data-display-type="datasets"]::before, .asset-icon[data-display-type="table"]::before, .asset-icon[data-display-type="blist"]::before { content: ""; color: rgb(207, 117, 50); }
+
+.asset-icon[data-display-type="charts"]::before, .asset-icon[data-display-type="chart"]::before { content: ""; color: rgb(230, 190, 101); }
+
+.asset-icon[data-display-type="filters"]::before, .asset-icon[data-display-type="filter"]::before { content: ""; color: rgb(141, 183, 223); }
+
+.asset-icon[data-display-type="blob"]::before { content: ""; color: rgb(136, 187, 80); }
+
+.asset-icon[data-display-type="maps"]::before, .asset-icon[data-display-type="map"]::before { content: ""; color: rgb(97, 152, 88); }
+
+.asset-icon[data-display-type="unpublished"]::before { content: ""; color: blue; }
+
+.settings-icon { background: none; text-indent: 0px; }
+
+.settings-icon::before { font-family: socrata-icons; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; font-size: 13px; color: gray; content: ""; }
+
+.clearBoth { clear: both; }
+
+.clearfix::after { clear: both; content: "."; display: block; height: 0px; visibility: hidden; }
+
+.clearfix { display: inline-block; }
+
+.clearfix { display: block; }
+
+* html .clearfix { height: 1%; }
+
+.textPrompt.prompt, .textPrompt.example { color: rgb(136, 136, 136); }
+
+.clipText { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.hiddenTextField { height: 0px; left: -10px; top: -1px; position: absolute; z-index: -100; background-color: transparent !important; border-color: transparent !important; width: 1px !important; }
+
+.accessible { height: 1px; left: -9999px; overflow: hidden; position: absolute; top: auto; width: 1px; }
+
+a:focus, a:active { text-decoration: underline; }
+
+a:focus img, a:active img { box-shadow: rgba(0, 40, 180, 0.3) 0px 0px 4px; }
+
+#jqmAlert { display: none; left: 50%; margin-left: -15em; min-height: 0px; position: fixed; top: 7em; width: 30em; }
+
+#jqmAlert, #jqmAlert .mainContent { background-image: none; }
+
+#jqmAlert .alertMessage { font-size: 1.3em; }
+
+.jqmOverlay { background-color: rgb(0, 0, 0); }
+
+a { color: rgb(59, 89, 152); text-decoration: none; }
+
+p a:hover, p a:focus, p a:active { text-decoration: underline; }
+
+a:visited { color: rgb(37, 58, 96); }
+
+#templates, .translations { display: none; }
+
+.hide { display: none !important; }
+
+.invisible { visibility: hidden; }
+
+.obscure { clip: rect(1px, 1px, 1px, 1px); position: absolute !important; }
+
+.mainError { color: red; font-size: 1.2em; padding: 0.25em 0px; }
+
+.flash.notice, .flash.warning { border: 1px solid rgb(236, 215, 118); border-radius: 0.2em; font-size: 1.5em; font-weight: bold; padding: 0.7em 1em; margin: 1em 0px; background-color: rgb(254, 248, 220); color: rgb(122, 103, 16); }
+
+.flash.notice .close, .flash.warning .close { color: rgb(122, 103, 16); }
+
+.flash.error { border: 1px solid rgb(126, 24, 24); border-radius: 0.2em; font-size: 1.5em; font-weight: bold; padding: 0.7em 1em; margin: 1em 0px; background-color: rgb(233, 185, 185); color: rgb(89, 6, 6); }
+
+.skip-links { position: absolute; left: 5px; top: -495px; }
+
+.skip-links a { border-radius: 0.2em; box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0.5em; background-color: rgb(25, 83, 139); color: rgb(255, 255, 255); font-size: 1.5em; font-weight: bold; padding: 0.6em; position: absolute; width: 30em; }
+
+.skip-links a:focus, .skip-links a:active { top: 500px; z-index: 10000; }
+
+.skip-links a:visited { color: rgb(235, 235, 235); }
+
+#newModals { display: none; }
+
+.modalDialog { background-color: rgb(255, 255, 255); border: 1px solid rgb(153, 153, 153); border-radius: 0.4em; box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 4px; display: none; left: 50%; margin-left: -20em; padding: 2em; position: fixed; top: 6em; width: 36em; z-index: 9999; }
+
+.modalDialog .loadingOverlay { background-color: rgb(204, 204, 204); opacity: 0.5; z-index: 3001; }
+
+.modalDialog .modalDialogClose { background-color: transparent; background-position: 0px 0px; background-repeat: no-repeat; display: block; text-align: left; text-indent: -9999px; background-image: url("https://data.seattle.gov/frontend/P25-HF-1/stylesheets/images/common/close.png"); height: 13px; width: 13px; position: absolute; right: 1em; top: 1em; }
+
+.modalDialog h2 { color: rgb(176, 30, 45); font-size: 1.9em; font-weight: normal; margin-bottom: 0.8em; }
+
+.modalDialog p { font-size: 1.2em; }
+
+.modalDialog p.modalParagraph { margin-bottom: 1em; }
+
+.modalDialog .actions { margin-top: 2em; }
+
+.modalDialog .actions li { float: right; }
+
+.socrataModal { display: none; background-color: rgba(0, 0, 0, 0.6); height: 100%; left: 0px; opacity: 0; perspective: 700px; position: fixed; top: 0px; transition-duration: 0.3s; transition-property: opacity; width: 100%; z-index: 3100; }
+
+.socrataModal .cornerClose { color: rgb(51, 51, 51); font-size: 1.2em; position: absolute; right: 2.5em; text-rendering: optimizelegibility; top: 1.5em; transition-duration: 0.3s; transition-property: color; }
+
+.socrataModal .cornerClose:hover, .socrataModal .cornerClose:focus, .socrataModal .cornerClose:active { color: rgb(102, 102, 102); }
+
+.socrataModal.shown { opacity: 1; }
+
+.socrataModal .socrataModalWrapper { height: 100%; }
+
+.socrataModal .socrataModalWrapper .modalContents { opacity: 0; transition-duration: 0.5s; }
+
+.socrataModal .socrataModalWrapper .modalContents.shown { opacity: 1; }
+
+.socrataModal .socrataModalWrapper .modalContents.pushed { opacity: 0; }
+
+.socrataModal .socrataDialog { background-color: rgb(255, 255, 255); border-radius: 0.2em; box-shadow: rgba(0, 0, 0, 0.4) 0px 0.3em 0.3em; margin: 4em auto; min-height: 3em; padding: 1.5em; position: relative; top: 0px; width: 70%; }
+
+.stage .icon { display: inline-block; margin-right: 0.5em; }
+
+.stage .icon span { border-radius: 9999px; background-color: rgb(222, 222, 222); display: inline-block; height: 8px; width: 8px; margin: 0px 1px; }
+
+.stage .icon span.on { background-color: rgb(0, 151, 43); }
+
+.stage .icon span.rejected { background-color: rgb(151, 43, 0); }
+
+#styleReference { display: none; }
+
+#styleReference .itemHighlight { background-color: rgb(221, 234, 240); }
+
+.asset-icon { margin-bottom: 2px; }
+
+.asset-icon[data-display-type] { background: none; text-indent: 0px; }
+
+.asset-icon[data-display-type]::before { font-family: socrata-icons; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; font-size: 13px; }
+
+.asset-icon[data-display-type="calendar"]::before { content: ""; color: blue; }
+
+.asset-icon[data-display-type="datasets"]::before, .asset-icon[data-display-type="table"]::before, .asset-icon[data-display-type="blist"]::before { content: ""; color: rgb(207, 117, 50); }
+
+.asset-icon[data-display-type="charts"]::before, .asset-icon[data-display-type="chart"]::before { content: ""; color: rgb(230, 190, 101); }
+
+.asset-icon[data-display-type="filters"]::before, .asset-icon[data-display-type="filter"]::before { content: ""; color: rgb(141, 183, 223); }
+
+.asset-icon[data-display-type="blob"]::before { content: ""; color: rgb(136, 187, 80); }
+
+.asset-icon[data-display-type="maps"]::before, .asset-icon[data-display-type="map"]::before { content: ""; color: rgb(97, 152, 88); }
+
+.asset-icon[data-display-type="unpublished"]::before { content: ""; color: blue; }
+
+.settings-icon { background: none; text-indent: 0px; }
+
+.settings-icon::before { font-family: socrata-icons; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; font-size: 13px; color: gray; content: ""; }
+
+form input[type="text"], form input.textInput, form textarea, form input[type="password"], form input[type="email"], input[type="text"], form input[type="file"] { color: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 1.2em; line-height: 1.2em; padding: 0.2em; }
+
+form input[type="text"], form input.textInput, form textarea, form input[type="password"], form input[type="email"], input[type="text"] { border: 1px solid rgb(202, 202, 202); }
+
+label.error { color: red; font-size: 1em; }
+
+form input[type="text"].text_wide, form textarea.text_wide { width: 30em; }
+
+.errorMessage { color: red; }
+
+.commonForm label { font-size: 1.2em; padding-left: 12px; }
+
+.commonForm label.required::before { content: "* "; color: rgb(196, 40, 45); font-size: 1.2em; }
+
+.commonForm label.requiredBlank::before { content: " "; }
+
+.commonForm .formSection { clear: both; margin-bottom: 2em; padding-left: 1em; }
+
+.commonForm .formSection .formHeader { margin-left: -1em; }
+
+.commonForm .formHeader { clear: both; display: block; font-weight: bold; margin-bottom: 0.5em; }
+
+.commonForm textarea { font-size: 1.2em; }
+
+.commonForm input[type="text"], .commonForm input[type="password"], .commonForm textarea, .commonForm .ui-slider { border-radius: 0.3em; box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 2px; }
+
+.commonForm input[type="text"]:hover, .commonForm input[type="password"]:hover, .commonForm textarea:hover, .commonForm .ui-slider:hover { box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 2px; }
+
+.commonForm input[type="text"]:focus, .commonForm input[type="text"]:active, .commonForm input[type="password"]:focus, .commonForm input[type="password"]:active, .commonForm textarea:focus, .commonForm textarea:active, .commonForm .ui-slider:focus, .commonForm .ui-slider:active { box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 2px; }
+
+.commonForm .ui-slider { background: linear-gradient(270deg, rgb(255, 255, 255), rgb(240, 240, 240)) rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); font-size: 1.2em; margin-top: 3px; }
+
+.commonForm .ui-slider .ui-slider-handle { background: linear-gradient(270deg, rgb(254, 254, 254), rgb(242, 242, 242)) rgb(254, 254, 254); border-radius: 0.3em; border: 1px solid rgb(153, 153, 153); box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 2px; cursor: pointer; }
+
+.commonForm .ui-slider .ui-slider-handle:hover { background: linear-gradient(270deg, rgb(238, 60, 57), rgb(176, 30, 45)) rgb(238, 60, 57); box-shadow: rgba(0, 0, 0, 0.7) 0px 0px 2px; border: 1px solid rgb(176, 30, 45); }
+
+.commonForm .ui-slider .ui-slider-handle:active, .commonForm .ui-slider .ui-slider-handle:focus { background: linear-gradient(270deg, rgb(238, 60, 57), rgb(176, 30, 45)) rgb(238, 60, 57); border: 1px solid rgb(241, 202, 126); }
+
+.commonForm .ui-slider .ui-slider-handle.disabled { background: linear-gradient(270deg, rgb(230, 230, 230), rgb(204, 204, 204)) rgb(230, 230, 230); border: 1px solid rgb(204, 204, 204); cursor: default; }
+
+.commonForm .colorControl { background: url("https://data.seattle.gov/frontend/P25-HF-1/images/colorpicker/select_arrow.png") right bottom no-repeat transparent; border: 1px solid rgb(202, 202, 202); display: inline-block; height: 18px; text-indent: -9999px; width: 20px; }
+
+.commonForm div.required, .commonForm span.required { padding: 0.1em 0.1em 0.1em 1em; }
+
+.commonForm div.required::before, .commonForm span.required::before { content: "* "; color: rgb(196, 40, 45); font-size: 1.2em; }
+
+.commonForm div.line { clear: both; line-height: 1.8em; min-height: 1.8em; padding-top: 0.4em; }
+
+.commonForm div.line > *, .commonForm div.line .fieldContainer > * { display: inline-block; float: left; margin-right: 0.2em; }
+
+.commonForm div.line > .span, .commonForm div.line .fieldContainer > .span { height: 1.8em; line-height: 1.8em; }
+
+.commonForm div.line label { margin-right: 1em; }
+
+.commonForm div.line .uniform.selector { margin-left: -2px; margin-top: -2px; }
+
+.commonForm div.line label.error { clear: both; display: block; float: none; font-size: 1.1em; }
+
+.commonForm div.line .additionalHelp { clear: both; color: rgb(102, 102, 102); display: block; float: none; font-size: 1.1em; font-style: italic; }
+
+.commonForm div.line span.error { color: red; display: block; line-height: 1.7em; padding-left: 12px; }
+
+.commonForm .finishButtons { margin-top: 1em; }
+
+.commonForm .finishButtons li { float: left; }
+
+.blist-combo-wrapper { cursor: default; position: relative; }
+
+.blist-combo-wrapper.active { z-index: 100; }
+
+.blist-combo-wrapper .blist-combo { overflow: hidden; position: relative; }
+
+.blist-combo-wrapper .blist-combo .blist-combo-value { float: none; overflow: hidden; }
+
+.blist-combo-dd { background: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px; display: none; max-height: 200px; overflow: hidden auto; position: absolute; z-index: 5000; }
+
+.blist-combo-dd li { font-size: 1.2em; padding: 4px 5px; white-space: nowrap; }
+
+.blist-combo-dd li.selected { background-color: rgb(227, 236, 247); }
+
+div.uniform.selector, div.uniform.selector div, .blist-combo, .blist-combo-value, div.uniform.checker span, div.uniform.radio span, div.uniform.uploader, div.uniform.uploader span.action { background-image: url("https://data.seattle.gov/frontend/P25-HF-1/stylesheets/images/common/uniform_sprite.png"); background-repeat: no-repeat; }
+
+div.uniform.checker, div.uniform.radio { margin-right: 1em; }
+
+div.uniform.selector *, div.uniform.radio *, div.uniform.checker *, div.uniform.uploader * { margin: 0px; padding: 0px; }
+
+div.uniform.selector select:focus, div.uniform.radio input:focus, div.uniform.checker input:focus, div.uniform.uploader input:focus { outline: 0px; }
+
+div.uniform.selector, .blist-combo { background-position: -483px -130px; display: inline-block; font-size: 1.2em; line-height: 26px; height: 26px; position: relative; vertical-align: bottom; }
+
+div.uniform.selector div, .blist-combo div { background-position: right 0px; cursor: pointer; margin-left: 10px; padding: 0px 25px 0px 2px; }
+
+div.uniform.selector div span, .blist-combo div span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: rgb(102, 102, 102); display: block; height: 26px; line-height: 26px; text-shadow: rgb(255, 255, 255) 0px 1px 0px; }
+
+div.uniform.selector div.container, .blist-combo div.container { background-image: none; margin: 0px; position: absolute; padding: 0px; width: 100%; }
+
+div.uniform.selector select, .blist-combo select { border: 1px solid rgb(255, 255, 255); font-size: 1em; opacity: 0; padding-right: 0.7em; position: relative; cursor: pointer; }
+
+div.uniform.selector:active, div.uniform.selector.active, .blist-combo:active, .blist-combo.active { background-position: -483px -156px; }
+
+div.uniform.selector:active .container div, div.uniform.selector.active .container div, .blist-combo:active .container div, .blist-combo.active .container div { background-position: right -26px; }
+
+div.uniform.selector.focus, div.uniform.selector.hover, div.uniform.selector:hover, .blist-combo.focus, .blist-combo.hover, .blist-combo:hover { background-position: -483px -182px; }
+
+div.uniform.selector.focus .container div, div.uniform.selector.hover .container div, div.uniform.selector:hover .container div, .blist-combo.focus .container div, .blist-combo.hover .container div, .blist-combo:hover .container div { background-position: right -52px; }
+
+div.uniform.selector.focus:active, div.uniform.selector.focus.active, .blist-combo.focus:active, .blist-combo.focus.active { background-position: -483px -208px; }
+
+div.uniform.selector.focus:active .container div, div.uniform.selector.focus.active .container div, .blist-combo.focus:active .container div, .blist-combo.focus.active .container div { background-position: right -78px; }
+
+div.uniform.selector:hover:active, div.uniform.selector.active:hover, .blist-combo:hover:active, .blist-combo.active:hover { background-position: -483px -208px; }
+
+div.uniform.selector:hover:active .container div, div.uniform.selector.active:hover .container div, .blist-combo:hover:active .container div, .blist-combo.active:hover .container div { background-position: right -78px; }
+
+div.uniform.selector.disabled, .blist-combo.disabled { background-position: -483px -234px; }
+
+div.uniform.selector.disabled .container div, .blist-combo.disabled .container div { background-position: right -104px; }
+
+div.uniform.selector.disabled .container div span, .blist-combo.disabled .container div span { color: rgb(187, 187, 187); }
+
+.blist-combo div span { float: left; }
+
+.blist-combo-focused { background-position: -483px -182px; }
+
+.blist-combo-focused div { background-position: right -52px; }
+
+.blist-combo-focused:active, .blist-combo-focused.active { background-position: -483px -208px; }
+
+.blist-combo-focused:active div, .blist-combo-focused.active div { background-position: right -78px; }
+
+div.uniform.checker { display: inline-block; height: 19px; position: relative; vertical-align: bottom; width: 19px; }
+
+div.uniform.checker input { display: inline-block; height: 19px; opacity: 0; width: 19px; }
+
+div.uniform.checker span { background-position: 0px -260px; display: block; float: left; height: 19px; text-align: center; width: 19px; }
+
+div.uniform.checker:active span, div.uniform.checker.active span { background-position: -19px -260px; }
+
+div.uniform.checker.focus span, div.uniform.checker:hover span { background-position: -38px -260px; }
+
+div.uniform.checker.focus:active span, div.uniform.checker:active:hover span, div.uniform.checker.active:hover span, div.uniform.checker.focus.active span { background-position: -57px -260px; }
+
+div.uniform.checker span.checked { background-position: -76px -260px; }
+
+div.uniform.checker:active span.checked, div.uniform.checker.active span.checked { background-position: -95px -260px; }
+
+div.uniform.checker.focus span.checked, div.uniform.checker:hover span.checked { background-position: -114px -260px; }
+
+div.uniform.checker.focus:active span.checked, div.uniform.checker:hover:active span.checked { background-position: -133px -260px; }
+
+div.uniform.checker.active:hover span.checked, div.uniform.checker.active.focus span.checked { background-position: -133px -260px; }
+
+div.uniform.checker.disabled span, div.uniform.checker.disabled:active span, div.uniform.checker.disabled.active span { background-position: -152px -260px; }
+
+div.uniform.checker.disabled span.checked, div.uniform.checker.disabled:active span.checked, div.uniform.checker.disabled.active span.checked { background-position: -171px -260px; }
+
+div.uniform.radio { display: inline-block; height: 18px; position: relative; vertical-align: bottom; width: 18px; }
+
+div.uniform.radio input { display: inline-block; height: 18px; opacity: 0; text-align: center; width: 18px; }
+
+div.uniform.radio span { background-position: 0px -279px; display: block; float: left; height: 18px; text-align: center; width: 18px; }
+
+div.uniform.radio:active span, div.uniform.radio.active span { background-position: -18px -279px; }
+
+div.uniform.radio.focus span, div.uniform.radio:hover span { background-position: -36px -279px; }
+
+div.uniform.radio.focus:active span, div.uniform.radio:active:hover span { background-position: -54px -279px; }
+
+div.uniform.radio.active:hover span, div.uniform.radio.active.focus span { background-position: -54px -279px; }
+
+div.uniform.radio span.checked { background-position: -72px -279px; }
+
+div.uniform.radio:active span.checked, div.uniform.radio.active span.checked { background-position: -90px -279px; }
+
+div.uniform.radio.focus span.checked, div.uniform.radio:hover span.checked { background-position: -108px -279px; }
+
+div.uniform.radio.focus:active span.checked, div.uniform.radio:hover:active span.checked, div.uniform.radio.focus.active span.checked, div.uniform.radio.active:hover span.checked { background-position: -126px -279px; }
+
+div.uniform.radio.disabled span, div.uniform.radio.disabled:active span, div.uniform.radio.disabled.active span { background-position: -144px -279px; }
+
+div.uniform.radio.disabled span.checked, div.uniform.radio.disabled:active span.checked, div.uniform.radio.disabled.active span.checked { background-position: -162px -279px; }
+
+div.uniform.uploader { background-position: 0px -297px; cursor: pointer; height: 28px; overflow: hidden; position: relative; width: 190px; }
+
+div.uniform.uploader span.action { background-color: rgb(255, 255, 255); background-position: right -409px; cursor: pointer; display: inline; float: left; font-size: 1.1em; font-weight: bold; height: 24px; line-height: 24px; overflow: hidden; padding: 2px 0px; text-align: center; text-shadow: rgb(255, 255, 255) 0px 1px 0px; width: 85px; }
+
+div.uniform.uploader span.filename { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; border-right: 1px solid rgb(187, 187, 187); color: rgb(119, 119, 119); display: block; float: left; font-size: 1.1em; height: 24px; line-height: 24px; margin: 2px 0px 2px 2px; padding: 0px 10px; width: 82px; }
+
+div.uniform.uploader input[type="file"] { bottom: 0px; float: right; height: 28px; opacity: 0; position: absolute; right: 0px; top: 0px; width: 190px; }
+
+div.uniform.uploader.focus, div.uniform.uploader.hover, div.uniform.uploader:hover { background-position: 0px -353px; }
+
+div.uniform.uploader.focus span.action, div.uniform.uploader.hover span.action, div.uniform.uploader:hover span.action { background-position: right -437px; }
+
+div.uniform.uploader.active span.action, div.uniform.uploader:active span.action { background-position: right -465px; }
+
+div.uniform.uploader.focus.active span.action, div.uniform.uploader:focus.active span.action, div.uniform.uploader.focus:active span.action, div.uniform.uploader:focus:active span.action { background-position: right -493px; }
+
+div.uniform.uploader.disabled { background-position: 0px -325px; }
+
+div.uniform.uploader.disabled span.action { background-position: right -381px; color: rgb(170, 170, 170); }
+
+div.uniform.uploader.disabled span.filename { border-color: rgb(221, 221, 221); color: rgb(170, 170, 170); }
+
+#signup .password .icon { background-color: transparent; background-position: 0px 0px; background-repeat: no-repeat; display: block; text-align: left; text-indent: -9999px; background-image: url("https://data.seattle.gov/frontend/P25-HF-1/stylesheets/images/icons/menu_icons.png?3"); height: 13px; width: 13px; }
+
+#signup .password .icon { background-position: 0px 0px; }
+
+#signup .password.none .icon { background-position: 0px 13px; }
+
+#signup .password.downArrow .icon, #signup .password.downArrowNoHover .icon, #signup .password.headerSortUp .icon { background-position: 0px 0px; }
+
+#signup .password.downArrow:hover .icon, #signup .password.downArrowHighlight .icon, #signup .password.collapsed .icon { background-position: 0px -13px; }
+
+#signup .password.upArrow .icon, #signup .password.upArrowNoHover .icon, #signup .password.headerSortDown .icon { background-position: 0px -26px; }
+
+#signup .password.upArrow:hover .icon, #signup .password.upArrowHighlight .icon, #signup .password.expanded .icon { background-position: 0px -39px; }
+
+#signup .password.rightArrow .icon, #signup .password.next .icon { background-position: 0px -52px; }
+
+#signup .password.rightArrow:hover .icon, #signup .password.rightArrowHighlight .icon { background-position: 0px -65px; }
+
+#signup .password.leftArrow .icon, #signup .password.leftArrowNoHover .icon, #signup .password.previous .icon { background-position: 0px -78px; }
+
+#signup .password.leftArrow:hover .icon, #signup .password.leftArrowHighlight .icon { background-position: 0px -91px; }
+
+#signup .password.add .icon { background-position: 0px -104px; }
+
+#signup .password.search .icon { background-position: 0px -117px; }
+
+#signup .password.about .icon { background-position: 0px -130px; }
+
+#signup .password.fullscreen .icon { background-position: 0px -143px; }
+
+#signup .password.share .icon { background-position: 0px -156px; }
+
+#signup .password.checked .icon { background-position: 0px -169px; }
+
+#signup .password.iconView .icon { background-position: 0px -182px; }
+
+#signup .password.listView .icon { background-position: 0px -195px; }
+
+#signup .password.fatrowView .icon { background-position: 0px -208px; }
+
+#signup .password.gridView .icon { background-position: 0px -221px; }
+
+#signup .password.typeFilter .icon { background-position: 0px -234px; }
+
+#signup .password.typeChart .icon { background-position: 0px -247px; }
+
+#signup .password.typeMap .icon { background-position: 0px -260px; }
+
+#signup .password.typeBlist .icon { background-position: 0px -273px; }
+
+#signup .password.feed .icon { background-position: 0px -286px; }
+
+#signup .password.typeApi .icon, #signup .password.embed .icon { background-position: 0px -299px; }
+
+#signup .password.views .icon { background-position: 0px -312px; }
+
+#signup .password.downloads .icon { background-position: 0px -325px; }
+
+#signup .password.delicious .icon { background-position: 0px -338px; }
+
+#signup .password.digg .icon { background-position: 0px -351px; }
+
+#signup .password.facebook .icon { background-position: 0px -364px; }
+
+#signup .password.twitter .icon { background-position: 0px -377px; }
+
+#signup .password.email .icon { background-position: 0px -390px; }
+
+#signup .password.rateUp .icon { background-position: 0px -403px; }
+
+#signup .password.ratedUp .icon { background-position: 0px -416px; }
+
+#signup .password.rateDown .icon { background-position: 0px -429px; }
+
+#signup .password.ratedDown .icon { background-position: 0px -442px; }
+
+#signup .password.typeForm .icon { background-position: 0px -455px; }
+
+#signup .password.typeCalendar .icon { background-position: 0px -468px; }
+
+#signup .password.typeBlob .icon { background-position: 0px -481px; }
+
+#signup .password.typeGrouped .icon { background-position: 0px -494px; }
+
+#signup .password.close .icon, #signup .password.remove .icon { background-position: 0px -507px; }
+
+#signup .password.alert .icon, #signup .password.warning .icon { background-position: 0px -520px; }
+
+#signup .password.subscribe .icon { background-position: 0px -533px; }
+
+#signup .password.start .icon { background-position: 0px -546px; }
+
+#signup .password.end .icon { background-position: 0px -559px; }
+
+#signup .password.options .icon { background-position: 0px -572px; }
+
+#signup .password.typeHref .icon { background-position: 0px -585px; }
+
+#signup .password.error .icon { background-position: 0px -598px; }
+
+#signup .password.typeUnpublished .icon { background-position: 0px -611px; }
+
+#signup .password.typeMeasure .icon { background-position: 0px -624px; }
+
+#signup .password .icon { display: inline-block; position: relative; top: 2px; left: 3px; }
+
+ul.menu { background-color: rgb(236, 236, 236); border-top: 1px solid rgb(141, 141, 141); border-right: 1px solid rgb(141, 141, 141); border-left: 1px solid rgb(141, 141, 141); border-image: initial; border-bottom: none; display: none; margin-bottom: 9px; position: absolute; z-index: 200; }
+
+ul.menu.shown { display: block; }
+
+ul.menu li { display: block; padding: 4px 0px; }
+
+ul.menu li.sectionTitle { color: rgb(149, 147, 147); font-size: 1.1em; line-height: 1.2em; padding-left: 30px; padding-right: 10px; }
+
+ul.menu li a { color: rgb(51, 51, 51); display: block; font-size: 1.1em; height: 15px; line-height: 15px; overflow: hidden; padding: 0.2em 10px 0.2em 30px; text-decoration: none; }
+
+ul.menu li.disabled a { color: rgb(153, 153, 153); cursor: auto; }
+
+ul.menu.noicon li a { padding-left: 5px; }
+
+ul.menu li > a > .highlight { display: block; overflow: hidden; }
+
+ul.menu li > a:hover { background-color: rgb(202, 202, 202); }
+
+ul.menu li.disabled > a:hover { background-color: transparent; }
+
+ul.menu li.separator { border-top: 1px solid rgb(153, 153, 153); height: 0px; line-height: 0; margin: -1px 10px -2px; padding: 0px; }
+
+ul.menu li.loading { background-image: url("https://data.seattle.gov/frontend/P25-HF-1/images/throbber.gif"); background-position: center center; background-repeat: no-repeat; height: 16px; margin: 0px auto; width: 16px; }
+
+ul.menu li.footer { background-image: url("https://data.seattle.gov/frontend/P25-HF-1/stylesheets/images/widgets/menu/corner_light_left_bottom.png"); background-position: left bottom; background-repeat: no-repeat; bottom: -9px; height: 9px; margin: 0px -1px; padding: 0px; position: absolute; width: 100%; z-index: -1; }
+
+ul.menu li.footer .outerWrapper { background-image: url("https://data.seattle.gov/frontend/P25-HF-1/stylesheets/images/widgets/menu/corner_light_right_bottom.png"); background-position: right bottom; background-repeat: no-repeat; height: 9px; margin-left: 9px; margin-right: -2px; padding-right: 9px; }
+
+ul.menu li.footer .innerWrapper { background-color: rgb(236, 236, 236); border-bottom: 1px solid rgb(141, 141, 141); display: block; height: 8px; }
+
+ul.menu a.externalLink .highlight { background-image: url("https://data.seattle.gov/frontend/P25-HF-1/stylesheets/images/content/external.png"); background-position: right 0px; background-repeat: no-repeat; height: 15px; padding-right: 11px; }
+
+ul.menu a.externalLink:hover .highlight { background-position: right -15px; }
+
+ul.menu li.submenu { position: relative; }
+
+ul.menu li.submenu .menu { left: 97%; top: 0px; }
+
+ul.menu a.submenuLink .highlight { background-image: url("https://data.seattle.gov/frontend/P25-HF-1/stylesheets/images/widgets/menu/submenu_arrow.png"); background-position: right 0.2em; background-repeat: no-repeat; }
+
+ul.menu.optionMenu, ul.menu.checkboxMenu { background-color: rgb(202, 202, 202); }
+
+ul.menu.optionMenu li, ul.menu.checkboxMenu li { background-color: rgb(236, 236, 236); margin-left: 30px; }
+
+ul.menu.optionMenu li .sectionTitle, ul.menu.checkboxMenu li .sectionTitle { margin-bottom: -1px; padding-left: 5px; }
+
+ul.menu.optionMenu li .separator, ul.menu.checkboxMenu li .separator { height: 2px; margin-right: 0px; padding: 0px; }
+
+ul.menu.optionMenu li a, ul.menu.checkboxMenu li a { margin-left: -30px; padding-left: 33px; }
+
+ul.menu.optionMenu li.footer, ul.menu.checkboxMenu li.footer { background-color: transparent; background-image: url("https://data.seattle.gov/frontend/P25-HF-1/stylesheets/images/widgets/menu/corner_dark_left_bottom.png"); margin-left: -1px; }
+
+ul.menu.optionMenu li.footer .colorWrapper, ul.menu.checkboxMenu li.footer .colorWrapper { background-color: rgb(202, 202, 202); display: block; height: 8px; width: 22px; }
+
+ul.menu.optionMenu li.button, ul.menu.checkboxMenu li.button { margin: 0px 0px 0px 30px; }
+
+ul.menu.optionMenu li.button a, ul.menu.checkboxMenu li.button a { margin: 0px; }
+
+ul.menu.multilevelMenu { width: 37em; }
+
+ul.menu.multilevelMenu > li { border-bottom: 1px solid rgb(202, 202, 202); border-top: 1px solid rgb(236, 236, 236); padding: 0px; width: 50%; }
+
+ul.menu.multilevelMenu > li.active { border-top: 1px solid rgb(141, 141, 141); border-bottom: 1px solid rgb(141, 141, 141); border-image: initial; border-left: none; border-right: none; }
+
+ul.menu.multilevelMenu > li.active.first { border-top: 1px solid rgb(202, 202, 202); }
+
+ul.menu.multilevelMenu li dt a { color: rgb(51, 51, 51); font-size: 1.5em; font-weight: bold; margin: 0px; padding: 0.3em; text-decoration: none; }
+
+ul.menu.multilevelMenu li.active dt { background-color: rgb(202, 202, 202); position: relative; z-index: 201; }
+
+ul.menu.multilevelMenu > li.active.first dt { margin-top: -1px; padding-top: 1px; }
+
+ul.menu.multilevelMenu dd > ul { background-color: rgb(202, 202, 202); border-left: 1px solid rgb(141, 141, 141); display: none; height: 100%; position: absolute; right: 0px; top: 0px; width: 50%; }
+
+ul.menu.multilevelMenu dd > ul > li > a:hover { background-color: rgb(236, 236, 236); }
+
+ul.menu.multilevelMenu li.active > dl > dd > ul { display: block; }
+
+ul.menu.multilevelMenu dd > ul > li.separator { border-top: 1px solid rgb(236, 236, 236); margin: 0.3em 10px 0.3em 30px; padding: 0px; }
+
+ul.menu.multilevelMenu > li.footer { background-color: transparent; border: none; width: 100%; }
+
+ul.menu.multilevelMenu > li.footer > .outerWrapper { background-image: url("https://data.seattle.gov/frontend/P25-HF-1/stylesheets/images/widgets/menu/corner_dark_right_bottom.png"); border: none; }
+
+ul.menu.multilevelMenu > li.footer > .outerWrapper > .innerWrapper > .colorWrapper { background-color: rgb(202, 202, 202); border-left: 1px solid rgb(141, 141, 141); display: block; float: right; height: 8px; width: 50%; }
+
+ul.menu li a.disabled { color: rgb(141, 141, 141); text-decoration: none; }
+
+ul.menu li.scrollable.hidden { display: none; }
+
+ul.menu li.button { padding: 0px; margin: 0px 1em; }
+
+ul.menu li.button.prev { border-bottom: 1px solid rgb(153, 153, 153); }
+
+ul.menu li.button.next { border-top: 1px solid rgb(153, 153, 153); }
+
+ul.menu li.button a { background-image: none; background-position: left center; background-repeat: no-repeat; margin: 0px -10px; padding-left: 5px; text-indent: -9999px; }
+
+ul.menu li.button .outerWrapper { background-position: right center; background-repeat: no-repeat; padding-right: 5px; }
+
+ul.menu li.button .midWrapper { background-position: left center; background-repeat: repeat-x; }
+
+ul.menu li.button .innerWrapper { background-position: left center; background-repeat: no-repeat; display: block; min-width: 20px; }
+
+ul.menu li.button.prev .innerWrapper { background-image: url("https://data.seattle.gov/frontend/P25-HF-1/stylesheets/images/widgets/dropdown_button/arrow_up.png"); }
+
+ul.menu li.button.next .innerWrapper { background-image: url("https://data.seattle.gov/frontend/P25-HF-1/stylesheets/images/widgets/dropdown_button/arrow_down.png"); }
+
+ul.menu li.button.prev.disabled .innerWrapper { background-image: url("https://data.seattle.gov/frontend/P25-HF-1/stylesheets/images/widgets/dropdown_button/arrow_up_disabled.png"); }
+
+ul.menu li.button.next.disabled .innerWrapper { background-image: url("https://data.seattle.gov/frontend/P25-HF-1/stylesheets/images/widgets/dropdown_button/arrow_down_disabled.png"); }
+
+ul.menu li.button.disabled a:hover { background-image: none; cursor: default; }
+
+ul.menu li.button.disabled a:hover .outerWrapper, ul.menu li.button.disabled a:hover .midWrapper { background-image: none; }
+
+.asset-icon { margin-bottom: 2px; }
+
+.asset-icon[data-display-type] { background: none; text-indent: 0px; }
+
+.asset-icon[data-display-type]::before { font-family: socrata-icons; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; font-size: 13px; }
+
+.asset-icon[data-display-type="calendar"]::before { content: ""; color: blue; }
+
+.asset-icon[data-display-type="datasets"]::before, .asset-icon[data-display-type="table"]::before, .asset-icon[data-display-type="blist"]::before { content: ""; color: rgb(207, 117, 50); }
+
+.asset-icon[data-display-type="charts"]::before, .asset-icon[data-display-type="chart"]::before { content: ""; color: rgb(230, 190, 101); }
+
+.asset-icon[data-display-type="filters"]::before, .asset-icon[data-display-type="filter"]::before { content: ""; color: rgb(141, 183, 223); }
+
+.asset-icon[data-display-type="blob"]::before { content: ""; color: rgb(136, 187, 80); }
+
+.asset-icon[data-display-type="maps"]::before, .asset-icon[data-display-type="map"]::before { content: ""; color: rgb(97, 152, 88); }
+
+.asset-icon[data-display-type="unpublished"]::before { content: ""; color: blue; }
+
+.settings-icon { background: none; text-indent: 0px; }
+
+.settings-icon::before { font-family: socrata-icons; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; font-size: 13px; color: gray; content: ""; }
+
+@keyframes busy-spinner { 
+  100% { transform: rotate(360deg); }
+}
+
+button.button, input.button, a.button { background: linear-gradient(270deg, rgb(254, 254, 254), rgb(242, 242, 242)) rgb(254, 254, 254); border: 1px solid rgb(153, 153, 153); border-radius: 0.2em; cursor: pointer; line-height: 14px; font-family: Arial, sans-serif; color: rgb(51, 51, 51); display: inline-block; font-size: 1.2em; font-weight: bold; height: auto; margin: 0.3em; padding: 0.5em 1em; text-shadow: rgba(255, 255, 255, 0.7) 1px 1px 0px; white-space: nowrap; }
+
+button.button:hover, button.button:focus, input.button:hover, input.button:focus, a.button:hover, a.button:focus { box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0.3em; }
+
+button.button.disabled, input.button.disabled, a.button.disabled { background: linear-gradient(270deg, rgb(252, 252, 252), rgb(248, 248, 248)) rgb(252, 252, 252); border: 1px solid rgb(221, 221, 221); color: rgb(136, 136, 136); cursor: default; }
+
+button.button.disabled:hover, input.button.disabled:hover, a.button.disabled:hover { box-shadow: none; }
+
+button.button.active, input.button.active, a.button.active { background: linear-gradient(270deg, rgb(242, 242, 242), rgb(254, 254, 254)) rgb(242, 242, 242); border-color: rgb(89, 89, 89); box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0.1em; }
+
+button.button.default, input.button.default, a.button.default { background: linear-gradient(270deg, rgb(255, 51, 51), rgb(153, 51, 51)) rgb(255, 51, 51); border-color: rgb(153, 51, 51); color: rgb(255, 255, 255); text-shadow: none; }
+
+button.button.default.disabled, input.button.default.disabled, a.button.default.disabled { background: linear-gradient(270deg, rgb(255, 136, 136), rgb(204, 102, 102)) rgb(255, 136, 136); border: 1px solid rgb(204, 102, 102); color: rgb(238, 238, 238); }
+
+.dropdown-button .button.next .icon, .create-resource-buttons .button.next .icon { background-position: 0px -52px; }
+
+.dropdown-button .icon, .create-resource-buttons .icon { display: inline-block; margin-left: 0.3em; position: relative; top: 0.2em; background-color: transparent; background-repeat: no-repeat; text-align: left; text-indent: -9999px; background-image: url("https://data.seattle.gov/frontend/P25-HF-1/stylesheets/images/icons/menu_icons.png?3"); height: 13px; width: 13px; }
+
+input.secondary-button, a.secondary-button { color: rgb(102, 102, 102); background-color: rgb(238, 238, 238); display: block; position: relative; width: auto; }
+
+input.secondary-button > .icon, a.secondary-button > .icon { transform: translate(0px, -50%); position: absolute !important; right: 0.5em !important; top: 50% !important; }
+
+#create-resource-dropdown .create-resource-panel, #create-resource-footer-dropdown .create-resource-panel { height: auto; padding-top: 15px; }
+
+#create-resource-dropdown .create-resource-buttons, #create-resource-footer-dropdown .create-resource-buttons { display: block; text-align: left; }
+
+#create-resource-dropdown .create-resource-spinner, #create-resource-footer-dropdown .create-resource-spinner { display: none; }
+
+#create-resource-dropdown.working .create-resource-panel, #create-resource-footer-dropdown.working .create-resource-panel { height: 48px; }
+
+#create-resource-dropdown.working .create-resource-buttons, #create-resource-footer-dropdown.working .create-resource-buttons { display: none; }
+
+#create-resource-dropdown.working .create-resource-spinner, #create-resource-footer-dropdown.working .create-resource-spinner { display: block; }
+
+#create-story-button, #create-story-footer-button, #create-measure-button, #create-measure-footer-button, #create-tabular-beta { margin-top: 0.5em; }
+
+.fullButton { background-color: rgb(255, 255, 255); border: 1px solid rgb(206, 206, 206); border-radius: 0.3em; display: block; font-size: 1.3em; font-weight: bold; margin-top: 1em; padding: 0.6em 1em; text-align: center; }
+
+div.menu { display: inline-block; position: relative; transition-duration: 0.2s; transition-property: -webkit-box-shadow; }
+
+div.menu .menuButton { background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); display: block; font-size: 1.2em; padding: 0.6em 1em; position: relative; transition-property: border; z-index: 50; }
+
+div.menu .menuButton .icon { background-color: transparent; background-position: 0px 0px; background-repeat: no-repeat; display: block; text-align: left; text-indent: -9999px; background-image: url("https://data.seattle.gov/frontend/P25-HF-1/stylesheets/images/icons/menu_icons.png?3"); height: 13px; width: 13px; }
+
+div.menu .menuButton .icon { background-position: 0px 0px; }
+
+div.menu .menuButton.none .icon { background-position: 0px 13px; }
+
+div.menu .menuButton.downArrow .icon, div.menu .menuButton.downArrowNoHover .icon, div.menu .menuButton.headerSortUp .icon { background-position: 0px 0px; }
+
+div.menu .menuButton.downArrow:hover .icon, div.menu .menuButton.downArrowHighlight .icon, div.menu .menuButton.collapsed .icon { background-position: 0px -13px; }
+
+div.menu .menuButton.upArrow .icon, div.menu .menuButton.upArrowNoHover .icon, div.menu .menuButton.headerSortDown .icon { background-position: 0px -26px; }
+
+div.menu .menuButton.upArrow:hover .icon, div.menu .menuButton.upArrowHighlight .icon, div.menu .menuButton.expanded .icon { background-position: 0px -39px; }
+
+div.menu .menuButton.rightArrow .icon, div.menu .menuButton.next .icon { background-position: 0px -52px; }
+
+div.menu .menuButton.rightArrow:hover .icon, div.menu .menuButton.rightArrowHighlight .icon { background-position: 0px -65px; }
+
+div.menu .menuButton.leftArrow .icon, div.menu .menuButton.leftArrowNoHover .icon, div.menu .menuButton.previous .icon { background-position: 0px -78px; }
+
+div.menu .menuButton.leftArrow:hover .icon, div.menu .menuButton.leftArrowHighlight .icon { background-position: 0px -91px; }
+
+div.menu .menuButton.add .icon { background-position: 0px -104px; }
+
+div.menu .menuButton.search .icon { background-position: 0px -117px; }
+
+div.menu .menuButton.about .icon { background-position: 0px -130px; }
+
+div.menu .menuButton.fullscreen .icon { background-position: 0px -143px; }
+
+div.menu .menuButton.share .icon { background-position: 0px -156px; }
+
+div.menu .menuButton.checked .icon { background-position: 0px -169px; }
+
+div.menu .menuButton.iconView .icon { background-position: 0px -182px; }
+
+div.menu .menuButton.listView .icon { background-position: 0px -195px; }
+
+div.menu .menuButton.fatrowView .icon { background-position: 0px -208px; }
+
+div.menu .menuButton.gridView .icon { background-position: 0px -221px; }
+
+div.menu .menuButton.typeFilter .icon { background-position: 0px -234px; }
+
+div.menu .menuButton.typeChart .icon { background-position: 0px -247px; }
+
+div.menu .menuButton.typeMap .icon { background-position: 0px -260px; }
+
+div.menu .menuButton.typeBlist .icon { background-position: 0px -273px; }
+
+div.menu .menuButton.feed .icon { background-position: 0px -286px; }
+
+div.menu .menuButton.typeApi .icon, div.menu .menuButton.embed .icon { background-position: 0px -299px; }
+
+div.menu .menuButton.views .icon { background-position: 0px -312px; }
+
+div.menu .menuButton.downloads .icon { background-position: 0px -325px; }
+
+div.menu .menuButton.delicious .icon { background-position: 0px -338px; }
+
+div.menu .menuButton.digg .icon { background-position: 0px -351px; }
+
+div.menu .menuButton.facebook .icon { background-position: 0px -364px; }
+
+div.menu .menuButton.twitter .icon { background-position: 0px -377px; }
+
+div.menu .menuButton.email .icon { background-position: 0px -390px; }
+
+div.menu .menuButton.rateUp .icon { background-position: 0px -403px; }
+
+div.menu .menuButton.ratedUp .icon { background-position: 0px -416px; }
+
+div.menu .menuButton.rateDown .icon { background-position: 0px -429px; }
+
+div.menu .menuButton.ratedDown .icon { background-position: 0px -442px; }
+
+div.menu .menuButton.typeForm .icon { background-position: 0px -455px; }
+
+div.menu .menuButton.typeCalendar .icon { background-position: 0px -468px; }
+
+div.menu .menuButton.typeBlob .icon { background-position: 0px -481px; }
+
+div.menu .menuButton.typeGrouped .icon { background-position: 0px -494px; }
+
+div.menu .menuButton.close .icon, div.menu .menuButton.remove .icon { background-position: 0px -507px; }
+
+div.menu .menuButton.alert .icon, div.menu .menuButton.warning .icon { background-position: 0px -520px; }
+
+div.menu .menuButton.subscribe .icon { background-position: 0px -533px; }
+
+div.menu .menuButton.start .icon { background-position: 0px -546px; }
+
+div.menu .menuButton.end .icon { background-position: 0px -559px; }
+
+div.menu .menuButton.options .icon { background-position: 0px -572px; }
+
+div.menu .menuButton.typeHref .icon { background-position: 0px -585px; }
+
+div.menu .menuButton.error .icon { background-position: 0px -598px; }
+
+div.menu .menuButton.typeUnpublished .icon { background-position: 0px -611px; }
+
+div.menu .menuButton.typeMeasure .icon { background-position: 0px -624px; }
+
+div.menu .menuButton:hover { text-decoration: none; }
+
+div.menu .menuButton .icon { margin-left: 0.2em; }
+
+div.menu .menuDropdown { background-color: rgb(255, 255, 255); border: 1px solid rgb(153, 153, 153); border-radius: 0.3em; box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 4px; display: none; margin-top: 0.2em; overflow: hidden; position: absolute; z-index: 10000; }
+
+div.menu .menuDropdown ul.menuColumns { margin: 0.3em 0px; overflow: hidden; }
+
+div.menu .menuDropdown ul.menuColumns li.menuColumn { border-left: 1px solid rgb(222, 222, 222); display: block; float: left; margin-bottom: -9999px; padding-bottom: 9999px; }
+
+div.menu .menuDropdown ul.menuColumns li.menuColumn:first-child { border-left: none; }
+
+div.menu .menuDropdown ul.menuColumns li.menuColumn ul.menuEntries { min-width: 10em; padding: 0.2em 0px; }
+
+div.menu .menuDropdown ul.menuColumns li.menuColumn ul.menuEntries li.menuEntry { clear: both; display: block; }
+
+div.menu .menuDropdown ul.menuColumns li.menuColumn ul.menuEntries li.menuEntry.divider { border-top: 1px solid rgb(238, 238, 238); margin-top: 0.2em; padding-top: 0.2em; }
+
+div.menu .menuDropdown ul.menuColumns li.menuColumn ul.menuEntries li.menuEntry.divider:first-child { border-top: none; margin-top: 0px; padding-top: 0px; }
+
+div.menu .menuDropdown ul.menuColumns li.menuColumn ul.menuEntries li.menuEntry a { border-bottom: 1px solid rgb(255, 255, 255); border-top: 1px solid rgb(255, 255, 255); display: block; font-size: 1.2em; padding: 0.3em 0.8em 0.3em 2.6em; position: relative; }
+
+div.menu .menuDropdown ul.menuColumns li.menuColumn ul.menuEntries li.menuEntry a:hover { background-color: rgb(247, 247, 247); border-color: rgb(222, 222, 222); text-decoration: none; }
+
+div.menu .menuDropdown ul.menuColumns li.menuColumn ul.menuEntries li.menuEntry a .icon { left: 0.8em; position: absolute; top: 0.5em; }
+
+div.menu .menuDropdown ul.menuColumns li.menuColumn ul.menuEntries li.menuEntry a .subtext { color: rgb(119, 119, 119); font-size: 0.85em; margin: 0.2em 0.1em; }
+
+div.menu.open .menuButton .icon { background-position: 0px -13px; }
+
+div.menu.open .menuDropdown { clear: both; display: block; }
+
+.starsControl .accessibleValue { background-color: transparent; background-position: 0px 0px; background-repeat: no-repeat; text-align: left; text-indent: -9999px; display: inline-block; }
+
+.starsControl input[type="radio"] { height: 16px; margin: 0px 1px 0px 0px; opacity: 0; padding: 0px; vertical-align: bottom; width: 16px; }
+
+.starsControl input[type="radio"]:focus + .starsLabel { border-bottom: 1px solid rgb(102, 102, 102); }
+
+.starsControl .starsLabel { text-align: left; text-indent: -9999px; background: url("https://data.seattle.gov/frontend/P25-HF-1/stylesheets/images/icons/stars.png") 0px -16px no-repeat transparent; display: inline-block; height: 16px; margin: 0px 1px; padding: 0px; width: 16px; }
+
+.starsControl.enabled .starsLabel { margin-left: -16px; margin-right: 1px; }
+
+.starsControl input:checked + .starsLabel ~ .starsLabel, .starsControl .currentValue ~ .starsLabel { background-position: 0px 0px; }
+
+.starsControl input[value="0"], .starsControl input[value="0"] + .starsLabel, .starsControl .value-0 { display: none; }
+
+.starsControl.blueStars .starsLabel { background-position: 0px -32px; }
+
+.starsControl.enabled input { cursor: pointer; }
+
+.starsControl.enabled:hover label.starsLabel { background-position: 0px -32px; }
+
+.starsControl.enabled:hover input:hover + .starsLabel ~ .starsLabel { background-position: 0px 0px; }
+
+.starsControl.jsEnabled input[type="submit"] { display: none; }
+
+.starsControl.smallStars input[type="radio"], .starsControl.smallStars .starsLabel { height: 10px; width: 10px; }
+
+.starsControl.smallStars .starsLabel { background: url("https://data.seattle.gov/frontend/P25-HF-1/stylesheets/images/icons/stars_small.png") 0px -10px no-repeat transparent; }
+
+.starsControl.smallStars.enabled .starsLabel { margin-left: -10px; }
+
+div.wizard { overflow: hidden; }
+
+div.wizard > ul { display: block; position: relative; }
+
+div.wizard > ul > li { display: none; float: left; }
+
+ul.wizardButtons { margin: 1em; }
+
+ul.wizardButtons li { display: block; }
+
+ul.wizardButtons li.cancel, ul.wizardButtons li.save { float: left; }
+
+ul.wizardButtons li.prev, ul.wizardButtons li.next { float: right; }
+
+.pillButtons { border-radius: 0.2em; overflow: hidden; }
+
+.pillButtons:hover { box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0.3em; }
+
+.pillButtons li { display: block; float: left; }
+
+.pillButtons li a { background: linear-gradient(270deg, rgb(254, 254, 254), rgb(242, 242, 242)) rgb(254, 254, 254); border-top: 1px solid rgb(153, 153, 153); border-right: 1px solid rgb(153, 153, 153); border-bottom: 1px solid rgb(153, 153, 153); border-image: initial; border-left: none; color: rgb(102, 102, 102); display: block; padding: 0.3em 0.45em 0.3em 0.5em; }
+
+.pillButtons li a.active { background: linear-gradient(270deg, rgb(119, 119, 119), rgb(170, 170, 170)) rgb(119, 119, 119); box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0.3em inset; color: rgb(255, 255, 255); }
+
+.pillButtons li a:focus { box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0.3em inset; }
+
+.pillButtons li:first-child a { border-top-left-radius: 0.2em; border-bottom-left-radius: 0.2em; border: 1px solid rgb(153, 153, 153); }
+
+.pillButtons li:last-child a { border-top-right-radius: 0.2em; border-bottom-right-radius: 0.2em; }
+
+.contentIndicatorContainer { position: relative; }
+
+.contentIndicatorContainer .contentIndicator { border-radius: 9999px; box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 1px; background-color: red; font-size: 1.1em; font-weight: bold; padding: 0.2em 0.5em 0px; position: absolute; }
+
+.bt-wrapper .bt-content .prompt { font-size: 1.1em; }
+
+.bt-wrapper .bt-content .actionButtons { margin-left: -1em; margin-top: 0.75em; text-align: center; }
+
+.bt-wrapper .bt-content .actionButtons li { display: inline-block; float: none; }
+
+.bt-wrapper .bt-content .actionButtons li a { display: inline-block; }
+
+.bt-wrapper .bt-content .title { font-weight: bold; display: inline-block; margin-top: 1em; }
+
+.bt-wrapper .bt-content .flyoutIcon .blist-th-icon { display: inline-block; margin-top: 0em; margin-bottom: -0.5em; }
+
+.bt-wrapper .wizardPrompt { padding-right: 1em; text-align: left; }
+
+.bt-wrapper .wizardPrompt .wizardDismiss { background-color: transparent; background-position: 0px 0px; background-repeat: no-repeat; display: block; text-align: left; text-indent: -9999px; background-image: url("https://data.seattle.gov/frontend/P25-HF-1/stylesheets/images/common/close.png"); height: 13px; width: 13px; position: absolute; right: 3px; top: 3px; }
+
+.bt-wrapper .wizardPrompt .prompt { font-size: 1.2em; }
+
+.loadingSpinner { animation: 0.9s linear 0s infinite normal none running busy-spinner; border-width: 8px; border-style: solid; border-color: rgb(40, 141, 193) rgb(234, 244, 249) rgb(40, 141, 193) rgb(40, 141, 193); border-image: initial; border-radius: 50%; box-sizing: border-box; display: inline-block; height: 48px; width: 48px; left: 50%; margin-left: -24px; margin-top: -24px; position: absolute; top: 50%; z-index: 10000; }
+
+.loadingSpinner.minimal { background-color: transparent; background-position: 0px 0px; background-repeat: no-repeat; text-align: left; text-indent: -9999px; animation: 0.9s linear 0s infinite normal none running busy-spinner; border-width: 3px; border-style: solid; border-color: rgb(40, 141, 193) rgb(234, 244, 249) rgb(40, 141, 193) rgb(40, 141, 193); border-image: initial; border-radius: 50%; box-sizing: border-box; display: inline-block; height: 16px; width: 16px; margin-left: -8px; margin-top: -8px; }
+
+.loadingSpinner .hidden { display: none; }
+
+.loadingSpinnerContainer { background: url("https://data.seattle.gov/frontend/P25-HF-1/stylesheets/images/common/spinner_background.png") no-repeat transparent; height: 48px; left: 50%; margin-left: -50px; margin-top: -50px; padding: 26px; position: absolute; top: 50%; width: 48px; z-index: 10000; }
+
+.loadingSpinnerContainer .loadingSpinner { margin: 0px; position: static; }
+
+.loadingSpinnerContainer .loadingMessage, .loadingSpinnerContainer .loadingCountdown { border-radius: 5px; background-color: rgba(255, 255, 255, 0.5); font-size: 1.2em; font-weight: bold; margin-left: -8em; margin-top: 0.5em; text-align: center; width: 20em; }
+
+.loadingOverlay { background-color: rgb(238, 238, 238); height: 100%; left: 0px; opacity: 0.7; position: absolute; top: 0px; width: 100%; z-index: 6000; }
+
+div#color_selector { background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); padding: 10px 5px; position: absolute; width: 141px; z-index: 3001; }
+
+div#color_selector div#color_custom { float: left; margin-top: -10px; width: 100%; }
+
+div#color_selector div#color_custom label { color: rgb(47, 47, 47); font-size: 0.95em; margin: 5px 2px; width: 25%; }
+
+div#color_selector div#color_custom input { border: 1px solid rgb(0, 0, 0); font-size: 0.95em; margin: 5px 2px 0px; width: 65%; }
+
+div#color_selector div.color_block { border-top: 1px solid rgb(102, 102, 102); border-bottom: 1px solid rgb(102, 102, 102); border-left: 1px solid rgb(102, 102, 102); border-image: initial; border-right: none; margin-bottom: 10px; }
+
+div.color_swatch, a.color_swatch { border-right: 1px solid rgb(102, 102, 102); cursor: pointer; display: block; float: left; height: 16px; line-height: 16px; width: 16px; }
+
+div.color_swatch .inner, a.color_swatch .inner { display: block; height: 14px; width: 14px; }
+
+div.color_swatch.selected .inner, a.color_swatch.selected .inner { border: 1px solid rgb(32, 96, 143); }
+
+div.color_swatch.hover .inner, a.color_swatch.hover .inner { border: 1px solid rgb(255, 255, 255); }
+
+#jqmUpload label { margin-right: 0.5em; }
+
+div.datepicker { display: none; left: 0px; margin-left: -4px; position: absolute; top: 0px; z-index: 4000; }
+
+div.datepicker .datepickerContainer { background-color: rgb(232, 232, 232); }
+
+div.datepicker .datepickerContainer table { border-collapse: collapse; padding: 3px; }
+
+div.datepicker .datepickerContainer table th { color: rgb(102, 102, 102); font-weight: normal; text-align: center; }
+
+div.datepicker .datepickerContainer table td { padding: 0.5em; text-align: right; }
+
+div.datepicker .datepickerContainer table td table td { padding: 0px; }
+
+div.datepicker .datepickerContainer table td .datepickerNotInMonth a { color: rgb(153, 153, 153); }
+
+div.datepicker .datepickerContainer table td .datepickerNotInMonth a:hover { color: rgb(102, 0, 0); }
+
+div.datepicker .datepickerContainer table td.datepickerDisabled a, div.datepicker .datepickerContainer table td.datepickerDisabled a:hover, div.datepicker .datepickerContainer table td.datepickerDisabled.datepickerNotInMonth a { color: rgb(51, 51, 51); }
+
+div.datepicker .datepickerContainer table td.datepickerSpecial a { background: rgb(119, 0, 0); }
+
+div.datepicker .datepickerContainer table td.datepickerSpecial.datepickerSelected a { background: rgb(170, 0, 0); }
+
+div.datepicker .datepickerContainer table tbody th { text-align: right; }
+
+div.datepicker .datepickerContainer table tbody a { display: block; }
+
+div.datepicker .datepickerContainer table table th, div.datepicker .datepickerContainer table table td { font-size: 1.1em; }
+
+div.datepicker .datepickerContainer table table.datepickerViewDays tbody.datepickerMonths, div.datepicker .datepickerContainer table table.datepickerViewDays tbody.datepickerYears { display: none; }
+
+div.datepicker .datepickerContainer table table.datepickerViewMonths tbody.datepickerDays, div.datepicker .datepickerContainer table table.datepickerViewMonths tbody.datepickerYears, div.datepicker .datepickerContainer table table.datepickerViewMonths tr.datepickerDoW { display: none; }
+
+div.datepicker .datepickerContainer table table.datepickerViewYears tbody.datepickerDays, div.datepicker .datepickerContainer table table.datepickerViewYears tbody.datepickerMonths, div.datepicker .datepickerContainer table table.datepickerViewYears tr.datepickerDoW { display: none; }
+
+div.datepicker .datepickerContainer a { color: rgb(51, 51, 51); cursor: default; text-decoration: none; }
+
+div.datepicker .datepickerContainer a:hover { color: rgb(102, 0, 0); }
+
+div.datepicker .datepickerContainer tbody.datepickerDays a { height: 1.6em; line-height: 1.6em; padding-right: 0.2em; width: 2em; }
+
+div.datepicker .datepickerContainer tbody.datepickerDays td.datepickerSelected { background-color: rgb(32, 96, 143); }
+
+div.datepicker .datepickerContainer tbody.datepickerDays td.datepickerSelected a { color: rgb(255, 255, 255); }
+
+div.datepicker .datepickerContainer tbody.datepickerDays td.datepickerNotInMonth.datepickerSelected { background-color: rgb(16, 48, 79); }
+
+div.datepicker .datepickerContainer .datepickerYears a, div.datepicker .datepickerContainer .datepickerMonths a { height: 3.6em; line-height: 3.6em; text-align: center; width: 4em; }
+
+div.datepicker .datepickerContainer .datepickerYears td.datepickerSelected, div.datepicker .datepickerContainer .datepickerMonths td.datepickerSelected { background-color: rgb(32, 96, 143); }
+
+div.datepicker .datepickerContainer .datepickerSpace div { width: 2em; }
+
+div.datepicker .datepickerContainer .datepickerGoNext a, div.datepicker .datepickerContainer .datepickerGoPrev a, div.datepicker .datepickerContainer .datepickerMonth a { height: 2em; line-height: 2em; text-align: center; }
+
+div.datepicker .datepickerContainer .datepickerGoNext a, div.datepicker .datepickerContainer .datepickerGoPrev a { width: 2em; }
+
+.datepickerHidden { display: none; }
+
+ul.autocomplete { background-color: rgb(255, 255, 255); border: 1px solid rgb(119, 119, 119); display: block; list-style-type: none; margin: 0px; min-height: 5em; overflow: hidden; padding: 2px; position: absolute; }
+
+ul.autocomplete li { border-top: 1px solid rgb(170, 170, 170); cursor: pointer; padding: 4px; }
+
+ul.autocomplete li:first-child { border-top: none; }
+
+ul.autocomplete li.active { background-color: rgb(247, 247, 247); }
+
+ul.autocomplete li p { font-size: 1.2em; margin: 1px 4px; white-space: nowrap; }
+
+ul.autocomplete li p .title { font-weight: bold; }
+
+ul.autocomplete li p .matchRow { color: rgb(102, 102, 102); }
+
+ul.autocomplete li span.matchedField { color: rgb(153, 153, 153); padding-right: 0.5em; }
+
+ul.autocomplete li span.match { font-weight: bold; }
+
+.userPicker { max-width: 300px; min-width: 250px; z-index: 1000; }
+
+form.search label { display: none; }
+
+form.search .searchField { border-radius: 0.1733em; background: url("https://data.seattle.gov/frontend/P25-HF-1/stylesheets/images/icons/search_large.png") 8px 6px no-repeat rgb(255, 255, 255); font-size: 1.5em; margin: 0px 0.2em 0px 0px; padding: 0.25em 0.25em 0.25em 2em; width: 15em; }
+
+form.search .searchField.prompt { color: rgb(204, 204, 204); }
+
+form.search .submit { background: linear-gradient(270deg, rgb(254, 254, 254), rgb(242, 242, 242)) rgb(254, 254, 254); border: 1px solid rgb(153, 153, 153); border-radius: 0.2em; cursor: pointer; line-height: 14px; padding: 0.3em 0.7em; color: rgb(68, 68, 68); height: auto; margin: 0px; font-size: 1.3em; text-transform: uppercase; }
+
+form.search .submit:hover, form.search .submit:focus { box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0.3em; }
+
+form.search .submit.disabled { background: linear-gradient(270deg, rgb(252, 252, 252), rgb(248, 248, 248)) rgb(252, 252, 252); border: 1px solid rgb(221, 221, 221); color: rgb(136, 136, 136); cursor: default; }
+
+form.search .submit.disabled:hover { box-shadow: none; }
+
+form.search .submit.active { background: linear-gradient(270deg, rgb(242, 242, 242), rgb(254, 254, 254)) rgb(242, 242, 242); border-color: rgb(89, 89, 89); box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 0.1em; }
+
+form.search .submit.default { background: linear-gradient(270deg, rgb(255, 51, 51), rgb(153, 51, 51)) rgb(255, 51, 51); border-color: rgb(153, 51, 51); color: rgb(255, 255, 255); text-shadow: none; }
+
+form.search .submit.default.disabled { background: linear-gradient(270deg, rgb(255, 136, 136), rgb(204, 102, 102)) rgb(255, 136, 136); border: 1px solid rgb(204, 102, 102); color: rgb(238, 238, 238); }
+
+.popupSelectPrompt { color: rgb(255, 255, 255); font-size: 1.2em; margin: 0.3em 0.3em 0.8em; }
+
+.popupSelectList { background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px inset; max-width: 40em; min-width: 20em; overflow: hidden auto; }
+
+.popupSelectList li { border-top: 1px solid rgb(153, 153, 153); font-size: 1.3em; padding: 0.6em 1em; }
+
+.popupSelectList li .icon { background-color: transparent; background-position: 0px 0px; background-repeat: no-repeat; display: block; text-align: left; text-indent: -9999px; background-image: url("https://data.seattle.gov/frontend/P25-HF-1/stylesheets/images/icons/menu_icons.png?3"); height: 13px; width: 13px; }
+
+.popupSelectList li .icon { background-position: 0px 0px; }
+
+.popupSelectList li.none .icon { background-position: 0px 13px; }
+
+.popupSelectList li.downArrow .icon, .popupSelectList li.downArrowNoHover .icon, .popupSelectList li.headerSortUp .icon { background-position: 0px 0px; }
+
+.popupSelectList li.downArrow:hover .icon, .popupSelectList li.downArrowHighlight .icon, .popupSelectList li.collapsed .icon { background-position: 0px -13px; }
+
+.popupSelectList li.upArrow .icon, .popupSelectList li.upArrowNoHover .icon, .popupSelectList li.headerSortDown .icon { background-position: 0px -26px; }
+
+.popupSelectList li.upArrow:hover .icon, .popupSelectList li.upArrowHighlight .icon, .popupSelectList li.expanded .icon { background-position: 0px -39px; }
+
+.popupSelectList li.rightArrow .icon, .popupSelectList li.next .icon { background-position: 0px -52px; }
+
+.popupSelectList li.rightArrow:hover .icon, .popupSelectList li.rightArrowHighlight .icon { background-position: 0px -65px; }
+
+.popupSelectList li.leftArrow .icon, .popupSelectList li.leftArrowNoHover .icon, .popupSelectList li.previous .icon { background-position: 0px -78px; }
+
+.popupSelectList li.leftArrow:hover .icon, .popupSelectList li.leftArrowHighlight .icon { background-position: 0px -91px; }
+
+.popupSelectList li.add .icon { background-position: 0px -104px; }
+
+.popupSelectList li.search .icon { background-position: 0px -117px; }
+
+.popupSelectList li.about .icon { background-position: 0px -130px; }
+
+.popupSelectList li.fullscreen .icon { background-position: 0px -143px; }
+
+.popupSelectList li.share .icon { background-position: 0px -156px; }
+
+.popupSelectList li.checked .icon { background-position: 0px -169px; }
+
+.popupSelectList li.iconView .icon { background-position: 0px -182px; }
+
+.popupSelectList li.listView .icon { background-position: 0px -195px; }
+
+.popupSelectList li.fatrowView .icon { background-position: 0px -208px; }
+
+.popupSelectList li.gridView .icon { background-position: 0px -221px; }
+
+.popupSelectList li.typeFilter .icon { background-position: 0px -234px; }
+
+.popupSelectList li.typeChart .icon { background-position: 0px -247px; }
+
+.popupSelectList li.typeMap .icon { background-position: 0px -260px; }
+
+.popupSelectList li.typeBlist .icon { background-position: 0px -273px; }
+
+.popupSelectList li.feed .icon { background-position: 0px -286px; }
+
+.popupSelectList li.typeApi .icon, .popupSelectList li.embed .icon { background-position: 0px -299px; }
+
+.popupSelectList li.views .icon { background-position: 0px -312px; }
+
+.popupSelectList li.downloads .icon { background-position: 0px -325px; }
+
+.popupSelectList li.delicious .icon { background-position: 0px -338px; }
+
+.popupSelectList li.digg .icon { background-position: 0px -351px; }
+
+.popupSelectList li.facebook .icon { background-position: 0px -364px; }
+
+.popupSelectList li.twitter .icon { background-position: 0px -377px; }
+
+.popupSelectList li.email .icon { background-position: 0px -390px; }
+
+.popupSelectList li.rateUp .icon { background-position: 0px -403px; }
+
+.popupSelectList li.ratedUp .icon { background-position: 0px -416px; }
+
+.popupSelectList li.rateDown .icon { background-position: 0px -429px; }
+
+.popupSelectList li.ratedDown .icon { background-position: 0px -442px; }
+
+.popupSelectList li.typeForm .icon { background-position: 0px -455px; }
+
+.popupSelectList li.typeCalendar .icon { background-position: 0px -468px; }
+
+.popupSelectList li.typeBlob .icon { background-position: 0px -481px; }
+
+.popupSelectList li.typeGrouped .icon { background-position: 0px -494px; }
+
+.popupSelectList li.close .icon, .popupSelectList li.remove .icon { background-position: 0px -507px; }
+
+.popupSelectList li.alert .icon, .popupSelectList li.warning .icon { background-position: 0px -520px; }
+
+.popupSelectList li.subscribe .icon { background-position: 0px -533px; }
+
+.popupSelectList li.start .icon { background-position: 0px -546px; }
+
+.popupSelectList li.end .icon { background-position: 0px -559px; }
+
+.popupSelectList li.options .icon { background-position: 0px -572px; }
+
+.popupSelectList li.typeHref .icon { background-position: 0px -585px; }
+
+.popupSelectList li.error .icon { background-position: 0px -598px; }
+
+.popupSelectList li.typeUnpublished .icon { background-position: 0px -611px; }
+
+.popupSelectList li.typeMeasure .icon { background-position: 0px -624px; }
+
+.popupSelectList li:first-child { border-top: none; }
+
+.popupSelectList li:hover { background-color: rgb(59, 89, 152); color: rgb(255, 255, 255); cursor: pointer; }
+
+.popupSelectList li .selectedIcon { float: left; }
+
+.popupSelectList li .contentWrapper { line-height: 1.3em; min-height: 1.3em; padding: 0px 1.6em; }
+
+.popupSelectList.iconPicker { height: 30em; width: 38em; }
+
+.popupSelectList.iconPicker li { border: none; display: inline-block; padding: 0.3em; width: auto; }
+
+.popupSelectList.iconPicker li .icon { display: none; }
+
+.popupSelectList.iconPicker li .contentWrapper { padding: 0px 0.2em; }
+
+.renderTypeNode > .divider { background: linear-gradient(270deg, rgb(153, 153, 153), gray) rgb(153, 153, 153); display: none; height: 14px; position: relative; }
+
+.renderTypeNode > .divider .close { position: absolute; right: 5px; top: 2px; z-index: 1; }
+
+.renderTypeNode > .divider .close .icon { background-color: transparent; background-position: 0px 0px; background-repeat: no-repeat; display: block; text-align: left; text-indent: -9999px; background-image: url("https://data.seattle.gov/frontend/P25-HF-1/stylesheets/images/icons/button_icons.png?1"); height: 10px; width: 10px; }
+
+.renderTypeNode > .divider .close .icon, .renderTypeNode > .divider .close.upArrow .icon { background-position: 0px 0px; }
+
+.renderTypeNode > .divider .close.go .icon, .renderTypeNode > .divider .close.submit .icon { background-position: 0px -10px; }
+
+.renderTypeNode > .divider .close.accept .icon { background-position: 0px -20px; }
+
+.renderTypeNode > .divider .close.add .icon { background-position: 0px -30px; }
+
+.renderTypeNode > .divider .close.downArrow .icon { background-position: 0px -40px; }
+
+.renderTypeNode > .divider .close.close .icon, .renderTypeNode > .divider .close.jqmClose .icon, .renderTypeNode > .divider .close.cancel .icon, .renderTypeNode > .divider .close.delete .icon { background-position: 0px -50px; }
+
+.renderTypeNode > .divider .close.downArrowDark .icon { background-position: 0px -60px; }
+
+.renderTypeNode > .divider .close.upArrowDark .icon { background-position: 0px -70px; }
+
+.renderTypeNode .renderContent { position: relative; }
+
+.multipleRenderers .renderTypeNode > .divider { display: block; }
+
+.saveViewDialog { margin-left: -14em; width: 28em; }
+
+.saveViewDialog input { width: 95%; }
+
+.saveViewDialog p, .saveViewDialog label.newName { margin: 0.5em 0px; }
+
+.saveViewDialog label.newName { display: block; font-size: 1.2em; line-height: 1.1em; }
+
+.saveViewDialog .info { font-weight: bold; margin-bottom: 1.5em; }
+
+.saveViewDialog .leavingSave { display: none; }
+
+.saveViewDialog .reloadSave { display: none; }
+
+.saveViewDialog .reloadUpdate { display: none; }
+
+.saveViewDialog.leavingSaveDialog .leavingSave { display: block; }
+
+.saveViewDialog.leavingSaveDialog .normalSave { display: none; }
+
+.saveViewDialog.reloadSaveDialog .reloadSave { display: block; }
+
+.saveViewDialog.reloadSaveDialog .normalSave { display: none; }
+
+.saveViewDialog.reloadUpdateDialog .reloadUpdate { display: block; }
+
+.saveViewDialog.reloadUpdateDialog .normalSave { display: none; }
+
+#login form label { width: 8em; }
+
+#login form .additionalHelp { margin-left: 11.5em; }
+
+#login form label.error, #login form span.error { margin-left: 11em; }
+
+#login .accountMaint { bottom: 2.1em; left: 18em; position: absolute; }
+
+#login .accountMaint li { padding-bottom: 0.3em; }
+
+#login .accountMaint li a { font-size: 1.2em; }
+
+#signup form label { width: 9em; }
+
+#signup form .additionalHelp { margin-left: 12.5em; }
+
+#signup form label.error, #signup form span.error { margin-left: 12em; }
+
+#signup form input[type="text"], #signup form input[type="password"], #signup form textarea, #signup form label.error { width: 14em; }
+
+#signup form span { font-size: 1.2em; }
+
+#signup form .terms { margin: 0.5em 0px; }
+
+#signup form div.required { margin-top: 1em; }
+
+#signup form .signup_loadingIndicator { background-color: transparent; background-position: 0px 0px; background-repeat: no-repeat; text-align: left; text-indent: -9999px; animation: 0.9s linear 0s infinite normal none running busy-spinner; border-width: 3px; border-style: solid; border-color: rgb(40, 141, 193) rgb(234, 244, 249) rgb(40, 141, 193) rgb(40, 141, 193); border-image: initial; border-radius: 50%; box-sizing: border-box; display: inline-block; height: 16px; width: 16px; }
+
+.visualization { position: relative; z-index: 0; }
+
+.visualization .noDataMessage { border-radius: 5px; background-color: rgb(204, 204, 204); font-size: 1.3em; font-weight: bold; left: 50%; margin-left: -5em; padding: 1em; position: absolute; top: 40%; z-index: 1; }
+
+div.autocompleteCombo { background-image: url("https://data.seattle.gov/frontend/P25-HF-1/stylesheets/images/common/uniform_sprite.png"); background-position: -485px -130px; background-repeat: no-repeat; display: inline-block; height: 26px; line-height: 26px; vertical-align: bottom; }
+
+div.autocompleteCombo.required { padding: 0px; }
+
+div.autocompleteCombo .wrapper { background-image: url("https://data.seattle.gov/frontend/P25-HF-1/stylesheets/images/common/uniform_sprite.png"); background-position: right 0px; background-repeat: no-repeat; height: 22px; line-height: 26px; margin-left: 8px; padding: 1px 25px 2px 0px; }
+
+div.autocompleteCombo .textInput { background-color: rgb(255, 255, 255); border-color: rgb(221, 221, 221); border-radius: 0px; box-shadow: none; cursor: pointer; padding: 0px; }
+
+div.autocompleteCombo .dropdownChooser { background: none; display: inline-block; height: 21px; position: absolute; right: 4px; top: 2px; width: 21px; }
+
+ul.autocompleteComboDropdown { background-color: rgb(255, 255, 255); border: 1px solid rgb(119, 119, 119); display: block; list-style-type: none; margin: 0px; overflow: hidden; padding: 0px; position: absolute; z-index: 3002; }
+
+ul.autocompleteComboDropdown li { border-top: 1px solid rgb(170, 170, 170); cursor: pointer; padding: 0px; }
+
+ul.autocompleteComboDropdown li:first-child { border-top: none; }
+
+ul.autocompleteComboDropdown li div { padding: 4px 4px 4px 14px; }
+
+ul.autocompleteComboDropdown li p { font-size: 1.2em; margin: 1px 4px; white-space: nowrap; }
+
+ul.autocompleteComboDropdown li p .title { font-weight: bold; }
+
+ul.autocompleteComboDropdown li p .matchRow { color: rgb(102, 102, 102); }
+
+ul.autocompleteComboDropdown li span.matchedField { color: rgb(153, 153, 153); padding-right: 0.5em; }
+
+ul.autocompleteComboDropdown li span.match { font-weight: bold; }
+
+ul.autocompleteComboDropdown li.active div { background-color: rgb(247, 247, 247); }
+
+.ss-icon, [class^="ss-"]::before, [class*=" ss-"]::before, [class^="ss-"]::after, [class*=" ss-"]::after { vertical-align: sub; }
+
+.ss-icon.button { font-weight: normal; padding-top: 0.6em; }
+
+[class^="ss-"]:not(:empty)::before, [class*=" ss-"]:not(:empty)::before { margin-right: 0.4em; }
+
+.contentEditable.editing { min-height: 1.5em; }
+
+#configuratorSettings label { font-weight: bold; width: 5.5em; }
+
+#configuratorSettings input { width: 21.5em; }
+
+#configuratorSettings span.error { margin-left: 8em; }
+
+#configuratorSettings .errorMessage { font-size: 1.2em; margin-bottom: -1em; margin-top: 1em; padding-left: 1em; }
+
+#sessionTimeoutModal .buttonWrapper { text-align: right; }
+
+.globalStatusIndicator { border-radius: 0px 0px 0.4em 0.4em; border-right: 1px solid rgb(255, 255, 255); border-bottom: 1px solid rgb(255, 255, 255); border-left: 1px solid rgb(255, 255, 255); border-image: initial; border-top: none; color: rgb(255, 255, 255); height: 1.5em; left: 50%; margin-left: -8em; padding: 0.5em 0.5em 0.8em; position: fixed; text-align: center; transition-duration: 0.5s; transition-property: top; top: -100%; width: 16em; z-index: 10000; }
+
+.globalStatusIndicator .icon, .globalStatusIndicator .message { font-size: 1.5em; font-weight: bold; vertical-align: middle; }
+
+.globalStatusIndicator .icon { display: none; margin-right: 0.5em; }
+
+.globalStatusIndicator.shown { top: 0px; }
+
+.globalStatusIndicator.state-good { background-color: rgb(9, 167, 79); }
+
+.globalStatusIndicator.state-good .icon.good { display: inline-block; }
+
+.globalStatusIndicator.state-waiting { background-color: rgb(252, 200, 6); }
+
+.globalStatusIndicator.state-waiting .icon.waiting { display: inline-block; }
+
+.globalStatusIndicator.state-bad { background-color: rgb(227, 50, 41); }
+
+.globalStatusIndicator.state-bad .icon.bad { display: inline-block; }
+
+#nbe-geocoding { position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%; background-color: rgb(247, 247, 247); z-index: 1; }
+
+#nbe-geocoding > .paneContent > div > label { display: inline-block; }
+
+#nbe-geocoding #create-geocoded-point-column-fields .nbe-geocoding-option.line { margin-bottom: 0px; }
+
+#nbe-geocoding #create-geocoded-point-column-fields .nbe-geocoding-option.line.select label { font-weight: 600 !important; }
+
+#nbe-geocoding #create-geocoded-point-column-fields .nbe-geocoding-option.line.input { margin-top: 0px; margin-bottom: 2em; }
+
+#nbe-geocoding #create-geocoded-point-column-fields .nbe-geocoding-option.line.input label { position: relative; display: block; float: left; width: auto; top: 0px; overflow: visible; }
+
+#nbe-geocoding #create-geocoded-point-column-fields .nbe-geocoding-option.line.input input { float: right; margin: 0px 6px 4px 0px; padding: 0.5em; width: 51%; color: rgb(94, 94, 94); font-family: var(--default-font-stack); font-size: 13.5px; border-radius: 1px; box-shadow: none; box-sizing: border-box; font-weight: 400 !important; }
+
+#nbe-geocoding .nbe-geocoding-buttons { margin-top: 15px; }
+
+#nbe-geocoding .nbe-geocoding-buttons #nbe-geocoding-submit, #nbe-geocoding .nbe-geocoding-buttons #nbe-geocoding-cancel { width: auto; float: right; }
+
+#nbe-geocoding .nbe-geocoding-buttons #nbe-geocoding-submit { margin-left: 15px; }
+
+.asset-icon { margin-bottom: 2px; }
+
+.asset-icon[data-display-type] { background: none; text-indent: 0px; }
+
+.asset-icon[data-display-type]::before { font-family: socrata-icons; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; font-size: 13px; }
+
+.asset-icon[data-display-type="calendar"]::before { content: ""; color: blue; }
+
+.asset-icon[data-display-type="datasets"]::before, .asset-icon[data-display-type="table"]::before, .asset-icon[data-display-type="blist"]::before { content: ""; color: rgb(207, 117, 50); }
+
+.asset-icon[data-display-type="charts"]::before, .asset-icon[data-display-type="chart"]::before { content: ""; color: rgb(230, 190, 101); }
+
+.asset-icon[data-display-type="filters"]::before, .asset-icon[data-display-type="filter"]::before { content: ""; color: rgb(141, 183, 223); }
+
+.asset-icon[data-display-type="blob"]::before { content: ""; color: rgb(136, 187, 80); }
+
+.asset-icon[data-display-type="maps"]::before, .asset-icon[data-display-type="map"]::before { content: ""; color: rgb(97, 152, 88); }
+
+.asset-icon[data-display-type="unpublished"]::before { content: ""; color: blue; }
+
+.settings-icon { background: none; text-indent: 0px; }
+
+.settings-icon::before { font-family: socrata-icons; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; font-size: 13px; color: gray; content: ""; }
+
+.gridList { border-collapse: collapse; width: 100%; }
+
+.gridList thead tr td, .gridList thead tr th { background-color: rgb(224, 228, 233); font-size: 1.2em; font-weight: normal; padding: 0.5em 1em; text-align: left; }
+
+.gridList thead tr td .icon, .gridList thead tr th .icon { background-color: transparent; background-position: 0px 0px; background-repeat: no-repeat; display: block; text-align: left; text-indent: -9999px; background-image: url("https://data.seattle.gov/frontend/P25-HF-1/stylesheets/images/icons/menu_icons.png?3"); height: 13px; width: 13px; }
+
+.gridList thead tr td .icon, .gridList thead tr th .icon { background-position: 0px 0px; }
+
+.gridList thead tr td.none .icon, .gridList thead tr th.none .icon { background-position: 0px 13px; }
+
+.gridList thead tr td.downArrow .icon, .gridList thead tr td.downArrowNoHover .icon, .gridList thead tr td.headerSortUp .icon, .gridList thead tr th.downArrow .icon, .gridList thead tr th.downArrowNoHover .icon, .gridList thead tr th.headerSortUp .icon { background-position: 0px 0px; }
+
+.gridList thead tr td.downArrow:hover .icon, .gridList thead tr td.downArrowHighlight .icon, .gridList thead tr td.collapsed .icon, .gridList thead tr th.downArrow:hover .icon, .gridList thead tr th.downArrowHighlight .icon, .gridList thead tr th.collapsed .icon { background-position: 0px -13px; }
+
+.gridList thead tr td.upArrow .icon, .gridList thead tr td.upArrowNoHover .icon, .gridList thead tr td.headerSortDown .icon, .gridList thead tr th.upArrow .icon, .gridList thead tr th.upArrowNoHover .icon, .gridList thead tr th.headerSortDown .icon { background-position: 0px -26px; }
+
+.gridList thead tr td.upArrow:hover .icon, .gridList thead tr td.upArrowHighlight .icon, .gridList thead tr td.expanded .icon, .gridList thead tr th.upArrow:hover .icon, .gridList thead tr th.upArrowHighlight .icon, .gridList thead tr th.expanded .icon { background-position: 0px -39px; }
+
+.gridList thead tr td.rightArrow .icon, .gridList thead tr td.next .icon, .gridList thead tr th.rightArrow .icon, .gridList thead tr th.next .icon { background-position: 0px -52px; }
+
+.gridList thead tr td.rightArrow:hover .icon, .gridList thead tr td.rightArrowHighlight .icon, .gridList thead tr th.rightArrow:hover .icon, .gridList thead tr th.rightArrowHighlight .icon { background-position: 0px -65px; }
+
+.gridList thead tr td.leftArrow .icon, .gridList thead tr td.leftArrowNoHover .icon, .gridList thead tr td.previous .icon, .gridList thead tr th.leftArrow .icon, .gridList thead tr th.leftArrowNoHover .icon, .gridList thead tr th.previous .icon { background-position: 0px -78px; }
+
+.gridList thead tr td.leftArrow:hover .icon, .gridList thead tr td.leftArrowHighlight .icon, .gridList thead tr th.leftArrow:hover .icon, .gridList thead tr th.leftArrowHighlight .icon { background-position: 0px -91px; }
+
+.gridList thead tr td.add .icon, .gridList thead tr th.add .icon { background-position: 0px -104px; }
+
+.gridList thead tr td.search .icon, .gridList thead tr th.search .icon { background-position: 0px -117px; }
+
+.gridList thead tr td.about .icon, .gridList thead tr th.about .icon { background-position: 0px -130px; }
+
+.gridList thead tr td.fullscreen .icon, .gridList thead tr th.fullscreen .icon { background-position: 0px -143px; }
+
+.gridList thead tr td.share .icon, .gridList thead tr th.share .icon { background-position: 0px -156px; }
+
+.gridList thead tr td.checked .icon, .gridList thead tr th.checked .icon { background-position: 0px -169px; }
+
+.gridList thead tr td.iconView .icon, .gridList thead tr th.iconView .icon { background-position: 0px -182px; }
+
+.gridList thead tr td.listView .icon, .gridList thead tr th.listView .icon { background-position: 0px -195px; }
+
+.gridList thead tr td.fatrowView .icon, .gridList thead tr th.fatrowView .icon { background-position: 0px -208px; }
+
+.gridList thead tr td.gridView .icon, .gridList thead tr th.gridView .icon { background-position: 0px -221px; }
+
+.gridList thead tr td.typeFilter .icon, .gridList thead tr th.typeFilter .icon { background-position: 0px -234px; }
+
+.gridList thead tr td.typeChart .icon, .gridList thead tr th.typeChart .icon { background-position: 0px -247px; }
+
+.gridList thead tr td.typeMap .icon, .gridList thead tr th.typeMap .icon { background-position: 0px -260px; }
+
+.gridList thead tr td.typeBlist .icon, .gridList thead tr th.typeBlist .icon { background-position: 0px -273px; }
+
+.gridList thead tr td.feed .icon, .gridList thead tr th.feed .icon { background-position: 0px -286px; }
+
+.gridList thead tr td.typeApi .icon, .gridList thead tr td.embed .icon, .gridList thead tr th.typeApi .icon, .gridList thead tr th.embed .icon { background-position: 0px -299px; }
+
+.gridList thead tr td.views .icon, .gridList thead tr th.views .icon { background-position: 0px -312px; }
+
+.gridList thead tr td.downloads .icon, .gridList thead tr th.downloads .icon { background-position: 0px -325px; }
+
+.gridList thead tr td.delicious .icon, .gridList thead tr th.delicious .icon { background-position: 0px -338px; }
+
+.gridList thead tr td.digg .icon, .gridList thead tr th.digg .icon { background-position: 0px -351px; }
+
+.gridList thead tr td.facebook .icon, .gridList thead tr th.facebook .icon { background-position: 0px -364px; }
+
+.gridList thead tr td.twitter .icon, .gridList thead tr th.twitter .icon { background-position: 0px -377px; }
+
+.gridList thead tr td.email .icon, .gridList thead tr th.email .icon { background-position: 0px -390px; }
+
+.gridList thead tr td.rateUp .icon, .gridList thead tr th.rateUp .icon { background-position: 0px -403px; }
+
+.gridList thead tr td.ratedUp .icon, .gridList thead tr th.ratedUp .icon { background-position: 0px -416px; }
+
+.gridList thead tr td.rateDown .icon, .gridList thead tr th.rateDown .icon { background-position: 0px -429px; }
+
+.gridList thead tr td.ratedDown .icon, .gridList thead tr th.ratedDown .icon { background-position: 0px -442px; }
+
+.gridList thead tr td.typeForm .icon, .gridList thead tr th.typeForm .icon { background-position: 0px -455px; }
+
+.gridList thead tr td.typeCalendar .icon, .gridList thead tr th.typeCalendar .icon { background-position: 0px -468px; }
+
+.gridList thead tr td.typeBlob .icon, .gridList thead tr th.typeBlob .icon { background-position: 0px -481px; }
+
+.gridList thead tr td.typeGrouped .icon, .gridList thead tr th.typeGrouped .icon { background-position: 0px -494px; }
+
+.gridList thead tr td.close .icon, .gridList thead tr td.remove .icon, .gridList thead tr th.close .icon, .gridList thead tr th.remove .icon { background-position: 0px -507px; }
+
+.gridList thead tr td.alert .icon, .gridList thead tr td.warning .icon, .gridList thead tr th.alert .icon, .gridList thead tr th.warning .icon { background-position: 0px -520px; }
+
+.gridList thead tr td.subscribe .icon, .gridList thead tr th.subscribe .icon { background-position: 0px -533px; }
+
+.gridList thead tr td.start .icon, .gridList thead tr th.start .icon { background-position: 0px -546px; }
+
+.gridList thead tr td.end .icon, .gridList thead tr th.end .icon { background-position: 0px -559px; }
+
+.gridList thead tr td.options .icon, .gridList thead tr th.options .icon { background-position: 0px -572px; }
+
+.gridList thead tr td.typeHref .icon, .gridList thead tr th.typeHref .icon { background-position: 0px -585px; }
+
+.gridList thead tr td.error .icon, .gridList thead tr th.error .icon { background-position: 0px -598px; }
+
+.gridList thead tr td.typeUnpublished .icon, .gridList thead tr th.typeUnpublished .icon { background-position: 0px -611px; }
+
+.gridList thead tr td.typeMeasure .icon, .gridList thead tr th.typeMeasure .icon { background-position: 0px -624px; }
+
+.gridList thead tr td:first-child, .gridList thead tr th:first-child { border-top-left-radius: 0.4em; border-bottom-left-radius: 0.4em; }
+
+.gridList thead tr td:last-child, .gridList thead tr th:last-child { border-top-right-radius: 0.4em; border-bottom-right-radius: 0.4em; }
+
+.gridList thead tr td.header.sortable:hover, .gridList thead tr th.header.sortable:hover { background-color: rgb(197, 204, 213); cursor: pointer; }
+
+.gridList thead tr td.headerSortUp, .gridList thead tr td.headerSortDown, .gridList thead tr th.headerSortUp, .gridList thead tr th.headerSortDown { background-color: rgb(197, 204, 213); }
+
+.gridList thead tr td.headerSortUp .icon, .gridList thead tr td.headerSortDown .icon, .gridList thead tr th.headerSortUp .icon, .gridList thead tr th.headerSortDown .icon { visibility: visible; }
+
+.gridList thead tr td div, .gridList thead tr th div { float: left; }
+
+.gridList thead tr td .icon, .gridList thead tr th .icon { visibility: hidden; float: right; }
+
+.gridList tbody tr { border-top: 1px solid rgb(224, 228, 233); }
+
+.gridList tbody tr:first-child { border-top: none; }
+
+.gridList tbody tr th.row-header { font-weight: normal; text-align: left; }
+
+.gridList tbody tr td, .gridList tbody tr .row-header { font-size: 1.2em; padding: 0.6em 1em; vertical-align: top; }
+
+#gridSidebar .gridListWrapper { border: 1px solid rgb(206, 206, 206); border-radius: 0.3em; background-color: rgb(255, 255, 255); }
+
+#gridSidebar .gridListWrapper .gridList thead tr th { border-bottom: 1px solid rgb(206, 206, 206); }
+
+#gridSidebar .gridListWrapper .gridList thead tr th:first-child { border-top-left-radius: 0.2em; border-bottom-left-radius: 0px; }
+
+#gridSidebar .gridListWrapper .gridList thead tr th:last-child { border-top-right-radius: 0.2em; border-bottom-right-radius: 0px; }
+
+.gridList.filterList thead th.type { width: 5em; }
+
+.gridList.filterList thead th.viewed { width: 6em; }
+
+.gridList.filterList thead th.picture { width: 6em; }
+
+.gridList.filterList tbody td.viewed { text-align: right; }
+
+.gridList.filterList tbody td.picture { text-align: center; }
+
+.gridList.filterList tbody td.picture img { height: 24px; width: 24px; }
+
+.gridList.commentModerationList thead th.author { width: 13em; }
+
+.gridList.commentModerationList thead th.dataset { width: 10em; }
+
+.gridList.commentModerationList thead th.status { width: 19.5em; }
+
+.gridList.commentModerationList tbody td.status { font-size: 1em; }
+
+.gridList.templatesList thead th.name { width: 18em; }
+
+.gridList.templatesList thead th.actions { width: 21em; }
+
+.gridList.templatesList tbody td.actions { font-size: 1em; }
+
+.gridList.storiesList thead th.date { width: 11em; }
+
+.gridList.storiesList thead th.actions { width: 21em; }
+
+.gridList.storiesList tbody td.actions { font-size: 1em; }
+
+@font-face { font-family: socrata-icons; src: url("https://data.seattle.gov/frontend/P25-HF-1/webfonts/common/socrata-icons.1706020453.woff2") format("woff2"), url("https://data.seattle.gov/frontend/P25-HF-1/webfonts/common/socrata-icons.1706020453.woff") format("woff"), url("https://data.seattle.gov/frontend/P25-HF-1/webfonts/common/socrata-icons.1706020453.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+
+.icon-add-collaborator::before, .socrata-icon-add-collaborator::before, .icon-add::before, .socrata-icon-add::before, .icon-arrow-down::before, .socrata-icon-arrow-down::before, .icon-arrow-down2::before, .socrata-icon-arrow-down2::before, .icon-arrow-left::before, .socrata-icon-arrow-left::before, .icon-arrow-next::before, .socrata-icon-arrow-next::before, .icon-arrow-prev::before, .socrata-icon-arrow-prev::before, .icon-arrow-right::before, .socrata-icon-arrow-right::before, .icon-arrow-up::before, .socrata-icon-arrow-up::before, .icon-arrow-up2::before, .socrata-icon-arrow-up2::before, .icon-attachment::before, .socrata-icon-attachment::before, .icon-axis-scale::before, .socrata-icon-axis-scale::before, .icon-bar-chart-horz::before, .socrata-icon-bar-chart-horz::before, .icon-bar-chart::before, .socrata-icon-bar-chart::before, .icon-bell::before, .socrata-icon-bell::before, .icon-bold2::before, .socrata-icon-bold2::before, .icon-boolean::before, .socrata-icon-boolean::before, .icon-calendar-alt::before, .socrata-icon-calendar-alt::before, .icon-cards::before, .socrata-icon-cards::before, .icon-chart::before, .socrata-icon-chart::before, .icon-check-2::before, .socrata-icon-check-2::before, .icon-check::before, .socrata-icon-check::before, .icon-checkmark-alt::before, .socrata-icon-checkmark-alt::before, .icon-checkmark3::before, .socrata-icon-checkmark3::before, .icon-chevron-down::before, .socrata-icon-chevron-down::before, .icon-chevron-up::before, .socrata-icon-chevron-up::before, .icon-circle::before, .socrata-icon-circle::before, .icon-clear-formatting::before, .socrata-icon-clear-formatting::before, .icon-close-2::before, .socrata-icon-close-2::before, .icon-close-circle::before, .socrata-icon-close-circle::before, .icon-close::before, .socrata-icon-close::before, .icon-collapse::before, .socrata-icon-collapse::before, .icon-color::before, .socrata-icon-color::before, .icon-column-info::before, .socrata-icon-column-info::before, .icon-column-mapping::before, .socrata-icon-column-mapping::before, .icon-column::before, .socrata-icon-column::before, .icon-combo-chart::before, .socrata-icon-combo-chart::before, .icon-community::before, .socrata-icon-community::before, .icon-copy-document::before, .socrata-icon-copy-document::before, .icon-crop::before, .socrata-icon-crop::before, .icon-cross2::before, .socrata-icon-cross2::before, .icon-data-document::before, .socrata-icon-data-document::before, .icon-data::before, .socrata-icon-data::before, .icon-dataset::before, .socrata-icon-dataset::before, .icon-date::before, .socrata-icon-date::before, .icon-db-collection::before, .socrata-icon-db-collection::before, .icon-delete::before, .socrata-icon-delete::before, .icon-distribution::before, .socrata-icon-distribution::before, .icon-dock-bottom::before, .socrata-icon-dock-bottom::before, .icon-dollar::before, .socrata-icon-dollar::before, .icon-download::before, .socrata-icon-download::before, .icon-draft-badge::before, .socrata-icon-draft-badge::before, .icon-draft-inverted::before, .socrata-icon-draft-inverted::before, .icon-draft::before, .socrata-icon-draft::before, .icon-droplet::before, .socrata-icon-droplet::before, .icon-edit::before, .socrata-icon-edit::before, .icon-email::before, .socrata-icon-email::before, .icon-embed::before, .socrata-icon-embed::before, .icon-expand::before, .socrata-icon-expand::before, .icon-external-square::before, .socrata-icon-external-square::before, .icon-external::before, .socrata-icon-external::before, .icon-eye-blocked::before, .socrata-icon-eye-blocked::before, .icon-eye::before, .socrata-icon-eye::before, .icon-facebook::before, .socrata-icon-facebook::before, .icon-failed::before, .socrata-icon-failed::before, .icon-featured::before, .socrata-icon-featured::before, .icon-federation::before, .socrata-icon-federation::before, .icon-file-upload::before, .socrata-icon-file-upload::before, .icon-file::before, .socrata-icon-file::before, .icon-filter::before, .socrata-icon-filter::before, .icon-flickr::before, .socrata-icon-flickr::before, .icon-flyout-options::before, .socrata-icon-flyout-options::before, .icon-function::before, .socrata-icon-function::before, .icon-gateway::before, .socrata-icon-gateway::before, .icon-geo::before, .socrata-icon-geo::before, .icon-github::before, .socrata-icon-github::before, .icon-goal::before, .socrata-icon-goal::before, .icon-google::before, .socrata-icon-google::before, .icon-grab-handle::before, .socrata-icon-grab-handle::before, .icon-group::before, .socrata-icon-group::before, .icon-gte::before, .socrata-icon-gte::before, .icon-hamburger::before, .socrata-icon-hamburger::before, .icon-hierarchy::before, .socrata-icon-hierarchy::before, .icon-id::before, .socrata-icon-id::before, .icon-image::before, .socrata-icon-image::before, .icon-indeterminate-state-checkbox::before, .socrata-icon-indeterminate-state-checkbox::before, .icon-indeterminate-state-icon::before, .socrata-icon-indeterminate-state-icon::before, .icon-info-inverse::before, .socrata-icon-info-inverse::before, .icon-info::before, .socrata-icon-info::before, .icon-instagram::before, .socrata-icon-instagram::before, .icon-italic2::before, .socrata-icon-italic2::before, .icon-join::before, .socrata-icon-join::before, .icon-kebab::before, .socrata-icon-kebab::before, .icon-layers::before, .socrata-icon-layers::before, .icon-layout-inline::before, .socrata-icon-layout-inline::before, .icon-layout-pop-out::before, .socrata-icon-layout-pop-out::before, .icon-layout-settings::before, .socrata-icon-layout-settings::before, .icon-line-chart::before, .socrata-icon-line-chart::before, .icon-link::before, .socrata-icon-link::before, .icon-linkedin::before, .socrata-icon-linkedin::before, .icon-list-numbered::before, .socrata-icon-list-numbered::before, .icon-list2::before, .socrata-icon-list2::before, .icon-logo::before, .socrata-icon-logo::before, .icon-lte::before, .socrata-icon-lte::before, .icon-map::before, .socrata-icon-map::before, .icon-measure::before, .socrata-icon-measure::before, .icon-measures-editor-working-copy::before, .socrata-icon-measures-editor-working-copy::before, .icon-measures-editor::before, .socrata-icon-measures-editor::before, .icon-move-vertical::before, .socrata-icon-move-vertical::before, .icon-move::before, .socrata-icon-move::before, .icon-my-org::before, .socrata-icon-my-org::before, .icon-no-filter::before, .socrata-icon-no-filter::before, .icon-number::before, .socrata-icon-number::before, .icon-official::before, .socrata-icon-official::before, .icon-official2::before, .socrata-icon-official2::before, .icon-outlink::before, .socrata-icon-outlink::before, .icon-paragraph-center3::before, .socrata-icon-paragraph-center3::before, .icon-paragraph-left::before, .socrata-icon-paragraph-left::before, .icon-paragraph-left3::before, .socrata-icon-paragraph-left3::before, .icon-paragraph-right3::before, .socrata-icon-paragraph-right3::before, .icon-pause::before, .socrata-icon-pause::before, .icon-pending-inverted::before, .socrata-icon-pending-inverted::before, .icon-pending::before, .socrata-icon-pending::before, .icon-pending2::before, .socrata-icon-pending2::before, .icon-pie-chart::before, .socrata-icon-pie-chart::before, .icon-pinterest::before, .socrata-icon-pinterest::before, .icon-play::before, .socrata-icon-play::before, .icon-play2::before, .socrata-icon-play2::before, .icon-plus2::before, .socrata-icon-plus2::before, .icon-plus3::before, .socrata-icon-plus3::before, .icon-presentation::before, .socrata-icon-presentation::before, .icon-preview::before, .socrata-icon-preview::before, .icon-print::before, .socrata-icon-print::before, .icon-private::before, .socrata-icon-private::before, .icon-processing::before, .socrata-icon-processing::before, .icon-progress::before, .socrata-icon-progress::before, .icon-public-open::before, .socrata-icon-public-open::before, .icon-pulse::before, .socrata-icon-pulse::before, .icon-puzzle::before, .socrata-icon-puzzle::before, .icon-question-inverse::before, .socrata-icon-question-inverse::before, .icon-question::before, .socrata-icon-question::before, .icon-quotes-left::before, .socrata-icon-quotes-left::before, .icon-redo::before, .socrata-icon-redo::before, .icon-refresh::before, .socrata-icon-refresh::before, .icon-region::before, .socrata-icon-region::before, .icon-remove::before, .socrata-icon-remove::before, .icon-scatter-plot::before, .socrata-icon-scatter-plot::before, .icon-search::before, .socrata-icon-search::before, .icon-security::before, .socrata-icon-security::before, .icon-settings-switch::before, .socrata-icon-settings-switch::before, .icon-settings::before, .socrata-icon-settings::before, .icon-share::before, .socrata-icon-share::before, .icon-sign-out::before, .socrata-icon-sign-out::before, .icon-sort-asc::before, .socrata-icon-sort-asc::before, .icon-sort-az::before, .socrata-icon-sort-az::before, .icon-sort-desc::before, .socrata-icon-sort-desc::before, .icon-sort-za::before, .socrata-icon-sort-za::before, .icon-sort::before, .socrata-icon-sort::before, .icon-stories-icon::before, .socrata-icon-stories-icon::before, .icon-stories-menu::before, .socrata-icon-stories-menu::before, .icon-story::before, .socrata-icon-story::before, .icon-sub-org::before, .socrata-icon-sub-org::before, .icon-table-hierarchy::before, .socrata-icon-table-hierarchy::before, .icon-table::before, .socrata-icon-table::before, .icon-tag::before, .socrata-icon-tag::before, .icon-team::before, .socrata-icon-team::before, .icon-templates::before, .socrata-icon-templates::before, .icon-text::before, .socrata-icon-text::before, .icon-tumblr::before, .socrata-icon-tumblr::before, .icon-twitter::before, .socrata-icon-twitter::before, .icon-undo::before, .socrata-icon-undo::before, .icon-undock::before, .socrata-icon-undock::before, .icon-user::before, .socrata-icon-user::before, .icon-vimeo::before, .socrata-icon-vimeo::before, .icon-waiting::before, .socrata-icon-waiting::before, .icon-warning-alt::before, .socrata-icon-warning-alt::before, .icon-warning-alt2::before, .socrata-icon-warning-alt2::before, .icon-warning::before, .socrata-icon-warning::before, .icon-watch::before, .socrata-icon-watch::before, .icon-watched::before, .socrata-icon-watched::before, .icon-windows::before, .socrata-icon-windows::before, .icon-working-copy::before, .socrata-icon-working-copy::before, .icon-yahoo::before, .socrata-icon-yahoo::before, .icon-yammer::before, .socrata-icon-yammer::before, .icon-youtube::before, .socrata-icon-youtube::before { display: inline-block; font-family: socrata-icons; font-style: normal; font-weight: normal; font-variant: normal; text-decoration: inherit; text-rendering: optimizelegibility; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; }
+
+.icon-lg, .socrata-icon-lg { font-size: 1.33333em; line-height: 0.75em; vertical-align: -15%; }
+
+.icon-2x, .socrata-icon-2x { font-size: 2em; }
+
+.icon-3x, .socrata-icon-3x { font-size: 3em; }
+
+.icon-4x, .socrata-icon-4x { font-size: 4em; }
+
+.icon-5x, .socrata-icon-5x { font-size: 5em; }
+
+.icon-fw, .socrata-icon-fw { width: 1.28571em; text-align: center; }
+
+.icon-add-collaborator::before, .socrata-icon-add-collaborator::before { content: ""; }
+
+.icon-add::before, .socrata-icon-add::before { content: ""; }
+
+.icon-arrow-down::before, .socrata-icon-arrow-down::before { content: ""; }
+
+.icon-arrow-down2::before, .socrata-icon-arrow-down2::before { content: ""; }
+
+.icon-arrow-left::before, .socrata-icon-arrow-left::before { content: ""; }
+
+.icon-arrow-next::before, .socrata-icon-arrow-next::before { content: ""; }
+
+.icon-arrow-prev::before, .socrata-icon-arrow-prev::before { content: ""; }
+
+.icon-arrow-right::before, .socrata-icon-arrow-right::before { content: ""; }
+
+.icon-arrow-up::before, .socrata-icon-arrow-up::before { content: ""; }
+
+.icon-arrow-up2::before, .socrata-icon-arrow-up2::before { content: ""; }
+
+.icon-attachment::before, .socrata-icon-attachment::before { content: ""; }
+
+.icon-axis-scale::before, .socrata-icon-axis-scale::before { content: ""; }
+
+.icon-bar-chart-horz::before, .socrata-icon-bar-chart-horz::before { content: ""; }
+
+.icon-bar-chart::before, .socrata-icon-bar-chart::before { content: ""; }
+
+.icon-bell::before, .socrata-icon-bell::before { content: ""; }
+
+.icon-bold2::before, .socrata-icon-bold2::before { content: ""; }
+
+.icon-boolean::before, .socrata-icon-boolean::before { content: ""; }
+
+.icon-calendar-alt::before, .socrata-icon-calendar-alt::before { content: ""; }
+
+.icon-cards::before, .socrata-icon-cards::before { content: ""; }
+
+.icon-chart::before, .socrata-icon-chart::before { content: ""; }
+
+.icon-check-2::before, .socrata-icon-check-2::before { content: ""; }
+
+.icon-check::before, .socrata-icon-check::before { content: ""; }
+
+.icon-checkmark-alt::before, .socrata-icon-checkmark-alt::before { content: ""; }
+
+.icon-checkmark3::before, .socrata-icon-checkmark3::before { content: ""; }
+
+.icon-chevron-down::before, .socrata-icon-chevron-down::before { content: ""; }
+
+.icon-chevron-up::before, .socrata-icon-chevron-up::before { content: ""; }
+
+.icon-circle::before, .socrata-icon-circle::before { content: ""; }
+
+.icon-clear-formatting::before, .socrata-icon-clear-formatting::before { content: ""; }
+
+.icon-close-2::before, .socrata-icon-close-2::before { content: ""; }
+
+.icon-close-circle::before, .socrata-icon-close-circle::before { content: ""; }
+
+.icon-close::before, .socrata-icon-close::before { content: ""; }
+
+.icon-collapse::before, .socrata-icon-collapse::before { content: ""; }
+
+.icon-color::before, .socrata-icon-color::before { content: ""; }
+
+.icon-column-info::before, .socrata-icon-column-info::before { content: ""; }
+
+.icon-column-mapping::before, .socrata-icon-column-mapping::before { content: ""; }
+
+.icon-column::before, .socrata-icon-column::before { content: ""; }
+
+.icon-combo-chart::before, .socrata-icon-combo-chart::before { content: ""; }
+
+.icon-community::before, .socrata-icon-community::before { content: ""; }
+
+.icon-copy-document::before, .socrata-icon-copy-document::before { content: ""; }
+
+.icon-crop::before, .socrata-icon-crop::before { content: ""; }
+
+.icon-cross2::before, .socrata-icon-cross2::before { content: ""; }
+
+.icon-data-document::before, .socrata-icon-data-document::before { content: ""; }
+
+.icon-data::before, .socrata-icon-data::before { content: ""; }
+
+.icon-dataset::before, .socrata-icon-dataset::before { content: ""; }
+
+.icon-date::before, .socrata-icon-date::before { content: ""; }
+
+.icon-db-collection::before, .socrata-icon-db-collection::before { content: ""; }
+
+.icon-delete::before, .socrata-icon-delete::before { content: ""; }
+
+.icon-distribution::before, .socrata-icon-distribution::before { content: ""; }
+
+.icon-dock-bottom::before, .socrata-icon-dock-bottom::before { content: ""; }
+
+.icon-dollar::before, .socrata-icon-dollar::before { content: ""; }
+
+.icon-download::before, .socrata-icon-download::before { content: ""; }
+
+.icon-draft-badge::before, .socrata-icon-draft-badge::before { content: ""; }
+
+.icon-draft-inverted::before, .socrata-icon-draft-inverted::before { content: ""; }
+
+.icon-draft::before, .socrata-icon-draft::before { content: ""; }
+
+.icon-droplet::before, .socrata-icon-droplet::before { content: ""; }
+
+.icon-edit::before, .socrata-icon-edit::before { content: ""; }
+
+.icon-email::before, .socrata-icon-email::before { content: ""; }
+
+.icon-embed::before, .socrata-icon-embed::before { content: ""; }
+
+.icon-expand::before, .socrata-icon-expand::before { content: ""; }
+
+.icon-external-square::before, .socrata-icon-external-square::before { content: ""; }
+
+.icon-external::before, .socrata-icon-external::before { content: ""; }
+
+.icon-eye-blocked::before, .socrata-icon-eye-blocked::before { content: ""; }
+
+.icon-eye::before, .socrata-icon-eye::before { content: ""; }
+
+.icon-facebook::before, .socrata-icon-facebook::before { content: ""; }
+
+.icon-failed::before, .socrata-icon-failed::before { content: ""; }
+
+.icon-featured::before, .socrata-icon-featured::before { content: ""; }
+
+.icon-federation::before, .socrata-icon-federation::before { content: ""; }
+
+.icon-file-upload::before, .socrata-icon-file-upload::before { content: ""; }
+
+.icon-file::before, .socrata-icon-file::before { content: ""; }
+
+.icon-filter::before, .socrata-icon-filter::before { content: ""; }
+
+.icon-flickr::before, .socrata-icon-flickr::before { content: ""; }
+
+.icon-flyout-options::before, .socrata-icon-flyout-options::before { content: ""; }
+
+.icon-function::before, .socrata-icon-function::before { content: ""; }
+
+.icon-gateway::before, .socrata-icon-gateway::before { content: ""; }
+
+.icon-geo::before, .socrata-icon-geo::before { content: ""; }
+
+.icon-github::before, .socrata-icon-github::before { content: ""; }
+
+.icon-goal::before, .socrata-icon-goal::before { content: ""; }
+
+.icon-google::before, .socrata-icon-google::before { content: ""; }
+
+.icon-grab-handle::before, .socrata-icon-grab-handle::before { content: ""; }
+
+.icon-group::before, .socrata-icon-group::before { content: ""; }
+
+.icon-gte::before, .socrata-icon-gte::before { content: ""; }
+
+.icon-hamburger::before, .socrata-icon-hamburger::before { content: ""; }
+
+.icon-hierarchy::before, .socrata-icon-hierarchy::before { content: ""; }
+
+.icon-id::before, .socrata-icon-id::before { content: ""; }
+
+.icon-image::before, .socrata-icon-image::before { content: ""; }
+
+.icon-indeterminate-state-checkbox::before, .socrata-icon-indeterminate-state-checkbox::before { content: ""; }
+
+.icon-indeterminate-state-icon::before, .socrata-icon-indeterminate-state-icon::before { content: ""; }
+
+.icon-info-inverse::before, .socrata-icon-info-inverse::before { content: ""; }
+
+.icon-info::before, .socrata-icon-info::before { content: ""; }
+
+.icon-instagram::before, .socrata-icon-instagram::before { content: ""; }
+
+.icon-italic2::before, .socrata-icon-italic2::before { content: ""; }
+
+.icon-join::before, .socrata-icon-join::before { content: ""; }
+
+.icon-kebab::before, .socrata-icon-kebab::before { content: ""; }
+
+.icon-layers::before, .socrata-icon-layers::before { content: ""; }
+
+.icon-layout-inline::before, .socrata-icon-layout-inline::before { content: ""; }
+
+.icon-layout-pop-out::before, .socrata-icon-layout-pop-out::before { content: ""; }
+
+.icon-layout-settings::before, .socrata-icon-layout-settings::before { content: ""; }
+
+.icon-line-chart::before, .socrata-icon-line-chart::before { content: ""; }
+
+.icon-link::before, .socrata-icon-link::before { content: ""; }
+
+.icon-linkedin::before, .socrata-icon-linkedin::before { content: ""; }
+
+.icon-list-numbered::before, .socrata-icon-list-numbered::before { content: ""; }
+
+.icon-list2::before, .socrata-icon-list2::before { content: ""; }
+
+.icon-logo::before, .socrata-icon-logo::before { content: ""; }
+
+.icon-lte::before, .socrata-icon-lte::before { content: ""; }
+
+.icon-map::before, .socrata-icon-map::before { content: ""; }
+
+.icon-measure::before, .socrata-icon-measure::before { content: ""; }
+
+.icon-measures-editor-working-copy::before, .socrata-icon-measures-editor-working-copy::before { content: ""; }
+
+.icon-measures-editor::before, .socrata-icon-measures-editor::before { content: ""; }
+
+.icon-move-vertical::before, .socrata-icon-move-vertical::before { content: ""; }
+
+.icon-move::before, .socrata-icon-move::before { content: ""; }
+
+.icon-my-org::before, .socrata-icon-my-org::before { content: ""; }
+
+.icon-no-filter::before, .socrata-icon-no-filter::before { content: ""; }
+
+.icon-number::before, .socrata-icon-number::before { content: ""; }
+
+.icon-official::before, .socrata-icon-official::before { content: ""; }
+
+.icon-official2::before, .socrata-icon-official2::before { content: ""; }
+
+.icon-outlink::before, .socrata-icon-outlink::before { content: ""; }
+
+.icon-paragraph-center3::before, .socrata-icon-paragraph-center3::before { content: ""; }
+
+.icon-paragraph-left::before, .socrata-icon-paragraph-left::before { content: ""; }
+
+.icon-paragraph-left3::before, .socrata-icon-paragraph-left3::before { content: ""; }
+
+.icon-paragraph-right3::before, .socrata-icon-paragraph-right3::before { content: ""; }
+
+.icon-pause::before, .socrata-icon-pause::before { content: ""; }
+
+.icon-pending-inverted::before, .socrata-icon-pending-inverted::before { content: ""; }
+
+.icon-pending::before, .socrata-icon-pending::before { content: ""; }
+
+.icon-pending2::before, .socrata-icon-pending2::before { content: ""; }
+
+.icon-pie-chart::before, .socrata-icon-pie-chart::before { content: ""; }
+
+.icon-pinterest::before, .socrata-icon-pinterest::before { content: ""; }
+
+.icon-play::before, .socrata-icon-play::before { content: ""; }
+
+.icon-play2::before, .socrata-icon-play2::before { content: ""; }
+
+.icon-plus2::before, .socrata-icon-plus2::before { content: ""; }
+
+.icon-plus3::before, .socrata-icon-plus3::before { content: ""; }
+
+.icon-presentation::before, .socrata-icon-presentation::before { content: ""; }
+
+.icon-preview::before, .socrata-icon-preview::before { content: ""; }
+
+.icon-print::before, .socrata-icon-print::before { content: ""; }
+
+.icon-private::before, .socrata-icon-private::before { content: ""; }
+
+.icon-processing::before, .socrata-icon-processing::before { content: ""; }
+
+.icon-progress::before, .socrata-icon-progress::before { content: ""; }
+
+.icon-public-open::before, .socrata-icon-public-open::before { content: ""; }
+
+.icon-pulse::before, .socrata-icon-pulse::before { content: ""; }
+
+.icon-puzzle::before, .socrata-icon-puzzle::before { content: ""; }
+
+.icon-question-inverse::before, .socrata-icon-question-inverse::before { content: ""; }
+
+.icon-question::before, .socrata-icon-question::before { content: ""; }
+
+.icon-quotes-left::before, .socrata-icon-quotes-left::before { content: ""; }
+
+.icon-redo::before, .socrata-icon-redo::before { content: ""; }
+
+.icon-refresh::before, .socrata-icon-refresh::before { content: ""; }
+
+.icon-region::before, .socrata-icon-region::before { content: ""; }
+
+.icon-remove::before, .socrata-icon-remove::before { content: ""; }
+
+.icon-scatter-plot::before, .socrata-icon-scatter-plot::before { content: ""; }
+
+.icon-search::before, .socrata-icon-search::before { content: ""; }
+
+.icon-security::before, .socrata-icon-security::before { content: ""; }
+
+.icon-settings-switch::before, .socrata-icon-settings-switch::before { content: ""; }
+
+.icon-settings::before, .socrata-icon-settings::before { content: ""; }
+
+.icon-share::before, .socrata-icon-share::before { content: ""; }
+
+.icon-sign-out::before, .socrata-icon-sign-out::before { content: ""; }
+
+.icon-sort-asc::before, .socrata-icon-sort-asc::before { content: ""; }
+
+.icon-sort-az::before, .socrata-icon-sort-az::before { content: ""; }
+
+.icon-sort-desc::before, .socrata-icon-sort-desc::before { content: ""; }
+
+.icon-sort-za::before, .socrata-icon-sort-za::before { content: ""; }
+
+.icon-sort::before, .socrata-icon-sort::before { content: ""; }
+
+.icon-stories-icon::before, .socrata-icon-stories-icon::before { content: ""; }
+
+.icon-stories-menu::before, .socrata-icon-stories-menu::before { content: ""; }
+
+.icon-story::before, .socrata-icon-story::before { content: ""; }
+
+.icon-sub-org::before, .socrata-icon-sub-org::before { content: ""; }
+
+.icon-table-hierarchy::before, .socrata-icon-table-hierarchy::before { content: ""; }
+
+.icon-table::before, .socrata-icon-table::before { content: ""; }
+
+.icon-tag::before, .socrata-icon-tag::before { content: ""; }
+
+.icon-team::before, .socrata-icon-team::before { content: ""; }
+
+.icon-templates::before, .socrata-icon-templates::before { content: ""; }
+
+.icon-text::before, .socrata-icon-text::before { content: ""; }
+
+.icon-tumblr::before, .socrata-icon-tumblr::before { content: ""; }
+
+.icon-twitter::before, .socrata-icon-twitter::before { content: ""; }
+
+.icon-undo::before, .socrata-icon-undo::before { content: ""; }
+
+.icon-undock::before, .socrata-icon-undock::before { content: ""; }
+
+.icon-user::before, .socrata-icon-user::before { content: ""; }
+
+.icon-vimeo::before, .socrata-icon-vimeo::before { content: ""; }
+
+.icon-waiting::before, .socrata-icon-waiting::before { content: ""; }
+
+.icon-warning-alt::before, .socrata-icon-warning-alt::before { content: ""; }
+
+.icon-warning-alt2::before, .socrata-icon-warning-alt2::before { content: ""; }
+
+.icon-warning::before, .socrata-icon-warning::before { content: ""; }
+
+.icon-watch::before, .socrata-icon-watch::before { content: ""; }
+
+.icon-watched::before, .socrata-icon-watched::before { content: ""; }
+
+.icon-windows::before, .socrata-icon-windows::before { content: ""; }
+
+.icon-working-copy::before, .socrata-icon-working-copy::before { content: ""; }
+
+.icon-yahoo::before, .socrata-icon-yahoo::before { content: ""; }
+
+.icon-yammer::before, .socrata-icon-yammer::before { content: ""; }
+
+.icon-youtube::before, .socrata-icon-youtube::before { content: ""; }

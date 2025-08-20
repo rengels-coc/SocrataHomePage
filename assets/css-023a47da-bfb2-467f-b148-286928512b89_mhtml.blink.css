@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+.alert-data-grid-modal { color: rgb(105, 106, 106); height: 100vh; }
+
+.alert-data-grid-modal .modal-container { width: 80%; min-height: 400px; max-width: 1200px !important; }
+
+.alert-data-grid-modal .modal-header { margin-bottom: 10px !important; }
+
+.alert-data-grid-modal .sub-title { font-size: 13px; margin-bottom: 10px; }
+
+.alert-data-grid-modal .tabs-list { border-bottom: 1px solid rgb(204, 204, 204); font-size: 13px; }
+
+.alert-data-grid-modal .tabs-list .tab-name { cursor: pointer; display: inline-block; margin-right: 20px; padding: 0px 5px 0px 0px; }
+
+.alert-data-grid-modal .tabs-list .tab-name.active, .alert-data-grid-modal .tabs-list .tab-name:hover { display: inline-block; color: rgb(62, 62, 62); border-bottom: 3px solid rgb(27, 120, 168); }
+
+.alert-data-grid-modal .actions-pane { float: right; }
+
+.alert-data-grid-modal .actions-pane .user-notification-download-icon { text-decoration: none; }
+
+.alert-data-grid-modal .tab-content { height: 300px; display: block; }
+
+.alert-data-grid-modal .tab-content .alert-data-container { display: none; height: 300px; position: relative; }
+
+.alert-data-grid-modal .tab-content .alert-data-container.active { display: block; }
+
+.alert-data-grid-modal .tab-content .alert-data-container .socrata-visualization-renderer { height: 300px; }
+
+.alert-data-grid-modal .tab-content .alert-details-container { display: none; margin-top: 25px; font-size: 13px; }
+
+.alert-data-grid-modal .tab-content .alert-details-container.active { display: block; }
+
+.alert-data-grid-modal .tab-content .alert-details-container .description-section { padding: 5px 15px 5px 0px; }
+
+.alert-data-grid-modal .tab-content .alert-details-container .entry .name { text-align: right; padding: 5px 15px 5px 0px; }
+
+.alert-data-grid-modal .tab-content .alert-details-container .entry .value { text-align: left; }
