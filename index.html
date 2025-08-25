@@ -14,30 +14,6 @@
 <meta name="csrf-token" content="DSylt1vldpJ82E30XGnuJ-t8fXUhb_CygEkRSH2ApPObPmZyVnbsSCToSKgcG2rfsdHP8bwq0VtQd_9kDoS6lA">
     
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
       
       <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <!-- Removed individual CSS link tags (their content is inside assets/combined_all.css). For rollback, re-enable them from the commented ORIGINAL STYLES block above. -->
@@ -56,14 +32,81 @@
   <meta property="og:image" content="//data.seattle.gov/stylesheets/images/common/socrata_logo_square.png">
 
     <link rel="shortcut icon" type="image/x-icon" href="https://data.seattle.gov/api/assets/5E5065A9-E12F-4080-A80A-4FF645E839E0?ChiefSeattle_Blue.png">
+  
+    <!-- Custom overrides & scoped adjustments -->
+    <style>
+      /* Trending tiles: uniform height & wrapping */
+      #trending-tiles .cs-tile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 190px; /* matches other tiles */
+        text-align: center;
+        box-shadow: none;
+        overflow: hidden;
+        padding: 0.5rem;
+      }
+      #trending-tiles .cs-tile-title,
+      #trending-tiles .cs-tile-description {
+        line-height: 1.25;
+        color: rgb(0, 61, 165);
+        margin: 0.25rem 0 0 0;
+        white-space: normal;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
+      /* Social icon fallback (inline SVG sizing) */
+      .site-chrome-social-link .social-icon-svg { width: 1.25rem; height: 1.25rem; display: inline-block; vertical-align: middle; fill: currentColor; }
+      /* Constrain hero banner & neutralize dark overlay */
+      .cs-home-banner-container { position: relative; overflow: hidden; }
+      .cs-home-banner-wrapper { position: relative; }
+      /* Remove the dark overlay entirely (user reported persistent dark gradient) */
+      .cs-home-banner-wrapper .cs-banner-overlay { background: none !important; }
+      /* Ensure hero text / elements remain interactive */
+      .cs-banner-overlay { pointer-events: none; }
+      /* Preserve hero background image on hover; earlier blanket hover overrides may have unset it */
+      .cs-home-banner-wrapper,
+      .cs-home-banner-wrapper:hover { background-size: cover !important; background-position: center center !important; background-repeat: no-repeat !important; }
+      /* Elevate post-hero sections above any positioned remnants */
+     .siteContentWrapper > section { position: relative; background: #fff; z-index: 1; }
+     /* Some section wrapper utility classes (.kXxxKZ, .gLDqgV) from the captured snapshot carry blend/overlay effects.
+       Force them to plain backgrounds to remove lingering dark gradient appearance. */
+     .kXxxKZ, .gLDqgV { background: #fff !important; background-image: none !important; background-blend-mode: normal !important; }
+     /* Tiles with gradient overlays: neutralize their gradient layer so it doesn't visually stack into a column tint */
+     .cs-homebase-tile .gradient-overlay { background: none !important; }
+     /* Fallback: if any element still paints a semi-transparent layer via blend mode */
+     [style*="background-blend-mode: overlay"] { background-blend-mode: normal !important; }
+  /* Remove unintended hover highlight on the central column / hero sections */
+  /* Hover: keep image, just avoid extra darkening */
+  .cs-home-banner-wrapper:hover .cs-banner-overlay { background: none !important; }
+  /* IMPORTANT: Remove hero from the generic white hover background reset to stop image flashing.
+    Keep only section wrappers on hover; hero retains its background image unchanged. */
+  .kXxxKZ:hover,
+  .gLDqgV:hover,
+  .hlzyrD:hover { background: #fff !important; background-color: #fff !important; box-shadow: none !important; filter: none !important; }
+  /* Minimal, non-destructive hover rule for the hero just to suppress any box-shadow/filter without touching background */
+  .cs-home-banner-wrapper:hover,
+  .cs-home-banner-container:hover { box-shadow: none !important; filter: none !important; }
+  /* If a semi-transparent overlay is being toggled on hover, suppress it */
+  .cs-home-banner-wrapper .cs-banner-overlay:hover { background: none !important; }
+  /* Neutralize any dynamically added mouseover highlight utility classes */
+  .mouseover-wrapper.grey-hover,
+  .mouseover-wrapper.red-hover { background: transparent !important; outline: none !important; box-shadow: none !important; }
+  /* Remove generic overlay blocks that might be layering tint */
+  /* Limit overlay neutralization to tiles only; generic .overlay removal could have removed hero visual layers elsewhere */
+  .cs-homebase-tile .overlay { background: none !important; }
+  /* Ensure section wrapper styled-component generated classes stay plain on hover */
+  .kXxxKZ:hover, .gLDqgV:hover, .hlzyrD:hover { background-image: none !important; }
+  /* Belt & suspenders: kill any pseudo-element backgrounds on the hero wrapper */
+  .cs-home-banner-wrapper::before,
+  .cs-home-banner-wrapper::after { content: none !important; display: none !important; }
+    </style>
   </head>
 
   <body class="controller_custom_content action_custom_content_page locale_en forge-typography cs-template-home grid-view" data-locale="en" data-defaultlocale="en" style="overflow-y: visible;">
     <div class="skip-links" role="navigation" aria-label="skip-links"><a class="skip-link" href="https://data.seattle.gov/#content">Skip to main content</a><a class="skip-link" href="https://data.seattle.gov/#site-chrome-footer">Skip to footer</a></div>
     
-
-    
-
     <div class="siteOuterWrapper" style="min-height: calc(100% - 84px);">
       <div class="siteInnerWrapper">
               <div id="site-chrome-container" class="branded site-chrome-large evergreen" template="evergreen">
@@ -84,8 +127,7 @@
 
               <div class="divider"><span></span></div>
 
-            
-
+          
 
               <div class="collapsible-search" data-autocomplete="true" data-autocomplete-collapsible="true"><div class="collapsed common--autocomplete--components--collapsed-icon" tabindex="0"><span data-testid="socrata-icon-search" class="socrata-icon socrata-icon-search" role="button" aria-label="search"><svg width="1024" height="1024" viewBox="0 0 1024 1024" aria-hidden="true">
     <path d="M709.327 586.853c30.146-51.26 47.621-111.406 47.621-175.338 0-190.629-154.658-345.14-345.286-345.14-190.63 0-345.287 154.657-345.287 345.14 0 190.483 154.658 345.141 345.287 345.141 63.785 0 124.076-17.475 175.338-47.62l248.59 248.588 122.036-122.036-248.298-248.735zm-297.665 54.902c-127.28 0-230.24-102.96-230.24-230.239 0-127.28 102.96-230.094 230.24-230.094 127.28 0 230.239 102.959 230.239 230.094 0 127.135-102.96 230.239-230.24 230.239z" fill-rule="evenodd"></path>
@@ -116,26 +158,12 @@
       </div>
     </div>
 
-    
-
   </header>
 </div>
-
-
-  
-
-
-
           <div id="noticeContainer">
             
           </div>
-
-
           <a name="content" tabindex="-1"></a>
-
-        
-
-
         <div id="access-manager-container"></div>
         <div id="toastmaster"><div aria-live="assertive"></div></div>
         <div id="internet-explorer-deprecation-banner"></div>
@@ -146,7 +174,7 @@
 
 
 
-<div class="socrata-component component-Container notRendered socrata-container" id="s1" style=""><div class="socrata-component component-Text serverRendered notRendered" id="s2" style=""><div class="content-wrapper  "><div id="content-body"><div class="query-provider-wrapper"><div><div class="cs-home-banner-container cs-banner-in-carousel">
+<div class="socrata-component component-Container notRendered socrata-container" id="s1"><div class="socrata-component component-Text serverRendered notRendered" id="s2"><div class="content-wrapper  "><div id="content-body"><div class="query-provider-wrapper"><div><div class="cs-home-banner-container cs-banner-in-carousel">
   <div class="cs-home-banner-wrapper cs-banner-in-carousel" style="background-image: url(&quot;assets/hero3.jpg&quot;); background-size: cover; background-position: center center;">
     <div class="cs-banner-overlay" style="background-color: rgba(7, 142, 245, 0.3);"></div><div class="cs-table-container"><div class="cs-table-inner-container"><div class="cs-banner-text">
       <div class="cs-title">Cambridge Open Data Portal</div>
@@ -170,11 +198,11 @@
 
 <section><div class="sc-gsDKAQ kXxxKZ"><div class="sc-bdvvtL hlzyrD"><div class="cs-section-with-header" style="margin-top: 0px;"><h2 class="cs-header" style="color: black; font-size: 2.4rem;">Datasets By Category</h2><hr><div></div></div><ul class="cs-tile-grid cs-lg-grid-4
                        cs-md-grid-3
-                       cs-sm-grid-2"><li class="tile"><a class="cs-tile cs-category-tile undefined cs-tile-hover-styles" href="https://data.seattle.gov/browse?sortBy=most_accessed&amp;utf8=%E2%9C%93" style="justify-content: center; height: 190px; box-shadow: none; color: rgb(0, 61, 165); background-color: rgb(216, 216, 216); border-color: rgb(0, 61, 165);"><i class="cs-tile-icon fas fa-fire-alt" style="color: rgb(0, 61, 165);"></i><span class="cs-tile-icon-description"></span><div class="cs-tile-title" style="color: rgb(0, 61, 165); align-self: center; text-align: center;">Most Popular</div><div class="cs-tile-description" style="color: rgb(0, 61, 165); align-self: center; text-align: center;">Seattle's most popular datasets</div></a></li><li class="tile"><a class="cs-tile cs-category-tile cs-border-top cs-tile-hover-styles" href="https://data.seattle.gov/browse?sortBy=newest&amp;utf8=%E2%9C%93&amp;limitTo=datasets" style="justify-content: center; height: 190px; box-shadow: none; color: rgb(0, 61, 165); background-color: rgb(216, 216, 216); border-color: rgb(0, 61, 165);"><i class="cs-tile-icon fas fa-clock" style="color: rgb(0, 61, 165);"></i><span class="cs-tile-icon-description"></span><div class="cs-tile-title" style="color: rgb(0, 61, 165); align-self: center; text-align: center;">Recently Added</div><div class="cs-tile-description" style="max-height: 4.5em; -webkit-line-clamp: 3; color: rgb(0, 61, 165); align-self: center; text-align: center;">The City's newest datasets</div></a></li><li class="tile"><a class="cs-tile cs-category-tile cs-border-top cs-tile-hover-styles" href="https://data.seattle.gov/browse?category=City+Administration" style="justify-content: center; height: 190px; box-shadow: none; color: rgb(0, 61, 165); background-color: rgb(255, 255, 255); border-color: rgb(0, 61, 165);"><i class="cs-tile-icon fas fa-book" style="color: rgb(0, 61, 165);"></i><span class="cs-tile-icon-description"></span><div class="cs-tile-title" style="color: rgb(0, 61, 165); align-self: center; text-align: center;">City Administration</div><div class="cs-tile-description" style="max-height: 4.5em; -webkit-line-clamp: 3; color: rgb(0, 61, 165); align-self: center; text-align: center;">Includes customer service, fleet, wage data</div></a></li><li class="tile"><a class="cs-tile cs-category-tile cs-border-top cs-tile-hover-styles" href="https://data.seattle.gov/browse?category=Community+and+Culture" style="justify-content: center; height: 190px; box-shadow: none; color: rgb(0, 61, 165); background-color: rgb(255, 255, 255); border-color: rgb(0, 61, 165);"><i class="cs-tile-icon fas fa-users" style="color: rgb(0, 61, 165);"></i><span class="cs-tile-icon-description"></span><div class="cs-tile-title" style="color: rgb(0, 61, 165); align-self: center; text-align: center;">Community &amp; Culture</div><div class="cs-tile-description" style="max-height: 4.5em; -webkit-line-clamp: 3; color: rgb(0, 61, 165); align-self: center; text-align: center;">Includes library, parks, and art data</div></a></li><li class="tile"><a class="cs-tile cs-category-tile cs-border-top cs-tile-hover-styles" href="https://data.seattle.gov/browse?tags=seattle%20gis%20open%20data" style="justify-content: center; height: 190px; box-shadow: none; color: rgb(0, 61, 165); background-color: rgb(255, 255, 255); border-color: rgb(0, 61, 165);"><i class="cs-tile-icon fas fa-map" style="color: rgb(0, 61, 165);"></i><span class="cs-tile-icon-description"></span><div class="cs-tile-title" style="color: rgb(0, 61, 165); align-self: center; text-align: center;">Land Base</div><div class="cs-tile-description" style="max-height: 4.5em; -webkit-line-clamp: 3; color: rgb(0, 61, 165); align-self: center; text-align: center;">Includes GIS layers</div></a></li><li class="tile"><a class="cs-tile cs-category-tile cs-border-top cs-tile-hover-styles" href="https://data.seattle.gov/browse?category=Built+Environment" style="justify-content: center; height: 190px; box-shadow: none; color: rgb(0, 61, 165); background-color: rgb(255, 255, 255); border-color: rgb(0, 61, 165);"><i class="cs-tile-icon fas fa-id-card" style="color: rgb(0, 61, 165);"></i><span class="cs-tile-icon-description"></span><div class="cs-tile-title" style="color: rgb(0, 61, 165); align-self: center; text-align: center;">Built Environment</div><div class="cs-tile-description" style="max-height: 4.5em; -webkit-line-clamp: 3; color: rgb(0, 61, 165); align-self: center; text-align: center;">Includes permitting, utilities, energy benchmarking</div></a></li><li class="tile"><a class="cs-tile cs-category-tile cs-border-top cs-tile-hover-styles" href="https://data.seattle.gov/browse?category=Public+Safety" style="justify-content: center; height: 190px; box-shadow: none; color: rgb(0, 61, 165); background-color: rgb(255, 255, 255); border-color: rgb(0, 61, 165);"><i class="cs-tile-icon fas fa-balance-scale" style="color: rgb(0, 61, 165);"></i><span class="cs-tile-icon-description"></span><div class="cs-tile-title" style="color: rgb(0, 61, 165); align-self: center; text-align: center;">Public Safety</div><div class="cs-tile-description" style="max-height: 4.5em; -webkit-line-clamp: 3; color: rgb(0, 61, 165); align-self: center; text-align: center;">Includes 911 data, police, fire, and other public safety agencies</div></a></li><li class="tile"><a class="cs-tile cs-category-tile cs-border-top cs-tile-hover-styles" href="https://data.seattle.gov/browse?category=Transportation" style="justify-content: center; height: 190px; box-shadow: none; color: rgb(0, 61, 165); background-color: rgb(255, 255, 255); border-color: rgb(0, 61, 165);"><i class="cs-tile-icon fas fa-bicycle" style="color: rgb(0, 61, 165);"></i><span class="cs-tile-icon-description"></span><div class="cs-tile-title" style="color: rgb(0, 61, 165); align-self: center; text-align: center;">Transportation</div><div class="cs-tile-description" style="max-height: 4.5em; -webkit-line-clamp: 3; color: rgb(0, 61, 165); align-self: center; text-align: center;">Includes bike counters and parking data</div></a></li></ul></div></div></section>
+                       cs-sm-grid-2"><li class="tile"><a class="cs-tile cs-category-tile undefined cs-tile-hover-styles" href="https://data.seattle.gov/browse?sortBy=most_accessed&amp;utf8=%E2%9C%93" style="justify-content: center; height: 190px; box-shadow: none; color: rgb(0, 61, 165); background-color: rgb(216, 216, 216); border-color: rgb(0, 61, 165);"><i class="cs-tile-icon fas fa-fire-alt" style="color: rgb(0, 61, 165);"></i><span class="cs-tile-icon-description"></span><div class="cs-tile-title" style="color: rgb(0, 61, 165); align-self: center; text-align: center;">Most Popular</div><div class="cs-tile-description" style="color: rgb(0, 61, 165); align-self: center; text-align: center;">Seattle's most popular datasets</div></a></li><li class="tile"><a class="cs-tile cs-category-tile cs-border-top cs-tile-hover-styles" href="https://data.seattle.gov/browse?sortBy=newest&amp;utf8=%E2%9C%93&amp;limitTo=datasets" style="justify-content: center; height: 190px; box-shadow: none; color: rgb(0, 61, 165); background-color: rgb(216, 216, 216); border-color: rgb(0, 61, 165);"><i class="cs-tile-icon fas fa-clock" style="color: rgb(0, 61, 165);"></i><span class="cs-tile-icon-description"></span><div class="cs-tile-title" style="color: rgb(0, 61, 165); align-self: center; text-align: center;">Recently Added</div><div class="cs-tile-description" style="max-height: 4.5em; line-clamp: 3; -webkit-line-clamp: 3; color: rgb(0, 61, 165); align-self: center; text-align: center;">The City's newest datasets</div></a></li><li class="tile"><a class="cs-tile cs-category-tile cs-border-top cs-tile-hover-styles" href="https://data.seattle.gov/browse?category=City+Administration" style="justify-content: center; height: 190px; box-shadow: none; color: rgb(0, 61, 165); background-color: rgb(255, 255, 255); border-color: rgb(0, 61, 165);"><i class="cs-tile-icon fas fa-book" style="color: rgb(0, 61, 165);"></i><span class="cs-tile-icon-description"></span><div class="cs-tile-title" style="color: rgb(0, 61, 165); align-self: center; text-align: center;">City Administration</div><div class="cs-tile-description" style="max-height: 4.5em; line-clamp: 3; -webkit-line-clamp: 3; color: rgb(0, 61, 165); align-self: center; text-align: center;">Includes customer service, fleet, wage data</div></a></li><li class="tile"><a class="cs-tile cs-category-tile cs-border-top cs-tile-hover-styles" href="https://data.seattle.gov/browse?category=Community+and+Culture" style="justify-content: center; height: 190px; box-shadow: none; color: rgb(0, 61, 165); background-color: rgb(255, 255, 255); border-color: rgb(0, 61, 165);"><i class="cs-tile-icon fas fa-users" style="color: rgb(0, 61, 165);"></i><span class="cs-tile-icon-description"></span><div class="cs-tile-title" style="color: rgb(0, 61, 165); align-self: center; text-align: center;">Community &amp; Culture</div><div class="cs-tile-description" style="max-height: 4.5em; line-clamp: 3; -webkit-line-clamp: 3; color: rgb(0, 61, 165); align-self: center; text-align: center;">Includes library, parks, and art data</div></a></li><li class="tile"><a class="cs-tile cs-category-tile cs-border-top cs-tile-hover-styles" href="https://data.seattle.gov/browse?tags=seattle%20gis%20open%20data" style="justify-content: center; height: 190px; box-shadow: none; color: rgb(0, 61, 165); background-color: rgb(255, 255, 255); border-color: rgb(0, 61, 165);"><i class="cs-tile-icon fas fa-map" style="color: rgb(0, 61, 165);"></i><span class="cs-tile-icon-description"></span><div class="cs-tile-title" style="color: rgb(0, 61, 165); align-self: center; text-align: center;">Land Base</div><div class="cs-tile-description" style="max-height: 4.5em; line-clamp: 3; -webkit-line-clamp: 3; color: rgb(0, 61, 165); align-self: center; text-align: center;">Includes GIS layers</div></a></li><li class="tile"><a class="cs-tile cs-category-tile cs-border-top cs-tile-hover-styles" href="https://data.seattle.gov/browse?category=Built+Environment" style="justify-content: center; height: 190px; box-shadow: none; color: rgb(0, 61, 165); background-color: rgb(255, 255, 255); border-color: rgb(0, 61, 165);"><i class="cs-tile-icon fas fa-id-card" style="color: rgb(0, 61, 165);"></i><span class="cs-tile-icon-description"></span><div class="cs-tile-title" style="color: rgb(0, 61, 165); align-self: center; text-align: center;">Built Environment</div><div class="cs-tile-description" style="max-height: 4.5em; line-clamp: 3; -webkit-line-clamp: 3; color: rgb(0, 61, 165); align-self: center; text-align: center;">Includes permitting, utilities, energy benchmarking</div></a></li><li class="tile"><a class="cs-tile cs-category-tile cs-border-top cs-tile-hover-styles" href="https://data.seattle.gov/browse?category=Public+Safety" style="justify-content: center; height: 190px; box-shadow: none; color: rgb(0, 61, 165); background-color: rgb(255, 255, 255); border-color: rgb(0, 61, 165);"><i class="cs-tile-icon fas fa-balance-scale" style="color: rgb(0, 61, 165);"></i><span class="cs-tile-icon-description"></span><div class="cs-tile-title" style="color: rgb(0, 61, 165); align-self: center; text-align: center;">Public Safety</div><div class="cs-tile-description" style="max-height: 4.5em; line-clamp: 3; -webkit-line-clamp: 3; color: rgb(0, 61, 165); align-self: center; text-align: center;">Includes 911 data, police, fire, and other public safety agencies</div></a></li><li class="tile"><a class="cs-tile cs-category-tile cs-border-top cs-tile-hover-styles" href="https://data.seattle.gov/browse?category=Transportation" style="justify-content: center; height: 190px; box-shadow: none; color: rgb(0, 61, 165); background-color: rgb(255, 255, 255); border-color: rgb(0, 61, 165);"><i class="cs-tile-icon fas fa-bicycle" style="color: rgb(0, 61, 165);"></i><span class="cs-tile-icon-description"></span><div class="cs-tile-title" style="color: rgb(0, 61, 165); align-self: center; text-align: center;">Transportation</div><div class="cs-tile-description" style="max-height: 4.5em; line-clamp: 3; -webkit-line-clamp: 3; color: rgb(0, 61, 165); align-self: center; text-align: center;">Includes bike counters and parking data</div></a></li></ul></div></div></section>
 
 <section><div id="powered-by-seattle-open-data" class="sc-gsDKAQ gLDqgV"><div class="sc-bdvvtL hlzyrD"><div class="cs-section-with-header" style="margin-top: 0px;"><h2 class="cs-header" style="color: black; font-size: 2.4rem;">Other City Data</h2><hr><div></div></div><ul class="cs-tile-grid cs-lg-grid-3
                        cs-md-grid-2
-                       cs-sm-grid-1"><li class="tile"><a href="http://openbudget.seattle.gov/#!/year/default" class="cs-homebase-tile" style="height: 180px; background-color: rgb(241, 241, 241); background-image: url(&quot;assets/5eb0cfec-2617-40a7-b0c8-bf71dbfab2a1.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;"><div class="gradient-overlay"></div><div class="overlay"></div><div class="cs-homebase-tile-content"><div class="cs-homebase-tile-icon"></div><div style="text-align: left; width: 100%;"><div class="cs-homebase-tile-title">Open Budget</div><div class="cs-homebase-tile-description"></div></div></div></a></li><li class="tile"><a href="https://capitalprojects.seattle.gov/projects" class="cs-homebase-tile" style="height: 180px; background-color: rgb(241, 241, 241); background-image: url(&quot;assets/3dd468d2-9242-4f51-bcb9-41422375316f.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;"><div class="gradient-overlay"></div><div class="overlay"></div><div class="cs-homebase-tile-content"><div class="cs-homebase-tile-icon"></div><div style="text-align: left; width: 100%;"><div class="cs-homebase-tile-title">SDOT Capital Projects Dashboard</div><div class="cs-homebase-tile-description"></div></div></div></a></li><li class="tile"><a href="https://coscontractsearchportal.masterworkslive.com/" class="cs-homebase-tile" style="height: 180px; background-color: rgb(241, 241, 241); background-image: url(&quot;assets/fd007d17-891d-4175-b3ae-71874172dc0f.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;"><div class="gradient-overlay"></div><div class="overlay"></div><div class="cs-homebase-tile-content"><div class="cs-homebase-tile-icon"></div><div style="text-align: left; width: 100%;"><div class="cs-homebase-tile-title">City Contract Search Portal</div><div class="cs-homebase-tile-description"></div></div></div></a></li><li class="tile"><a href="https://data-seattlecitygis.opendata.arcgis.com/" class="cs-homebase-tile" style="height: 180px; background-color: rgb(241, 241, 241); background-image: url(&quot;assets/46f00aec-0ca6-47b0-9077-3463c7fe3d8e.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;"><div class="gradient-overlay"></div><div class="overlay"></div><div class="cs-homebase-tile-content"><div class="cs-homebase-tile-icon"></div><div style="text-align: left; width: 100%;"><div class="cs-homebase-tile-title">Open GIS Portal</div><div class="cs-homebase-tile-description"></div></div></div></a></li><li class="tile"><a href="https://www.seattle.gov/city-finance/business-taxes-and-licenses/find-a-licensed-business" class="cs-homebase-tile" style="height: 180px; background-color: rgb(241, 241, 241); background-image: url(&quot;assets/75b13cc9-5b68-4398-9733-2a5a2448b039.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;"><div class="gradient-overlay"></div><div class="overlay"></div><div class="cs-homebase-tile-content"><div class="cs-homebase-tile-icon"></div><div style="text-align: left; width: 100%;"><div class="cs-homebase-tile-title">Find a Business</div><div class="cs-homebase-tile-description"></div></div></div></a></li><li class="tile"><a href="https://www.seattle.gov/opcd/population-and-demographics" class="cs-homebase-tile" style="height: 180px; background-color: rgb(241, 241, 241); background-image: url(&quot;assets/b55f4b7a-bb68-4135-b780-9dd775ff15fb.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;"><div class="gradient-overlay"></div><div class="overlay"></div><div class="cs-homebase-tile-content"><div class="cs-homebase-tile-icon"></div><div style="text-align: left; width: 100%;"><div class="cs-homebase-tile-title">City Demographics</div><div class="cs-homebase-tile-description"></div></div></div></a></li><li class="tile"><a href="http://www.seattle.gov/seattle-police-department/crime-data/crime-dashboard" class="cs-homebase-tile" style="height: 180px; background-color: rgb(241, 241, 241); background-image: url(&quot;assets/ab774261-4b0d-49f4-9abc-4e30f8199e28.png&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;"><div class="gradient-overlay"></div><div class="overlay"></div><div class="cs-homebase-tile-content"><div class="cs-homebase-tile-icon"></div><div style="text-align: left; width: 100%;"><div class="cs-homebase-tile-title">SPD Crime Dashboard</div><div class="cs-homebase-tile-description"></div></div></div></a></li></ul></div></div></section><section><div class="sc-gsDKAQ kXxxKZ"><div class="sc-bdvvtL hlzyrD"><div class="cs-section-with-header" style="margin-top: 0px;"><h2 class="cs-header" style="color: black; font-size: 2.4rem;">About Open Data</h2><hr><div><div><p> Seattle is home to an engaged, innovative public that strives to make the city a better place to live. As a City, we strive to make our data open to the public, enabling those outside of government to find solutions to our most pressing civic challenges.</p><br> <p>The Open Data Program makes the data generated by the City of Seattle available to the public for the purpose of increasing the quality of life for our residents; increasing transparency, accountability and comparability; promoting economic development and research; and improving internal performance management. </p><br> <p> <a href="https://seattle.gov/tech/reports-and-data/open-data">Click here to learn more about the program</a></p></div></div></div></div></div></section></div></div></div>
+                       cs-sm-grid-1"><li class="tile"><a href="http://openbudget.seattle.gov/#!/year/default" class="cs-homebase-tile" style="height: 180px; background-color: rgb(241, 241, 241); background-image: url(&quot;assets/5eb0cfec-2617-40a7-b0c8-bf71dbfab2a1.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;"><div class="gradient-overlay"></div><div class="overlay"></div><div class="cs-homebase-tile-content"><div class="cs-homebase-tile-icon"></div><div style="text-align: left; width: 100%;"><div class="cs-homebase-tile-title">Open Budget</div><div class="cs-homebase-tile-description"></div></div></div></a></li><li class="tile"><a href="https://capitalprojects.seattle.gov/projects" class="cs-homebase-tile" style="height: 180px; background-color: rgb(241, 241, 241); background-image: url(&quot;assets/3dd468d2-9242-4f51-bcb9-41422375316f.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;"><div class="gradient-overlay"></div><div class="overlay"></div><div class="cs-homebase-tile-content"><div class="cs-homebase-tile-icon"></div><div style="text-align: left; width: 100%;"><div class="cs-homebase-tile-title">SDOT Capital Projects Dashboard</div><div class="cs-homebase-tile-description"></div></div></div></a></li><li class="tile"><a href="https://coscontractsearchportal.masterworkslive.com/" class="cs-homebase-tile" style="height: 180px; background-color: rgb(241, 241, 241); background-image: url(&quot;assets/fd007d17-891d-4175-b3ae-71874172dc0f.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;"><div class="gradient-overlay"></div><div class="overlay"></div><div class="cs-homebase-tile-content"><div class="cs-homebase-tile-icon"></div><div style="text-align: left; width: 100%;"><div class="cs-homebase-tile-title">City Contract Search Portal</div><div class="cs-homebase-tile-description"></div></div></div></a></div></li><li class="tile"><a href="https://data-seattlecitygis.opendata.arcgis.com/" class="cs-homebase-tile" style="height: 180px; background-color: rgb(241, 241, 241); background-image: url(&quot;assets/46f00aec-0ca6-47b0-9077-3463c7fe3d8e.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;"><div class="gradient-overlay"></div><div class="overlay"></div><div class="cs-homebase-tile-content"><div class="cs-homebase-tile-icon"></div><div style="text-align: left; width: 100%;"><div class="cs-homebase-tile-title">Open GIS Portal</div><div class="cs-homebase-tile-description"></div></div></div></a></div></li><li class="tile"><a href="https://www.seattle.gov/city-finance/business-taxes-and-licenses/find-a-licensed-business" class="cs-homebase-tile" style="height: 180px; background-color: rgb(241, 241, 241); background-image: url(&quot;assets/75b13cc9-5b68-4398-9733-2a5a2448b039.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;"><div class="gradient-overlay"></div><div class="overlay"></div><div class="cs-homebase-tile-content"><div class="cs-homebase-tile-icon"></div><div style="text-align: left; width: 100%;"><div class="cs-homebase-tile-title">Find a Business</div><div class="cs-homebase-tile-description"></div></div></div></a></div></li><li class="tile"><a href="https://www.seattle.gov/opcd/population-and-demographics" class="cs-homebase-tile" style="height: 180px; background-color: rgb(241, 241, 241); background-image: url(&quot;assets/b55f4b7a-bb68-4135-b780-9dd775ff15fb.jpg&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;"><div class="gradient-overlay"></div><div class="overlay"></div><div class="cs-homebase-tile-content"><div class="cs-homebase-tile-icon"></div><div style="text-align: left; width: 100%;"><div class="cs-homebase-tile-title">City Demographics</div><div class="cs-homebase-tile-description"></div></div></div></a></div></li><li class="tile"><a href="http://www.seattle.gov/seattle-police-department/crime-data/crime-dashboard" class="cs-homebase-tile" style="height: 180px; background-color: rgb(241, 241, 241); background-image: url(&quot;assets/ab774261-4b0d-49f4-9abc-4e30f8199e28.png&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;"><div class="gradient-overlay"></div><div class="overlay"></div><div class="cs-homebase-tile-content"><div class="cs-homebase-tile-icon"></div><div style="text-align: left; width: 100%;"><div class="cs-homebase-tile-title">SPD Crime Dashboard</div><div class="cs-homebase-tile-description"></div></div></div></a></div></li></ul></div></div></section><section><div class="sc-gsDKAQ kXxxKZ"><div class="sc-bdvvtL hlzyrD"><div class="cs-section-with-header" style="margin-top: 0px;"><h2 class="cs-header" style="color: black; font-size: 2.4rem;">About Open Data</h2><hr><div><div><p> Seattle is home to an engaged, innovative public that strives to make the city a better place to live. As a City, we strive to make our data open to the public, enabling those outside of government to find solutions to our most pressing civic challenges.</p><br> <p>The Open Data Program makes the data generated by the City of Seattle available to the public for the purpose of increasing the quality of life for our residents; increasing transparency, accountability and comparability; promoting economic development and research; and improving internal performance management. </p><br> <p> <a href="https://seattle.gov/tech/reports-and-data/open-data">Click here to learn more about the program</a></p></div></div></div></div></div></section></div></div></div>
 <!--[if lte IE 9]>
   <script>
     (function(global) ;)(typeof window === 'undefined' ? this : window);
@@ -205,12 +233,6 @@
   </script>
 <![endif]-->
 </div></div></div>
-
-
-
-
-
-
           </div>
       </div>
     </div>
@@ -260,82 +282,9 @@
           </div>
         </div>
       </footer>
-
-
-
     <div class="socrataModal" style="display: none;"><div class="socrataModalWrapper"></div></div>
-
-    
-
-    
-
     <div id="js-appended-templates" style="display: none" aria-hidden="true"></div>
-    
-
-    
-    
-
-    
-
-    
-
-    
-
-
-
-
-
-
-
-      
-
-    <div id="modals">
-      
-    </div>
-    <div id="newModals">
-      
-    </div>
-
-      <div class="loadingSpinnerContainer hide"><div class="loadingSpinner"></div><div class="loadingMessage hide"></div><div class="loadingCountdown hide">Checking<span class="secondsSection"> in <span class="seconds"></span> seconds</span>...</div></div>
-
-
-
-  
-
-    
-
-    
-
-    
-
-
-  
-
+    <div id="modals"></div>
+    <div id="newModals"></div>
+    <div class="loadingSpinnerContainer hide"><div class="loadingSpinner"></div><div class="loadingMessage hide"></div><div class="loadingCountdown hide">Checking<span class="secondsSection"> in <span class="seconds"></span> seconds</span>...</div></div>
 <div></div></body></html>
-
-<!-- Scoped styles for Trending tiles -->
-<style>
-  /* Ensure uniform tile height and allow text wrapping within the tile */
-  #trending-tiles .cs-tile {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 190px; /* matches other tiles on the page */
-    text-align: center;
-    box-shadow: none;
-    overflow: hidden; /* prevent spillover if text exceeds the fixed height */
-    padding: 0.5rem;
-  }
-  #trending-tiles .cs-tile-title,
-  #trending-tiles .cs-tile-description {
-    line-height: 1.25;
-    color: rgb(0, 61, 165);
-    margin: 0.25rem 0 0 0;
-    white-space: normal; /* allow wrapping */
-    overflow-wrap: anywhere; /* break long words if needed */
-    word-break: break-word; /* legacy support */
-  }
-  /* Social icon fallback (inline SVG) */
-  .site-chrome-social-link .social-icon-svg { width: 1.25rem; height: 1.25rem; display: inline-block; vertical-align: middle; fill: currentColor; }
-</style>
