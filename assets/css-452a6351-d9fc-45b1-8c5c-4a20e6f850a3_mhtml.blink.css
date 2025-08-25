@@ -1,7 +1,0 @@
-@charset "utf-8";
-
-.alert-meta-page label { color: rgb(94, 94, 94); display: block; font-size: 14px; font-weight: 800; padding-bottom: 10px; }
-
-.alert-meta-page .alert-name-section, .alert-meta-page .alert-description-section { margin-bottom: 30px; }
-
-.alert-meta-page .alert-name-section input, .alert-meta-page .alert-name-section textarea, .alert-meta-page .alert-description-section input, .alert-meta-page .alert-description-section textarea { border: 1px solid rgb(241, 241, 241); padding: 8px 6px; width: 100%; }

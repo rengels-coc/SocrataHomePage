@@ -1,9 +1,0 @@
-@charset "utf-8";
-
-.cs-section-with-header { margin: 8vh auto 4vh; }
-
-.cs-section-with-header .cs-header { text-align: left; font-weight: normal; font-size: 1.68002em; margin: 0px 0px 0.25em; }
-
-.cs-section-with-header .cs-header.cs-header-centered-text { text-align: center; }
-
-.cs-section-with-header hr { margin-top: 0.25em; margin-bottom: 1em; }

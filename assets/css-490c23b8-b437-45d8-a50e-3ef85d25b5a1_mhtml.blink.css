@@ -1,9 +1,0 @@
-@charset "utf-8";
-
-.soql-slice-builder { position: relative; margin-bottom: 10px; }
-
-.soql-slice-builder .field-selector { display: inline-block; margin-right: 10px; vertical-align: top; }
-
-.soql-slice-builder .field-selector .value-input { background: rgb(255, 255, 255); border: 1px solid rgb(145, 145, 145); cursor: pointer; color: rgb(173, 173, 173); height: 41px; overflow: hidden; padding: 12px; text-overflow: ellipsis; white-space: nowrap; }
-
-.soql-slice-builder .delete-icon { cursor: pointer; background: rgb(241, 241, 241); font-size: 15px; margin: 0px; padding: 8px 10px; position: absolute; right: 0px; }

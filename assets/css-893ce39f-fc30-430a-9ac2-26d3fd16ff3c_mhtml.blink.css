@@ -1,5 +1,0 @@
-@charset "utf-8";
-
-#forge-nav-drawer > forge-list:first-child { margin-top: 56px; padding-top: 8px; }
-
-#forge-nav-drawer forge-list-item { color: var(--forge-theme-text-high, rgba(0, 0, 0, 0.87)); }
