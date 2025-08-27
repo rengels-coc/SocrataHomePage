@@ -35,6 +35,59 @@
   
     <!-- Custom overrides & scoped adjustments -->
     <style>
+      /* =====================
+         Interactive Tile Enhancements (Seattle-style)
+         - Subtle elevation + background tint on hover/focus
+         - Smooth transitions; accessible focus ring
+         - Non-destructive: only additive styles
+         ===================== */
+      :root {
+        --tile-accent: rgb(0,61,165);
+        --tile-hover-bg: rgba(0,61,165,0.06);
+        --tile-hover-border: rgba(0,61,165,0.55);
+        --tile-focus-ring: 2px solid rgba(0,61,165,0.65);
+        --tile-transition: 120ms ease-in-out;
+      }
+
+      /* Base tile smoothing */
+      .cs-tile, .cs-category-tile, .cs-homebase-tile {
+        transition: background-color var(--tile-transition),
+                    box-shadow var(--tile-transition),
+                    transform var(--tile-transition),
+                    border-color var(--tile-transition),
+                    color var(--tile-transition);
+        position: relative;
+      }
+      /* Elevation & tint on hover */
+      .cs-tile:hover, .cs-category-tile:hover, .cs-homebase-tile:hover,
+      .cs-tile:focus-visible, .cs-category-tile:focus-visible, .cs-homebase-tile:focus-visible {
+        background-color: var(--tile-hover-bg) !important;
+        border-color: var(--tile-hover-border) !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        transform: translateY(-2px);
+        text-decoration: none;
+        outline: none;
+      }
+      .cs-tile:focus-visible, .cs-category-tile:focus-visible, .cs-homebase-tile:focus-visible { outline: var(--tile-focus-ring); outline-offset: 2px; }
+      /* Keep titles readable */
+      .cs-tile-title, .cs-homebase-tile-title { font-weight: 600; }
+      /* Icon sizing standardization */
+  .cs-tile-icon, .cs-homebase-tile-icon, .cs-homebase-tile .cs-tile-icon { font-size: 2.2rem; line-height: 1; transition: transform var(--tile-transition), color var(--tile-transition), filter var(--tile-transition); }
+      /* Icon interactive motion */
+      .cs-tile:hover .cs-tile-icon, .cs-category-tile:hover .cs-tile-icon, .cs-homebase-tile:hover .cs-homebase-tile-icon,
+      .cs-tile:focus-visible .cs-tile-icon, .cs-category-tile:focus-visible .cs-tile-icon, .cs-homebase-tile:focus-visible .cs-homebase-tile-icon { transform: scale(1.08) rotate(-2deg); color: var(--tile-accent); filter: drop-shadow(0 2px 2px rgba(0,0,0,0.18)); }
+      @media (prefers-reduced-motion: reduce) {
+        .cs-tile, .cs-category-tile, .cs-homebase-tile, .cs-tile-icon, .cs-homebase-tile-icon { transition: none; }
+        .cs-tile:hover .cs-tile-icon, .cs-category-tile:hover .cs-tile-icon, .cs-homebase-tile:hover .cs-homebase-tile-icon { transform: none; }
+      }
+      /* Prevent layout shift when lifting */
+      .cs-tile, .cs-category-tile, .cs-homebase-tile { will-change: transform; }
+      /* Trending tiles already forced to height; ensure consistent padding */
+      #trending-tiles .cs-tile { padding: 0.75rem; }
+      /* Accessible hover/active state for keyboard: mimic hover when focused */
+      .cs-tile:active, .cs-category-tile:active, .cs-homebase-tile:active { transform: translateY(0); box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
+      /* Avoid compounding previous neutralization rules for overlays here (handled below) */
+
       /* Trending tiles: uniform height & wrapping */
       #trending-tiles .cs-tile {
         display: flex;
@@ -96,6 +149,14 @@
   /* Remove generic overlay blocks that might be layering tint */
   /* Limit overlay neutralization to tiles only; generic .overlay removal could have removed hero visual layers elsewhere */
   .cs-homebase-tile .overlay { background: none !important; }
+  /* Reintroduce a controlled, hover-only overlay for image tiles for legibility */
+  .cs-homebase-tile { position: relative; overflow: hidden; }
+  .cs-homebase-tile::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0.45) 100%); opacity: 0; transition: opacity var(--tile-transition); pointer-events: none; }
+  .cs-homebase-tile:hover::after, .cs-homebase-tile:focus-visible::after { opacity: 1; }
+  /* Darken text slightly on image tiles for contrast */
+  .cs-homebase-tile:hover .cs-homebase-tile-title, .cs-homebase-tile:focus-visible .cs-homebase-tile-title { color: #fff !important; text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
+  /* Respect reduced motion */
+  @media (prefers-reduced-motion: reduce) { .cs-homebase-tile::after { transition: none; } }
   /* Ensure section wrapper styled-component generated classes stay plain on hover */
   .kXxxKZ:hover, .gLDqgV:hover, .hlzyrD:hover { background-image: none !important; }
   /* Belt & suspenders: kill any pseudo-element backgrounds on the hero wrapper */
